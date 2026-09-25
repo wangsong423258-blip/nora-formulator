@@ -1,0 +1,535 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "meal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected_version": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "default": null
+    },
+    "ingredientSelection": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/IngredientSelection"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "profile": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/QuickMealProfile",
+          "default": null
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "meal_id"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "QuickMealProfile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string"
+        },
+        "species": {
+          "enum": [
+            "DOG",
+            "CAT"
+          ]
+        },
+        "breed_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "breed_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "as_of_date": {
+          "type": "string"
+        },
+        "age_years": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 40
+        },
+        "age_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 11
+        },
+        "life_stage": {
+          "enum": [
+            null,
+            "GROWTH",
+            "ADULT",
+            "MATURE",
+            "SENIOR",
+            "EARLY_GROWTH",
+            "LATE_GROWTH_SMALL_MEDIUM",
+            "LATE_GROWTH_LARGE",
+            "UNWEANED",
+            "DOG_GROWTH",
+            "DOG_ADULT",
+            "DOG_MATURE",
+            "DOG_SENIOR",
+            "DOG_EARLY_GROWTH",
+            "DOG_LATE_GROWTH_SMALL_MEDIUM",
+            "DOG_LATE_GROWTH_LARGE",
+            "DOG_UNWEANED",
+            "CAT_GROWTH",
+            "CAT_ADULT",
+            "CAT_SENIOR",
+            "LATE_GROWTH",
+            "LARGE_BREED_GROWTH"
+          ]
+        },
+        "sex": {
+          "enum": [
+            "FEMALE",
+            "MALE",
+            "UNKNOWN"
+          ]
+        },
+        "neutered": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "weight_kg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "body_condition": {
+          "oneOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 9
+            },
+            {
+              "enum": [
+                "VERY_THIN",
+                "THIN",
+                "IDEAL",
+                "NORMAL",
+                "OVERWEIGHT",
+                "OBESE",
+                "SEVERE_UNDERWEIGHT",
+                "MILD_UNDERWEIGHT",
+                "MILD_OVERWEIGHT"
+              ]
+            }
+          ]
+        },
+        "muscle_condition": {
+          "enum": [
+            "NORMAL",
+            "MILD_LOSS",
+            "MODERATE_LOSS",
+            "SEVERE_LOSS",
+            "UNKNOWN"
+          ]
+        },
+        "weight_trend": {
+          "enum": [
+            "STABLE",
+            "GAINING",
+            "LOSING",
+            "UNKNOWN",
+            "LOSS",
+            "GAIN"
+          ]
+        },
+        "activity_level": {
+          "enum": [
+            "LOW",
+            "NORMAL",
+            "HIGH",
+            "VERY_HIGH",
+            "ACTIVE",
+            "MODERATE_LOW_IMPACT",
+            "MODERATE_HIGH_IMPACT"
+          ]
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "recent_symptoms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "food_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "reason": {
+                "enum": [
+                  "ALLERGY",
+                  "INTOLERANCE",
+                  "VET_RESTRICTED",
+                  "CONFIRMED_ALLERGY",
+                  "VET_AVOID"
+                ]
+              },
+              "ingredient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "disliked_foods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_adult_weight_kg": {
+          "type": "number"
+        },
+        "growth_complete": {
+          "type": "boolean"
+        },
+        "weaned": {
+          "type": "boolean"
+        },
+        "available_ingredient_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "daily_label_servings": {
+          "type": "number"
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feeding_goal": {
+          "deprecated": true
+        },
+        "current_diet_type": {
+          "deprecated": true
+        },
+        "main_diet": {
+          "deprecated": true
+        },
+        "extra_foods": {
+          "deprecated": true
+        },
+        "commercial_extras": {
+          "deprecated": true
+        },
+        "current_supplements": {
+          "deprecated": true
+        },
+        "current_diet_context": {
+          "deprecated": true
+        },
+        "disease_subtypes": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "subtype": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "disease_id",
+                  "subtype"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "current_intake": {
+          "deprecated": true
+        },
+        "current_main_diet": {
+          "deprecated": true
+        },
+        "ingredient_selection": {
+          "$ref": "#/$defs/IngredientSelection"
+        },
+        "clinical_nutrition": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "documented_deficiencies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "active_nutrient",
+                  "clinician_confirmed",
+                  "report_reference"
+                ],
+                "properties": {
+                  "active_nutrient": {
+                    "enum": [
+                      "TAURINE",
+                      "COBALAMIN"
+                    ]
+                  },
+                  "clinician_confirmed": {
+                    "const": true
+                  },
+                  "report_reference": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  }
+                }
+              }
+            },
+            "risk_factors": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "MOBILITY_DECLINE",
+                  "STIFFNESS",
+                  "OBESITY"
+                ]
+              }
+            },
+            "mmvd_stage": {
+              "enum": [
+                null,
+                "A",
+                "B1",
+                "B2",
+                "C",
+                "D"
+              ]
+            },
+            "cognitive_dysfunction_report": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 300
+            }
+          }
+        },
+        "meal_scope": {
+          "enum": [
+            "DAY",
+            "MEAL"
+          ]
+        },
+        "diagnosed_diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "breed": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "species"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "weight_kg"
+          ]
+        },
+        {
+          "required": [
+            "weight"
+          ]
+        }
+      ]
+    },
+    "IngredientSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "const": "CANDIDATE_POOL"
+        },
+        "categories": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ANIMAL_PROTEIN": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ENERGY_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "FIBER_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

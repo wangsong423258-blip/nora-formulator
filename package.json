@@ -1,0 +1,50 @@
+{
+  "name": "nora-sdk",
+  "version": "0.3.1",
+  "description": "Developer tools and API contract for Nora. No formulation engine or nutritional dataset included.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./sdk/client.d.mts",
+      "import": "./sdk/client.mjs"
+    },
+    "./attribution": {
+      "types": "./attribution/index.d.mts",
+      "import": "./attribution/index.mjs"
+    }
+  },
+  "bin": {
+    "nora": "./cli/nora.mjs"
+  },
+  "files": [
+    "sdk/",
+    "cli/",
+    "openapi/",
+    "schemas/",
+    "docs/",
+    "examples/",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "attribution/"
+  ],
+  "scripts": {},
+  "noraRuntimeSupport": {
+    "v1Targets": [
+      "macos-arm64",
+      "windows-x64"
+    ],
+    "minimumMacOS": "14",
+    "productionAvailable": false,
+    "windowsNativeValidated": false,
+    "runtimeDownloadsAvailable": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangsong423258-blip/nora-formulator.git"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "manifest_version": 1,
+  "release": "Nora v1.1.1 Community Preview",
+  "tag": "v1.1.1-preview",
+  "release_version": "1.1.1",
+  "publication_scope": "SDK_AND_STATUS_METADATA_ONLY",
+  "runtime_release_complete": false,
+  "versions": {
+    "product": "Nora",
+    "release_tag": "v1.1.1-preview",
+    "publication_scope": "SDK_AND_STATUS_METADATA_ONLY",
+    "runtime_version": "1.1.1",
+    "sdk_version": "0.3.1",
+    "engine_version": "freshfood-ingredient-first-1.9.0",
+    "datapack_version": "1.1.0",
+    "canonical_api_version": "v1",
+    "license_schema_version": 1,
+    "runtime_available": false,
+    "target_platforms": [
+      "macos-arm64",
+      "windows-x64"
+    ],
+    "shared_version_policy": "Same engine, DataPack, license schema and Canonical Contract for both editions and platforms."
+  },
+  "available_runtime_assets": [],
+  "planned_runtime_assets": [
+    {
+      "filename": "Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg",
+      "version": "1.1.1",
+      "platform": "macos",
+      "architecture": "arm64",
+      "edition": "Local",
+      "channel": "Community Preview",
+      "stability": "PREVIEW",
+      "available": false,
+      "sha256": null,
+      "bytes": null,
+      "download_url": null,
+      "reason": "Usable encrypted DataPack, publisher authorization and final installation acceptance pending."
+    },
+    {
+      "filename": "Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz",
+      "version": "1.1.1",
+      "platform": "macos",
+      "architecture": "arm64",
+      "edition": "Self-hosted",
+      "channel": "Community Preview",
+      "stability": "PREVIEW",
+      "available": false,
+      "sha256": null,
+      "bytes": null,
+      "download_url": null,
+      "reason": "Usable encrypted DataPack, publisher authorization and final installation acceptance pending."
+    },
+    {
+      "filename": "Nora-Setup-v1.1.1-Windows-x64-Experimental.exe",
+      "version": "1.1.1",
+      "platform": "windows",
+      "architecture": "x64",
+      "edition": "Local",
+      "channel": "Experimental Preview",
+      "stability": "EXPERIMENTAL",
+      "available": false,
+      "sha256": null,
+      "bytes": null,
+      "download_url": null,
+      "reason": "No runnable Windows PE Runtime; native numerical validation not measured."
+    },
+    {
+      "filename": "Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
+      "version": "1.1.1",
+      "platform": "windows",
+      "architecture": "x64",
+      "edition": "Self-hosted",
+      "channel": "Experimental Preview",
+      "stability": "EXPERIMENTAL",
+      "available": false,
+      "sha256": null,
+      "bytes": null,
+      "download_url": null,
+      "reason": "No runnable Windows PE Runtime; native numerical validation not measured."
+    }
+  ],
+  "available_metadata_assets": [
+    {
+      "filename": "VERSION.json",
+      "bytes": 541,
+      "sha256": "005f4c8a04208ec8b2975f60f56daa5ce4de2fd8df7c13d629b68e5c27811cb8"
+    },
+    {
+      "filename": "LICENSE_INFO.md",
+      "bytes": 980,
+      "sha256": "2d09c27cd4e62b88d27f02ffebccc45999e63ba91e686abd1e3a2b65f39eac17"
+    }
+  ],
+  "validation": {
+    "macos_arm64_reference": {
+      "cases": 160,
+      "exact_match": 160,
+      "basis": "Existing native reference candidate; not final installer or clean-machine acceptance"
+    },
+    "windows_x64_native": {
+      "status": "NOT_MEASURED",
+      "exact_match": null,
+      "display_equivalent": null,
+      "decision_affecting": null
+    },
+    "final_clean_machine": {
+      "macos": "PENDING",
+      "windows": "PENDING",
+      "windows_server": "PENDING"
+    }
+  },
+  "platform_signing": {
+    "macos_developer_id": "PENDING",
+    "macos_notarization": "PENDING",
+    "windows_authenticode": "PENDING"
+  },
+  "checksum_policy": "SHA256SUMS.txt covers the attached manifest, VERSION.json and LICENSE_INFO.md. Missing runtime assets have no hashes. This status manifest is not a signed installation manifest."
+}

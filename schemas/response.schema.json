@@ -1,0 +1,291 @@
+{
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "type": "string"
+        },
+        "engine_version": {
+          "type": "string"
+        },
+        "data_version": {
+          "type": "string"
+        },
+        "ruleset_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_version",
+        "engine_version",
+        "data_version",
+        "ruleset_version"
+      ],
+      "additionalProperties": false
+    },
+    "operation_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "resource_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resource_version": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "confirmed_resource_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "amount_g": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "weight_basis": {
+                "type": "string"
+              },
+              "food_state": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ingredient_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "nutrients": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "nutrient_id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "known_subtotal": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "unit": {
+                "type": "string"
+              },
+              "basis": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "nutrient_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "recipe_energy_kcal": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "pet_me_kcal": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ca_p_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "complete_balanced_claim": {
+          "type": "boolean"
+        },
+        "ingredients": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "food_state": {
+                "type": "string"
+              },
+              "weight_basis": {
+                "type": "string"
+              },
+              "selectable": {
+                "type": "boolean"
+              },
+              "eligibility": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ingredient_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "disease_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "species": {
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "disease_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "growth_context_required": {
+          "type": "boolean"
+        },
+        "full_profile_validated": {
+          "type": "boolean"
+        },
+        "cooking_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": [
+                  "integer",
+                  "string"
+                ]
+              },
+              "instruction": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraint_status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PARTIAL",
+            "UNKNOWN",
+            "NOT_APPLICABLE"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "metadata",
+    "operation_id",
+    "status",
+    "result",
+    "warnings",
+    "errors"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

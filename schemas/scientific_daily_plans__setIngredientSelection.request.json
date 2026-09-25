@@ -1,0 +1,800 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ingredient_selection": {
+      "$ref": "#/$defs/IngredientSelection"
+    },
+    "recipe_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected_version": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "ingredient_selection",
+    "recipe_id"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "PetNutritionProfile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string"
+        },
+        "species": {
+          "enum": [
+            "DOG",
+            "CAT"
+          ]
+        },
+        "breed_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "breed_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "as_of_date": {
+          "type": "string"
+        },
+        "age_years": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 40
+        },
+        "age_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 11
+        },
+        "life_stage": {
+          "enum": [
+            null,
+            "GROWTH",
+            "ADULT",
+            "MATURE",
+            "SENIOR",
+            "EARLY_GROWTH",
+            "LATE_GROWTH_SMALL_MEDIUM",
+            "LATE_GROWTH_LARGE",
+            "UNWEANED",
+            "DOG_GROWTH",
+            "DOG_ADULT",
+            "DOG_MATURE",
+            "DOG_SENIOR",
+            "DOG_EARLY_GROWTH",
+            "DOG_LATE_GROWTH_SMALL_MEDIUM",
+            "DOG_LATE_GROWTH_LARGE",
+            "DOG_UNWEANED",
+            "CAT_GROWTH",
+            "CAT_ADULT",
+            "CAT_SENIOR",
+            "LATE_GROWTH",
+            "LARGE_BREED_GROWTH"
+          ]
+        },
+        "sex": {
+          "enum": [
+            "FEMALE",
+            "MALE",
+            "UNKNOWN"
+          ]
+        },
+        "neutered": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "weight_kg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "body_condition": {
+          "oneOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 9
+            },
+            {
+              "enum": [
+                "VERY_THIN",
+                "THIN",
+                "IDEAL",
+                "NORMAL",
+                "OVERWEIGHT",
+                "OBESE",
+                "SEVERE_UNDERWEIGHT",
+                "MILD_UNDERWEIGHT",
+                "MILD_OVERWEIGHT"
+              ]
+            }
+          ]
+        },
+        "muscle_condition": {
+          "enum": [
+            "NORMAL",
+            "MILD_LOSS",
+            "MODERATE_LOSS",
+            "SEVERE_LOSS",
+            "UNKNOWN"
+          ]
+        },
+        "weight_trend": {
+          "enum": [
+            "STABLE",
+            "GAINING",
+            "LOSING",
+            "UNKNOWN",
+            "LOSS",
+            "GAIN"
+          ]
+        },
+        "activity_level": {
+          "enum": [
+            "LOW",
+            "NORMAL",
+            "HIGH",
+            "VERY_HIGH",
+            "ACTIVE",
+            "MODERATE_LOW_IMPACT",
+            "MODERATE_HIGH_IMPACT"
+          ]
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "recent_symptoms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "food_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "reason": {
+                "enum": [
+                  "ALLERGY",
+                  "INTOLERANCE",
+                  "VET_RESTRICTED",
+                  "CONFIRMED_ALLERGY",
+                  "VET_AVOID"
+                ]
+              },
+              "ingredient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "disliked_foods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_adult_weight_kg": {
+          "type": "number"
+        },
+        "growth_complete": {
+          "type": "boolean"
+        },
+        "weaned": {
+          "type": "boolean"
+        },
+        "available_ingredient_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "daily_label_servings": {
+          "type": "number"
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feeding_goal": {
+          "deprecated": true
+        },
+        "current_diet_type": {
+          "deprecated": true
+        },
+        "main_diet": {
+          "deprecated": true
+        },
+        "extra_foods": {
+          "deprecated": true
+        },
+        "commercial_extras": {
+          "deprecated": true
+        },
+        "current_supplements": {
+          "deprecated": true
+        },
+        "current_diet_context": {
+          "deprecated": true
+        },
+        "disease_subtypes": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "subtype": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "disease_id",
+                  "subtype"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "current_intake": {
+          "deprecated": true
+        },
+        "current_main_diet": {
+          "deprecated": true
+        },
+        "ingredient_selection": {
+          "$ref": "#/$defs/IngredientSelection"
+        },
+        "clinical_nutrition": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "documented_deficiencies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "active_nutrient",
+                  "clinician_confirmed",
+                  "report_reference"
+                ],
+                "properties": {
+                  "active_nutrient": {
+                    "enum": [
+                      "TAURINE",
+                      "COBALAMIN"
+                    ]
+                  },
+                  "clinician_confirmed": {
+                    "const": true
+                  },
+                  "report_reference": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  }
+                }
+              }
+            },
+            "risk_factors": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "MOBILITY_DECLINE",
+                  "STIFFNESS",
+                  "OBESITY"
+                ]
+              }
+            },
+            "mmvd_stage": {
+              "enum": [
+                null,
+                "A",
+                "B1",
+                "B2",
+                "C",
+                "D"
+              ]
+            },
+            "cognitive_dysfunction_report": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 300
+            }
+          }
+        }
+      },
+      "required": [
+        "species",
+        "weight_kg"
+      ],
+      "additionalProperties": false
+    },
+    "IngredientSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "const": "CANDIDATE_POOL"
+        },
+        "categories": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ANIMAL_PROTEIN": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ENERGY_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "FIBER_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "UserSupplementSpec": {
+      "type": "object",
+      "required": [
+        "id",
+        "supplement_type",
+        "species",
+        "label_source",
+        "user_confirmed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$"
+        },
+        "supplement_type": {
+          "enum": [
+            "TAURINE",
+            "CALCIUM",
+            "OMEGA3_FISH_OIL",
+            "DOG_VITAMIN_MINERAL",
+            "CAT_VITAMIN_MINERAL"
+          ]
+        },
+        "species": {
+          "oneOf": [
+            {
+              "enum": [
+                "DOG",
+                "CAT",
+                "BOTH"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "enum": [
+                  "DOG",
+                  "CAT"
+                ]
+              }
+            }
+          ]
+        },
+        "supplement_mode": {
+          "enum": [
+            "LABEL_GUIDED",
+            "NUTRIENT_CALCULATED"
+          ]
+        },
+        "serving_amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "serving_unit": {
+          "enum": [
+            "g",
+            "mg",
+            "scoop",
+            "mL",
+            "capsule",
+            "tablet"
+          ]
+        },
+        "active_components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nutrient_id",
+              "amount",
+              "unit",
+              "basis"
+            ],
+            "properties": {
+              "nutrient_id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "g",
+                  "mg",
+                  "ug",
+                  "μg",
+                  "µg",
+                  "IU"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "PER_SERVING",
+                  "PER_G",
+                  "PER_UNIT"
+                ]
+              },
+              "chemical_form": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "per_serving_amount": {
+                "type": "number"
+              },
+              "serving_unit": {
+                "type": "string"
+              },
+              "evidence_type": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "label_source": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "user_confirmed": {
+          "const": true
+        },
+        "optional_quality_data": {
+          "type": "object"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "manufacturer": {
+          "type": "string"
+        },
+        "dosage_form": {
+          "enum": [
+            "CAPSULE",
+            "TABLET",
+            "POWDER",
+            "LIQUID"
+          ]
+        },
+        "measurement_increment": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "grams_per_scoop": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "complete_homemade_diet": {
+          "type": "boolean"
+        },
+        "usage_basis": {
+          "enum": [
+            "PER_BODY_WEIGHT",
+            "PER_FOOD_WEIGHT",
+            "PER_DAILY_DIET",
+            "PER_SERVING"
+          ]
+        },
+        "taurine_mg_per_serving": {
+          "type": "number"
+        },
+        "elemental_calcium_mg_per_serving": {
+          "type": "number"
+        },
+        "elemental_calcium_mg": {
+          "type": "number"
+        },
+        "epa_mg_per_serving": {
+          "type": "number"
+        },
+        "dha_mg_per_serving": {
+          "type": "number"
+        },
+        "fish_oil_total_mg": {
+          "type": "number"
+        },
+        "total_omega3_mg": {
+          "type": "number"
+        },
+        "energy_kcal_per_serving": {
+          "type": "number"
+        },
+        "product_mass_g_per_serving": {
+          "type": "number"
+        },
+        "recommended_amount": {
+          "type": "number"
+        },
+        "usage_basis_amount": {
+          "type": "number"
+        },
+        "max_daily_amount": {
+          "type": "number"
+        },
+        "dose_increment": {
+          "type": "number"
+        },
+        "product_name": {
+          "type": "string"
+        },
+        "recommended_unit": {
+          "type": "string"
+        },
+        "usage_basis_unit": {
+          "type": "string"
+        },
+        "food_weight_basis": {
+          "type": "string"
+        },
+        "max_daily_unit": {
+          "type": "string"
+        },
+        "division_label_source": {
+          "type": "string"
+        },
+        "product_usage_basis": {
+          "type": "string"
+        },
+        "division_allowed": {
+          "type": "boolean"
+        },
+        "pure_inorganic": {
+          "type": "boolean"
+        },
+        "pure_oil": {
+          "type": "boolean"
+        },
+        "extra_active_components_unknown": {
+          "type": "boolean"
+        },
+        "calcium_compound": {
+          "type": "object",
+          "properties": {
+            "form": {
+              "type": "string"
+            },
+            "mg_per_serving": {
+              "type": "number"
+            },
+            "purity_fraction": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "form",
+            "mg_per_serving",
+            "purity_fraction"
+          ],
+          "additionalProperties": false
+        },
+        "carrier": {
+          "type": "object"
+        },
+        "life_stages": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ALL",
+              "GROWTH",
+              "ADULT",
+              "HEALTHY_SENIOR"
+            ]
+          }
+        },
+        "label_constraints": {
+          "type": "object",
+          "properties": {
+            "required_food_categories": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "declared_active_nutrients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "undeclared_active_ingredients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nutrient_panel": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nutrient_id",
+              "amount",
+              "unit",
+              "basis"
+            ],
+            "properties": {
+              "nutrient_id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "g",
+                  "mg",
+                  "ug",
+                  "μg",
+                  "µg",
+                  "IU"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "PER_SERVING",
+                  "PER_G",
+                  "PER_UNIT"
+                ]
+              },
+              "chemical_form": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "per_serving_amount": {
+                "type": "number"
+              },
+              "serving_unit": {
+                "type": "string"
+              },
+              "evidence_type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

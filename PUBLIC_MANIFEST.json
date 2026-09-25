@@ -1,0 +1,847 @@
+{
+  "default": "DENY",
+  "manifest_version": 1,
+  "release_version": "1.1.1-preview",
+  "license": "Apache-2.0",
+  "self_hash_policy": "External approved manifest records the ordinary byte hash of this file.",
+  "reviewed_line_exceptions": {
+    "CORE_SYMBOL_SCAN": {
+      "NOTICE": [
+        "87e555b8200c8e385282ba4b0a96f1ecb9ba3fe0b9be8700baf5b1dc84163cf0"
+      ],
+      "README.md": [
+        "ffa4a543ecd920242cbe04b28b67f16d3f6811da4fc3764eebf4672510f38b68"
+      ],
+      "docs/licensing.md": [
+        "5c9222d5e9ece6cf145df41234b61254490c6c47b704719dad41bac53342bfdd"
+      ],
+      "LICENSE_INFO.md": [
+        "abd83a722ad6c7e5c0b1d8e4d5dd5370e73869c038613e2821ce83d2b6f93e85"
+      ]
+    },
+    "PRIVATE_PATH_SCAN": {},
+    "PROPRIETARY_DATA_SCAN": {},
+    "INTERNAL_URL_SCAN": {
+      "README.md": [
+        "d7ef266c7dec2296fa37d545402745eb8d89d708342a02fc0b4f799769358321"
+      ],
+      "sdk/client.mjs": [
+        "e3cc9ef9caea2a674b05208f691de3c7f1691bfc34ae9cbe4a9cfca230a2973e",
+        "44d14f0d23313351193292204d652acd436f28ea08c297b2364f62702e8f6b55"
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "1bf2d9362b269d8017ea47909f3161920f7a4c941b2b82eefbf1b25061ace030",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "0550b61ba16496e4c11453bf201f26916b1a5193baa23ed793b0718728e1f59f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "f9d18a2d1e20c2955d4dfbccd1499ff740db8c0aeaf4b6a4fafc8fb658c2d170",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "LICENSE_INFO.md",
+      "sha256": "2d09c27cd4e62b88d27f02ffebccc45999e63ba91e686abd1e3a2b65f39eac17",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "7d8c171f62ffa01dff91f9ebe3cd80c7930b41d3b94d9a71ad37345dac0eef60",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "PUBLIC_MANIFEST.json",
+      "sha256": null,
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "README.md",
+      "sha256": "35f9a7298fde3321a6d554e4ddb23f137bd375989eb02d5d826a8731bb00c8f2",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "sha256": "65be44acb5a391da911152f3f19e3ec96a1cb5c6658d4b1b23c6fc2a8a19c45b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "b97ddfac3e522f16d02a7bc774dc9c9ded47d5425a3e853ad7ffa4d7fbb54f63",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "9799c3d74dec6ba80d0aca7d883516f4d7934c20ddcf1b520aaae99fee3ff9ec",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "VERSION.json",
+      "sha256": "005f4c8a04208ec8b2975f60f56daa5ce4de2fd8df7c13d629b68e5c27811cb8",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "attribution/index.d.mts",
+      "sha256": "8dbc6664031e610c33e68b8c65b3af090c7859c16cf6e9603166c0021ea7711e",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "attribution/index.mjs",
+      "sha256": "8fc8bd34b01f131b78c7d99fccc13ecd1a2a71f043f205c0f9930b5ff08283a6",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "cli/install.mjs",
+      "sha256": "bf45a6c16e8498bdcdc4f93c4c3ab02ad2b56eb5081d6b8ad09b5f2857989e26",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "cli/nora.mjs",
+      "sha256": "87d220c286f4e573fba65e0bc95d9bd1698f6662b9ce9d7f44e8ef31d2b4abc7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/attribution.md",
+      "sha256": "47f34b8e4ad44983a19e5c220fd4b8b39f7374ffc8a0e49fc8eb2f8be2c0bf4e",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/capabilities.md",
+      "sha256": "79316c57f1070494d0d7164ecae7f026dbafca7f336baa36ec227b5cf2e51842",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/contract.md",
+      "sha256": "81921a50c1375b7bc3f40b9811c135f1ea086e367518c0b3561d28608a0c657d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/integration.md",
+      "sha256": "4d9868fdedef398053cebfa4327ab93a6380e143877b9e2051e40ede31c63197",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/licensing.md",
+      "sha256": "046a824cdbc964216b447b529bb96c2934464526ba9d5b97579aa93b06324185",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/macos-local.md",
+      "sha256": "20685b2d981bd065c613bc9dfbc89f8e8ff8cdf88f0797bd03e377365f60e86a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/macos-self-hosted.md",
+      "sha256": "9a91a210c4d5b3b851fee4c50d5ce1c6b05862dbd1594991de6123f71af7ee58",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/openapi.json",
+      "sha256": "5b75630509c2650b7cac92a29155b487fae5b5de3274a3ca09d88ea49ae9d832",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/release-policy.md",
+      "sha256": "47265ceca3bfd103160c02fa62a04f583e037bab5f12d620af0575e7bcbca530",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/security.md",
+      "sha256": "cbff25af50027755efd44d0ce35f7514fc2515f262dc1b0aefd3e4f73939e208",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/windows-local.md",
+      "sha256": "80d5af60534a7f7c7096e42cdf0a633e4fa224afb2d513d7c108d24574675e89",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/windows-self-hosted.md",
+      "sha256": "f1bd96f28ce9b5ea69a9188173c85206e7a5e2b4ca32eb15715da07a82a30185",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "391fd4f3a28f5f451477898073fa183dab2188b1c8c39b4e627859a9eaa4bfbf",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "examples/validate-profile.mjs",
+      "sha256": "82c9d0fd9a9e15bc8225ccbe004d9a50c423c13c86da7e3c7b73d215ee40aef8",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "examples/version.mjs",
+      "sha256": "9b8a4d829b3dfc4e56ab4294c67b3d3bcb6b6d651f7139b58b90dc2867815ee6",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "openapi/openapi.json",
+      "sha256": "eaaf369740d4dfeaee03d93a58c9a268f383ea3f7463993eebc5630923ae3895",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e54a1d323307266e27a85591aa60937beb71dc32edd7d9b256e8b2209048a29d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__confirmRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__designDailyFreshFoodRecipe.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__generateCookingPlan.request.json",
+      "sha256": "99b243588a92fb19dbe8b4f2d237121b53ac9f5f306b5f7c1d7a921cd6178938",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__getDiseaseCatalog.request.json",
+      "sha256": "4292f84204fd4d87c1f3c7971a2846c0312cf887485e61898c6cd51b33876bfb",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__getRecipe.request.json",
+      "sha256": "5f90e2614b1e48bf764a8de84c2ceb816c779d2ffa45cdbb13128d1e24b12b2c",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__recalculateRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__replaceIngredient.request.json",
+      "sha256": "63da2cbb58016b5559c0d7d20dfd4e383924e634381e777a5dc5629b8d72e07b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__setUserSupplementSpec.request.json",
+      "sha256": "e210137f2860188540755d4635b21b48fb1438ac831250fd89fbf8cd16b08fe2",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__updatePetNutritionProfile.request.json",
+      "sha256": "145b3bc29960c6534206868518365e6f59d4cf1ac2363c59f0279cf886c8c59a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/body_condition_daily_recipes__validateProfile.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__designQuickFreshMeal.request.json",
+      "sha256": "232ebba6b12f16cd6b78f8ba7c538efb08acb2d98b9c3a753e5a9d3da17bd08c",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__getDiseaseCatalog.request.json",
+      "sha256": "630dae0c3d64e71033c5b140ae3e1039fb7260c2c8a0b1b7a6afc06871745d3b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__getIngredientCatalog.request.json",
+      "sha256": "630dae0c3d64e71033c5b140ae3e1039fb7260c2c8a0b1b7a6afc06871745d3b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__getQuickFreshMeal.request.json",
+      "sha256": "e706e99bb45103f8854498b7e36cccad10d84fc593e67aa04138c9fe8e68e23a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__getQuickMealCookingPlan.request.json",
+      "sha256": "e706e99bb45103f8854498b7e36cccad10d84fc593e67aa04138c9fe8e68e23a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__recalculateQuickFreshMeal.request.json",
+      "sha256": "19bb6e3e7f71492aafb044ad5baeea8d294da5547afc717d91a78c22d8ed47a4",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/candidate_pool_meals__validateQuickMealProfile.request.json",
+      "sha256": "6a901d4df7ea844c4de145e77103e0011816a6101d18384edc8a6d2eddb613f2",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__confirmRecipe.request.json",
+      "sha256": "1a5e1d1b61b0cff6f6032c914b161b83a281d052afaae70bdb004c792627f6e3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__designDailyFreshFoodRecipe.request.json",
+      "sha256": "c5bcdf2aa04e12833618ecad75d508d23a63e7c4c37236ee6c25ee2281315cfd",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__generateCookingPlan.request.json",
+      "sha256": "638ee0b8c9187e8f4a5665d9d817e5a1c03d33dac018af98c83fbd575a143e97",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__getDiseaseCatalog.request.json",
+      "sha256": "808f3e9073817bf51d232e7d839004d131c576722dab9d0c2b6d0c56ba514239",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__getRecipe.request.json",
+      "sha256": "429909fe89ac0bfdbc9ae215c3bf48b2fcccc5c72ab2f9d08f1cabf150c58b25",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__recalculateRecipe.request.json",
+      "sha256": "1a5e1d1b61b0cff6f6032c914b161b83a281d052afaae70bdb004c792627f6e3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__replaceIngredient.request.json",
+      "sha256": "dd58722257148efbdff11ce02b39222ec61086f14c2ead76d99c98be46c64ee3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__setUserSupplementSpec.request.json",
+      "sha256": "1104d70742dd150d279ad9ac722689dc1525578c538e97bed0936ce148035277",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__updatePetNutritionProfile.request.json",
+      "sha256": "947bd01c48d6d2f72d90236dfbd32e05c27f93498748713dbc411770d60eaca7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/daily_recipes__validateProfile.request.json",
+      "sha256": "c5bcdf2aa04e12833618ecad75d508d23a63e7c4c37236ee6c25ee2281315cfd",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__confirmRecipe.request.json",
+      "sha256": "f8f1e9607d6b83b920910c110f8f95a40726fffb45031ea3a0e72e0f06c3fe00",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__designFreshFoodRecipe.request.json",
+      "sha256": "e1b14defff1fa0490fa6f465be3795155c9db291a51f19225f1b97d76c816894",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__generateCookingPlan.request.json",
+      "sha256": "d3d86c3aebdf8fe8af3f9512aa5ddd8d433e08301837895efd3fadc7e99f64fd",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__getRecipe.request.json",
+      "sha256": "91571c85c10f6e3060a3fd817c47eb1678603338ecb05ca86498ba0bc2f18f8f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__recalculateRecipe.request.json",
+      "sha256": "f8f1e9607d6b83b920910c110f8f95a40726fffb45031ea3a0e72e0f06c3fe00",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__replaceIngredient.request.json",
+      "sha256": "2efdeb800d731903ee6ba1d1e2f0d78846adbbdcb9762f2db632b9efbce5327b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__setUserSupplementSpec.request.json",
+      "sha256": "310759a61b3940d8d8c7ff56f1b7d31d45a10da74e15fcbe8217cf8daca07dcf",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/diet_designs__updateDesignContext.request.json",
+      "sha256": "5492bc14570562e3d17fe1f8762c1e4a9fe8a738c58e8366238fb30dce8d292f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__confirmRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__designDailyFreshFoodRecipe.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__generateCookingPlan.request.json",
+      "sha256": "99b243588a92fb19dbe8b4f2d237121b53ac9f5f306b5f7c1d7a921cd6178938",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__getDiseaseCatalog.request.json",
+      "sha256": "4292f84204fd4d87c1f3c7971a2846c0312cf887485e61898c6cd51b33876bfb",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__getRecipe.request.json",
+      "sha256": "5f90e2614b1e48bf764a8de84c2ceb816c779d2ffa45cdbb13128d1e24b12b2c",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__recalculateRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__replaceIngredient.request.json",
+      "sha256": "63da2cbb58016b5559c0d7d20dfd4e383924e634381e777a5dc5629b8d72e07b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__updatePetNutritionProfile.request.json",
+      "sha256": "145b3bc29960c6534206868518365e6f59d4cf1ac2363c59f0279cf886c8c59a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/food_core_plans__validateProfile.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__confirmRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__designDailyFreshFoodRecipe.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__generateCookingPlan.request.json",
+      "sha256": "99b243588a92fb19dbe8b4f2d237121b53ac9f5f306b5f7c1d7a921cd6178938",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__getDiseaseCatalog.request.json",
+      "sha256": "4292f84204fd4d87c1f3c7971a2846c0312cf887485e61898c6cd51b33876bfb",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__getRecipe.request.json",
+      "sha256": "5f90e2614b1e48bf764a8de84c2ceb816c779d2ffa45cdbb13128d1e24b12b2c",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__recalculateRecipe.request.json",
+      "sha256": "7a5739a98f19295c36afa1834c479bbece0b81cfaad25b4c608efccba1e550dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__replaceIngredient.request.json",
+      "sha256": "63da2cbb58016b5559c0d7d20dfd4e383924e634381e777a5dc5629b8d72e07b",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__updatePetNutritionProfile.request.json",
+      "sha256": "145b3bc29960c6534206868518365e6f59d4cf1ac2363c59f0279cf886c8c59a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/nutrient_completion_plans__validateProfile.request.json",
+      "sha256": "dfc9046841b81bfa582de4c29bc9d9dee2e52f982cf39ff1b1ee2d7a0c4096b3",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__confirmRecipe.request.json",
+      "sha256": "07ced5f956c76321256b3aba5d44279ca4a6e8f3141e76c4308cce7f4aee4e5a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__generateCookingPlan.request.json",
+      "sha256": "3d356a44456840d759cea44fd5b30a922ec1fef126d695dfac79846d299e5fd2",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__generatePracticalRecipe.request.json",
+      "sha256": "efda15d52df313c69e54778829d91546440a81646ff945029ed8aaef012b9fdf",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__getRecipe.request.json",
+      "sha256": "59f0ad4d3f93f25c6f7ab4c9872e2fbdedfd1dedadf5f94616e1af3af3082d03",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__recalculateRecipe.request.json",
+      "sha256": "07ced5f956c76321256b3aba5d44279ca4a6e8f3141e76c4308cce7f4aee4e5a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__replaceIngredient.request.json",
+      "sha256": "cbe64c8287a5931bda97c4a27329f8b6d50467a42ef3ac8b1df9c97c4ba08209",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__setUserSupplementSpec.request.json",
+      "sha256": "18d96e64ada058639da8c8e0ce51efabe9058e833e34591dd4de51d406602ccc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__updatePetNutritionProfile.request.json",
+      "sha256": "c3171df5b615ebc883c5104fb630b6dbea7bb76d1e4d247cac386528d271b3c0",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/practical_recipes__validateProfile.request.json",
+      "sha256": "efda15d52df313c69e54778829d91546440a81646ff945029ed8aaef012b9fdf",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/response.schema.json",
+      "sha256": "8e94aa29088f3b1bc3cc3e8848cad564a3698f47b56469958a18e10113eb1eb7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/runtime-status.schema.json",
+      "sha256": "da8f37bac221689346db9f310cad222b96edd43b0cbc241dd3f4b4892ae3872c",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__confirmRecipe.request.json",
+      "sha256": "a16fb0b7f6a1d0af036e846fc7de2a7be9e836c77fdb2aacba1a29e23c42605a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__designDailyFreshFoodRecipe.request.json",
+      "sha256": "0537bdfc4db193e511969e0ed892e1cf15b830e1de579ae0d472798221c3accc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__generateCookingPlan.request.json",
+      "sha256": "cc2dbd649bdbb81efbaf4c6e9f891b64dcd1981dc5f84e28ee518f2ce9d9b6f5",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__getDiseaseCatalog.request.json",
+      "sha256": "b1b3b98004a7975b709895aa52fbdc0df7bc3e9e9c82e71c46abecd1c2dcffc7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__getIngredientCatalog.request.json",
+      "sha256": "b1b3b98004a7975b709895aa52fbdc0df7bc3e9e9c82e71c46abecd1c2dcffc7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__getRecipe.request.json",
+      "sha256": "50243e131803f4b1a2ba0551bd48f715967812529c87d87768726bce186c7bf8",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__recalculateRecipe.request.json",
+      "sha256": "a16fb0b7f6a1d0af036e846fc7de2a7be9e836c77fdb2aacba1a29e23c42605a",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__replaceIngredient.request.json",
+      "sha256": "246337d97c805c3c9cef010b2784faec7040a78ce0ca9f3b097b8857fd63f390",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__setIngredientSelection.request.json",
+      "sha256": "0957625c7f4a64faa18953777fcdd32bdf1fc1ede43e220e859a1eb1963eb23f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__updatePetNutritionProfile.request.json",
+      "sha256": "c8b41d818c224beadd8dd765ad09375aaabcc1bc4cbea04421b1d26c317cd2ad",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/scientific_daily_plans__validateProfile.request.json",
+      "sha256": "0537bdfc4db193e511969e0ed892e1cf15b830e1de579ae0d472798221c3accc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__confirmRecipe.request.json",
+      "sha256": "18eaca50d4935c1b7083d4607a651673bdb404118771615f6e8720c50e0209a8",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__designDailyFreshFoodRecipe.request.json",
+      "sha256": "fb45738bf1ca316c91061c884a623af08cef94d408dfe9be75e49f5e205f85e0",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__generateCookingPlan.request.json",
+      "sha256": "ad53503133def87beb72692207687c8619f62595d92ac369875e1abeeea35628",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__getDiseaseCatalog.request.json",
+      "sha256": "361245fe61a96f65ae6c8561aef884c1e3a8811860f307c19a62f2002ef2823d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__getIngredientCatalog.request.json",
+      "sha256": "361245fe61a96f65ae6c8561aef884c1e3a8811860f307c19a62f2002ef2823d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__getRecipe.request.json",
+      "sha256": "a85194a814b3ba048d5abab662c3cc98f59fc872a870aabb5b3c6c9f922c33ab",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__recalculateRecipe.request.json",
+      "sha256": "18eaca50d4935c1b7083d4607a651673bdb404118771615f6e8720c50e0209a8",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__replaceIngredient.request.json",
+      "sha256": "216975476e2f465dffcea7e6af29b168e7be43111218651d72991b7cb20a2552",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__setIngredientSelection.request.json",
+      "sha256": "ebbf936907b0efa0a856b378ba9b9a6a63353fb452f7f3f013dd4b49973918a7",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__updatePetNutritionProfile.request.json",
+      "sha256": "901c8c004e063f32d62a82b9ae5b122baf288f9563d851e0f890fa59de88e0db",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selectable_daily_plans__validateProfile.request.json",
+      "sha256": "fb45738bf1ca316c91061c884a623af08cef94d408dfe9be75e49f5e205f85e0",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__cancelQuickFreshMeal.request.json",
+      "sha256": "4d9f3415460cff9eb3d23714b198a614abf1fc4d5cf2499dd4af1755705ce23d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__checkIngredientCombination.request.json",
+      "sha256": "a870bdb2686f6ce18cff3c34de7915e913cb683aa04bf906aceef4bfc6b75cfb",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__designQuickFreshMeal.request.json",
+      "sha256": "48c0bf71d32a53e15b2973d8cf89f9203ae3e1ef10cc32247500a6ff93bd97b5",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__getDiseaseCatalog.request.json",
+      "sha256": "4d9f3415460cff9eb3d23714b198a614abf1fc4d5cf2499dd4af1755705ce23d",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__getIngredientCatalog.request.json",
+      "sha256": "b0fbf0da0f84c1437b8efd16cb0c575d284a2d22853d886540ef1ea002aed84f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__getIngredientEligibility.request.json",
+      "sha256": "b0fbf0da0f84c1437b8efd16cb0c575d284a2d22853d886540ef1ea002aed84f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__getQuickFreshMeal.request.json",
+      "sha256": "fa116095b69fb1e7c0cdc63269caca5fae21abdbb1b360529f88e96d4a2a453e",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__getQuickMealCookingPlan.request.json",
+      "sha256": "fa116095b69fb1e7c0cdc63269caca5fae21abdbb1b360529f88e96d4a2a453e",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__recalculateQuickFreshMeal.request.json",
+      "sha256": "b502a23dadb7e8ee0f1a80a5cc32c668cd314d318d61f756bc5261bb489afd09",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__resolveQuickMealLifeStage.request.json",
+      "sha256": "b0fbf0da0f84c1437b8efd16cb0c575d284a2d22853d886540ef1ea002aed84f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/selected_ingredient_meals__validateQuickMealProfile.request.json",
+      "sha256": "b0fbf0da0f84c1437b8efd16cb0c575d284a2d22853d886540ef1ea002aed84f",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "schemas/version.request.json",
+      "sha256": "20c934cb722af252216993ccb5f6512fa713d878f708aba69a95744056f5b163",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "sdk/client.d.mts",
+      "sha256": "c1211062e5e26f4926536022fe5ffbedcd508e4a2ddfd3ecc102f7db712cf287",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "sdk/client.mjs",
+      "sha256": "944a0ff8ff01b1a9354cbd1bd65eeda6c682c163c56d024c397b9cc735bd06dc",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "sdk/operations.mjs",
+      "sha256": "42db3f457d9873f4c34ddc43f08c1004d5c8367bc3a9fa352a5db737ea5ca336",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "sdk/release-trust.mjs",
+      "sha256": "ba6745bb47b90cee458e418d9a99ec128361fb28ff6178aa3364603f5b0705ad",
+      "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    }
+  ],
+  "sdk_version": "0.3.1"
+}

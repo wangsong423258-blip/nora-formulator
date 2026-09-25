@@ -1,0 +1,17 @@
+{
+  "product": "Nora",
+  "release_tag": "v1.1.1-preview",
+  "publication_scope": "SDK_AND_STATUS_METADATA_ONLY",
+  "runtime_version": "1.1.1",
+  "sdk_version": "0.3.1",
+  "engine_version": "freshfood-ingredient-first-1.9.0",
+  "datapack_version": "1.1.0",
+  "canonical_api_version": "v1",
+  "license_schema_version": 1,
+  "runtime_available": false,
+  "target_platforms": [
+    "macos-arm64",
+    "windows-x64"
+  ],
+  "shared_version_policy": "Same engine, DataPack, license schema and Canonical Contract for both editions and platforms."
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "runtime_version",
+    "api_version",
+    "status",
+    "channel",
+    "offline_runtime",
+    "edition",
+    "attribution_required",
+    "attribution"
+  ],
+  "properties": {
+    "runtime_version": {
+      "type": "string"
+    },
+    "api_version": {
+      "const": "v1"
+    },
+    "status": {
+      "const": "READY"
+    },
+    "channel": {
+      "enum": [
+        "development",
+        "production"
+      ]
+    },
+    "offline_runtime": {
+      "const": true
+    },
+    "edition": {
+      "enum": [
+        "Community",
+        "Commercial",
+        "Enterprise",
+        "OEM"
+      ]
+    },
+    "attribution_required": {
+      "type": "boolean"
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "zh"
+      ],
+      "properties": {
+        "en": {
+          "const": "Powered by Nora · PalEcho"
+        },
+        "zh": {
+          "const": "由 Nora · PalEcho 提供支持"
+        }
+      }
+    },
+    "attribution_text": {
+      "type": "string",
+      "const": "Powered by Nora · PalEcho"
+    }
+  }
+}
