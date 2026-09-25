@@ -72,3 +72,12 @@ const status = await client.runtimeStatus();
 ```
 
 Never expose the connection token in browser code or public logs. The HTTP adapter is an integration layer. [OpenAPI](openapi/openapi.json) · [Contract](docs/contract.md) · [Examples](examples).
+
+## Contact & Commercial Licensing
+
+For Commercial / Enterprise licensing, removal of the “Powered by Nora · PalEcho” attribution, enterprise self-hosted deployment, product integration, OEM / white-label licensing, or business collaboration, please contact:
+
+- Website: [https://www.PalEcho.com](https://www.PalEcho.com)
+- Email: wangsong423258@gmail.com
+
+For technical issues, please use GitHub Issues. For security-related reports, please refer to SECURITY.md.
