@@ -8,8 +8,9 @@ Fresh-food formulation for dogs and cats. Open SDK. Private Runtime. Private Dat
 
 | Platform | Local Desktop | Self-hosted Runtime |
 | --- | --- | --- |
-| macOS Apple Silicon, macOS 14+ | [Community Preview DMG](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg) | [Community Preview TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz) |
-| Windows x64 | [Experimental Desktop EXE](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Setup-v1.1.1-Windows-x64-Experimental.exe) | [Experimental Runtime ZIP](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip) |
+| macOS Apple Silicon, macOS 14+ | [Local Community Preview DMG](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg) | [Self-hosted Community Preview TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz) |
+| Windows x64 | [Local Experimental Preview EXE](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Setup-v1.1.1-Windows-x64-Experimental.exe) | [Self-hosted Experimental Preview ZIP](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip) |
+| Linux x64, Ubuntu 24.04 | Not offered | [Experimental Self-hosted Preview TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Linux-x64-Experimental.tar.gz) |
 
 [Release notes](https://github.com/wangsong423258-blip/nora-formulator/releases/tag/v1.1.1-preview) · [SHA256 checksums](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/SHA256SUMS.txt) · [Manifest](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/RELEASE_MANIFEST.json)
 
@@ -26,7 +27,7 @@ Apple Developer ID signing, notarization and final clean-machine acceptance are 
 
 ### Self-hosted
 
-Extract the Runtime archive on your own Mac, Windows PC or Windows Server. No GUI is required. Your own backend, website or app can integrate with the local Runtime using the public SDK / CLI; core calculation does not depend on PalEcho cloud services. Keep the connection credential inside your trusted backend.
+Extract the Runtime archive on your own Mac, Windows PC, Windows Server or Linux x64 host/server. No GUI is required. Your own backend, website or app can integrate with the local Runtime using the public SDK / CLI; core calculation does not depend on PalEcho cloud services. Keep the connection credential inside your trusted backend.
 
 Mac:
 
@@ -44,7 +45,15 @@ Windows:
 .\cli\nora.cmd status
 ```
 
-[macOS Self-hosted](docs/macos-self-hosted.md) · [Windows Self-hosted](docs/windows-self-hosted.md) · [SDK integration](docs/integration.md)
+Linux (Ubuntu 24.04 x64):
+
+```sh
+./cli/nora install
+./cli/nora start
+./cli/nora status
+```
+
+[Linux Self-hosted](docs/linux-self-hosted.md) · [macOS Self-hosted](docs/macos-self-hosted.md) · [Windows Self-hosted](docs/windows-self-hosted.md) · [SDK integration](docs/integration.md)
 
 ### Validation and Preview limits
 
@@ -52,7 +61,9 @@ macOS ARM64 remains the **validated reference platform: 160/160 EXACT** on the f
 
 Windows x64 is **Experimental Preview**, with **no production support**. The existing native 160-case comparison has 61 exact matches, 97 internal numeric differences and 2 user-affecting differences: **158/160 user business results are equivalent; one case changes ingredient gram allocation and one case has a Solver timeout**. This is not a 160/160 pass or production validation. Use for evaluation, testing and integration only, not formal production nutrition decisions. The full comparison was not rerun for this Desktop packaging update.
 
-Windows code signing and final clean-machine acceptance are **WAIVED_BY_OWNER**, never PASS. Automatic OS service registration and reboot recovery for Self-hosted are not certified by this Preview. **Linux is not in this Desktop release scope**; no Linux public asset is added. macOS Intel and Windows ARM64 are outside the supported Preview targets.
+Windows code signing and final clean-machine acceptance are **WAIVED_BY_OWNER**, never PASS. Automatic OS service registration and reboot recovery for Self-hosted are not certified by this Preview. Linux provides Self-hosted only, without a Desktop GUI or installer. macOS Intel and Windows ARM64 are outside the supported Preview targets.
+
+Linux x64 is **Experimental Self-hosted Preview**, with **no production support**. The existing Ubuntu 24.04 x64 native 160-case audit has 61 exact matches, 96 internal numeric differences, 1 display-equivalent result and 2 user-affecting differences: **158/160 user business results are equivalent; one case changes ingredient gram allocation and one case has a Solver timeout**. The timeout is included in the two user-affecting cases. Use for evaluation, testing and integration only, not formal production nutrition decisions. No numerical regression was rerun for this publication.
 
 ## Community / Commercial licensing
 

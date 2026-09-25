@@ -11,5 +11,8 @@
   "windows_status": "EXPERIMENTAL_PREVIEW",
   "community_device_binding": false,
   "community_manual_approval_required": false,
-  "desktop_ui": "SHARED_NATIVE_HOST_UI"
+  "desktop_ui": "SHARED_NATIVE_HOST_UI",
+  "linux_status": "EXPERIMENTAL_SELF_HOSTED_PREVIEW",
+  "linux_deployment": "Self-hosted",
+  "linux_production_validated": false
 }

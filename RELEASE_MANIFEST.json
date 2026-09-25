@@ -15,7 +15,10 @@
     "windows_status": "EXPERIMENTAL_PREVIEW",
     "community_device_binding": false,
     "community_manual_approval_required": false,
-    "desktop_ui": "SHARED_NATIVE_HOST_UI"
+    "desktop_ui": "SHARED_NATIVE_HOST_UI",
+    "linux_status": "EXPERIMENTAL_SELF_HOSTED_PREVIEW",
+    "linux_deployment": "Self-hosted",
+    "linux_production_validated": false
   },
   "community": {
     "free": true,
@@ -64,7 +67,24 @@
       "timeout_or_failure": 1,
       "business_equivalent": 158,
       "production_validated": false
-    }
+    },
+    "linux_native_runner": "Ubuntu 24.04 x64",
+    "linux_native_comparison": {
+      "total": 160,
+      "exact_match": 61,
+      "internal_numeric_difference": 96,
+      "display_equivalent": 1,
+      "user_affecting_difference": 2,
+      "timeout_or_failure": 1,
+      "business_equivalent": 158,
+      "production_validated": false
+    },
+    "linux_runtime_start": "PASS",
+    "linux_datapack": "PASS",
+    "linux_license": "PASS",
+    "linux_smoke_test": "PASS",
+    "linux_production_validated": false,
+    "linux_evidence": "Existing native CI and business audit; no regression rerun for publication"
   },
   "runtime_assets": [
     {
@@ -130,9 +150,28 @@
       "file": "Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
       "OS": "windows",
       "deployment": "Self-hosted"
+    },
+    {
+      "filename": "Nora-Runtime-v1.1.1-Linux-x64-Experimental.tar.gz",
+      "file": "Nora-Runtime-v1.1.1-Linux-x64-Experimental.tar.gz",
+      "version": "1.1.1",
+      "platform": "linux",
+      "OS": "linux",
+      "architecture": "x64",
+      "edition": "Self-hosted",
+      "deployment": "Self-hosted",
+      "status": "EXPERIMENTAL_SELF_HOSTED_PREVIEW",
+      "stability": "EXPERIMENTAL",
+      "available": true,
+      "bytes": 79561070,
+      "sha256": "51176246d4d2b6d2f6f66a9a032201576df7a4cff43fe623d9fbd53fd4f544ff",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Linux-x64-Experimental.tar.gz",
+      "native_runner": "Ubuntu 24.04 x64",
+      "production_validated": false
     }
   ],
-  "checksum_policy": "SHA256SUMS.txt covers the four Runtime/Desktop downloads, RELEASE_MANIFEST.json, VERSION.json and LICENSE_INFO.md. This inventory is separate from signed Runtime installation envelopes.",
+  "checksum_policy": "SHA256SUMS.txt covers the five Runtime/Desktop downloads, RELEASE_MANIFEST.json, VERSION.json and LICENSE_INFO.md. This inventory is separate from signed Runtime installation envelopes.",
   "local_selfhosted_engine_identical": true,
-  "shared_desktop_ui_identical": true
+  "shared_desktop_ui_identical": true,
+  "linux_preview_available": true
 }

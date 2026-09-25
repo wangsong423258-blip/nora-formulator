@@ -10,15 +10,14 @@
         "87e555b8200c8e385282ba4b0a96f1ecb9ba3fe0b9be8700baf5b1dc84163cf0"
       ],
       "README.md": [
-        "57ecd6b15c84f9d364b11e03665925da261d84e5e0792029d5640efdb7726f2e",
         "237d6b0adb71fa5fca0ccce2c3d8904c0019269508979e1dbf207105ed57cd21",
+        "12909054874487b47aa690f0da97a468d70e4ccadb15f4dea07189afc7dcc030",
         "e213d08b56911f4f22dd61f16d335bde46c35429ad77293832b4c3e4f00e084d"
       ],
       "docs/licensing.md": [
         "dd723451364e489b93fb343fe2fede8e6ddaf688597375b2111b7f1284ff687a"
       ],
       "LICENSE_INFO.md": [
-        "5c48924836b9353cef8feb3b90b5433e62b095af3f26c3f884630f7a7aa85458",
         "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
       ],
       "CHANGELOG.md": [
@@ -34,6 +33,10 @@
       "docs/windows-self-hosted.md": [
         "237d6b0adb71fa5fca0ccce2c3d8904c0019269508979e1dbf207105ed57cd21",
         "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
+      ],
+      "docs/linux-self-hosted.md": [
+        "12909054874487b47aa690f0da97a468d70e4ccadb15f4dea07189afc7dcc030",
+        "8a549c19530964bb9a6a43f223efafce4db8a719d239e41e60556edd2fe67574"
       ]
     },
     "PRIVATE_PATH_SCAN": {},
@@ -73,7 +76,7 @@
     },
     {
       "path": "LICENSE_INFO.md",
-      "sha256": "5f7ea7cd9c83d01511e1b3d3feb62defc8f639787cb31518f3b97a05f7d37e26",
+      "sha256": "55c4627db83b0a645e53b5ad8a57a0334297eb1a387289199406714b5e0069b3",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -91,13 +94,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "629c2d22429eed967e7294762284cb16b83264d9f3cbcc7e1c291d821fadfc67",
+      "sha256": "80529d4d269739a57c428554537658a32259f439738f6595ec11f809676a745c",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "RELEASE_MANIFEST.json",
-      "sha256": "3ed49e526a9b08c78c386e80a47ebe5ef58d267e7754e72f7d89d742b4e7d8dd",
+      "sha256": "a6f0d6840f63f2f5f73e46b5d797731f03ac0ceae3abd9fcb6f3995497317775",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -109,13 +112,13 @@
     },
     {
       "path": "SHA256SUMS.txt",
-      "sha256": "2202676d578f99ec8d8b232aceb5e5dd0f8dc890c0ddaee5937b63a7ae8ff476",
+      "sha256": "733fd4f3bb0315d35b67786ae00609770dd0984c8334b492890489403a77b26f",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "VERSION.json",
-      "sha256": "99d381da77ff0a6aed82b38c0d1215d11887ff775a21d9d6e8ae3e4e594d7bd3",
+      "sha256": "04af10e95acc9ce990d05d4594941131404f68b5254ef9573ef029a315437f25",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -855,6 +858,12 @@
       "path": "sdk/release-trust.mjs",
       "sha256": "833113f8265281d884f5937f86055af6807d1aaf06211b5c5b15350ce99398ab",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
+      "public_approval_status": "APPROVED"
+    },
+    {
+      "path": "docs/linux-self-hosted.md",
+      "sha256": "28d392dc4821045f65628941cfaee95e0f33a96f861583c111e0626b87308aec",
+      "source_classification": "PUBLIC_DOCUMENTATION",
       "public_approval_status": "APPROVED"
     }
   ],

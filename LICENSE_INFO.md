@@ -13,3 +13,5 @@ MANUAL_APPROVAL_REQUIRED = NO
 ATTRIBUTION_REQUIRED = YES
 
 Commercial / Enterprise: separately issued authorization may set ATTRIBUTION_REQUIRED = NO.
+
+The same Community terms apply to the Linux x64 Experimental Self-hosted Preview. Linux offers Self-hosted deployment only; production validation is not asserted.
