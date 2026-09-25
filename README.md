@@ -1,33 +1,34 @@
 # Nora
 
-**Open SDK. Private Runtime. Private DataPack.**
+**Open SDK. Private Engine. Local or Self-hosted.**
 
-Local formulation Runtime and developer interfaces for canine and feline fresh diets.
+Fresh-food formulation for dogs and cats. Open SDK. Private Runtime. Private DataPack.
 
 ## Downloads — v1.1.1 Community Preview
 
-| Edition | Platform | Download | Status |
-| --- | --- | --- | --- |
-| Local | macOS Apple Silicon / ARM64 | [DMG](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg) | Community Preview |
-| Self-hosted | macOS Apple Silicon / ARM64 | [TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz) | Community Preview |
-| Local | Windows x64 | Windows package pending | Experimental Preview / Full Native Validation Pending |
-| Self-hosted | Windows x64 / Windows Server | Windows package pending | Experimental Preview / Full Native Validation Pending |
+| Platform | Local Desktop | Self-hosted Runtime |
+| --- | --- | --- |
+| macOS Apple Silicon, macOS 14+ | [Community Preview DMG](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg) | [Community Preview TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz) |
+| Windows x64 | [Experimental Desktop EXE](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Setup-v1.1.1-Windows-x64-Experimental.exe) | [Experimental Runtime ZIP](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip) |
 
-[Release notes](https://github.com/wangsong423258-blip/nora-formulator/releases/tag/v1.1.1-preview) · [SHA256 checksums](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/SHA256SUMS.txt) · [Release manifest](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/RELEASE_MANIFEST.json)
+[Release notes](https://github.com/wangsong423258-blip/nora-formulator/releases/tag/v1.1.1-preview) · [SHA256 checksums](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/SHA256SUMS.txt) · [Manifest](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/RELEASE_MANIFEST.json)
 
-**Community is ready to use without registration:** the Mac packages include a universal signed Community License and encrypted DataPack. No device binding, machine-code submission, activation server, contact with PalEcho or manual approval is required. Personal, company, commercial, Local and Self-hosted use are free. Reasonably display **Powered by Nora · PalEcho**.
+### Local Desktop
 
-### macOS Local
+Download → install → open **Nora** → click **鲜食制作** → enter your pet's details → choose ingredients → calculate → view the formula.
 
-1. Download the DMG, open it and drag **Nora.app** to **Applications**.
-2. Launch Nora and select **Install & Start**. The Runtime automatically verifies the included License and DataPack.
-3. Use **Status** to confirm readiness; connect your application using the public SDK. **Stop** stops the Runtime; closing the manager window leaves it running.
+The same Desktop UI is used on Mac and Windows. The application initializes the local Runtime, verifies the included Community License and encrypted DataPack, and displays the Runtime's formulation response. No Python, compiler, development checkout, device application or manual DataPack setup is needed.
 
-Apple Developer ID signing, notarization and final clean-machine acceptance are **WAIVED_BY_OWNER**, not PASS. This Preview is unnotarized. First opening may require manual approval in **System Settings → Privacy & Security**. 未完成 Apple notarization，首次打开可能需要用户在 macOS 隐私与安全性中手动允许。 See [macOS Local](docs/macos-local.md).
+- **Mac:** open the DMG, drag Nora.app to Applications and launch it. [macOS installation](docs/macos-local.md).
+- **Windows:** run the EXE and open Nora from the Start menu or Desktop. The installer prepares Microsoft Edge WebView2 if missing; initial dependency installation needs internet. Calculation then runs locally. Windows 10/11 x64 with .NET Framework 4.8; native GUI smoke tested on Windows Server 2022 x64. Unsigned Preview may show Unknown Publisher / SmartScreen prompts. [Windows installation](docs/windows-local.md).
 
-### macOS Self-hosted
+Apple Developer ID signing, notarization and final clean-machine acceptance are **WAIVED_BY_OWNER**, not PASS. This app is not Apple notarized. First launch may require manual approval in **System Settings → Privacy & Security**. 未完成 Apple notarization，首次打开可能需要用户在 macOS 隐私与安全性中手动允许。
 
-Extract the TAR.GZ on an Apple Silicon Mac running macOS 14 or later. From the extracted directory:
+### Self-hosted
+
+Extract the Runtime archive on your own Mac, Windows PC or Windows Server. No GUI is required. Your own backend, website or app can integrate with the local Runtime using the public SDK / CLI; core calculation does not depend on PalEcho cloud services. Keep the connection credential inside your trusted backend.
+
+Mac:
 
 ```sh
 ./nora install
@@ -35,31 +36,39 @@ Extract the TAR.GZ on an Apple Silicon Mac running macOS 14 or later. From the e
 ./nora status
 ```
 
-No Python, compiler, Node.js or development checkout is required for the included native CLI and Runtime. Your application, website backend or enterprise service can call the Runtime on your own infrastructure. Core calculation does not require a PalEcho cloud service. See [Self-hosted deployment](docs/macos-self-hosted.md) and [integration](docs/integration.md).
+Windows:
 
-### Platform evidence
+```powershell
+.\cli\nora.cmd install
+.\cli\nora.cmd start
+.\cli\nora.cmd status
+```
 
-macOS Apple Silicon remains the **validated reference platform: 160/160 exact regression** on the existing native reference. The Core binary and mathematical/data inputs are unchanged. This release checks installation, automatic Community authorization, a bounded formulation smoke, restart and tamper rejection; it does not claim a newly executed full 160-case or independent clean-machine run.
+[macOS Self-hosted](docs/macos-self-hosted.md) · [Windows Self-hosted](docs/windows-self-hosted.md) · [SDK integration](docs/integration.md)
 
-**Windows x64 is Experimental Preview / Full Native Validation Pending. 尚未完成完整 Native 数值验证。** Native 160-case regression, Windows code signing and final clean-machine acceptance are WAIVED_BY_OWNER, not PASS. No runnable Windows PE Runtime could be built in the available environment, so no Windows EXE/ZIP is uploaded. Windows package pending. No production support; future Experimental packages are for evaluation, testing and integration only and must not be used for production nutrition decisions.
+### Validation and Preview limits
 
-**Linux is not in Nora v1 scope.** macOS Intel and Windows ARM64 are also outside v1 scope.
+macOS ARM64 remains the **validated reference platform: 160/160 EXACT** on the frozen reference. The engine, nutrition data and Canonical Contract are unchanged. This update checks the final GUI/package and a bounded formulation smoke; it does not claim a new full regression or an independent clean-machine acceptance run.
 
-## Licensing and deployment
+Windows x64 is **Experimental Preview**, with **no production support**. The existing native 160-case comparison has 61 exact matches, 97 internal numeric differences and 2 user-affecting differences: **158/160 user business results are equivalent; one case changes ingredient gram allocation and one case has a Solver timeout**. This is not a 160/160 pass or production validation. Use for evaluation, testing and integration only, not formal production nutrition decisions. The full comparison was not rerun for this Desktop packaging update.
 
-Apache-2.0 applies to this public SDK repository. Nora Runtime and DataPack are Proprietary, are not included in this repository, and are distributed as separate Release assets under their own terms.
+Windows code signing and final clean-machine acceptance are **WAIVED_BY_OWNER**, never PASS. Automatic OS service registration and reboot recovery for Self-hosted are not certified by this Preview. **Linux is not in this Desktop release scope**; no Linux public asset is added. macOS Intel and Windows ARM64 are outside the supported Preview targets.
 
-Community permits free personal, company, commercial, Local and Self-hosted use with **Powered by Nora · PalEcho** attribution. A separate Commercial / Enterprise authorization can remove attribution and allow white-label or OEM use. Local and Self-hosted use the same engine, DataPack version, license schema, Canonical Contract and calculation capabilities. See [licensing](docs/licensing.md), [attribution](docs/attribution.md) and [security](docs/security.md).
+## Community / Commercial licensing
+
+Community is free for personal, company and commercial use, including Local and Self-hosted deployment. The bundled universal signed Community License has no device binding, machine-code submission, activation server or manual approval. Reasonably display **Powered by Nora · PalEcho**. Commercial / Enterprise attribution removal is available through a separate license, including white-label / OEM authorization. SDK: Apache-2.0. Runtime and DataPack: Proprietary; they are not included in this repository and are distributed only as separate Release assets.
+
+Local and Self-hosted have the same algorithm capabilities, Engine version, DataPack version, License schema and Canonical API. [Licensing](docs/licensing.md) · [Attribution](docs/attribution.md) · [Security](docs/security.md).
 
 ## Public SDK
 
-SDK 0.3.2 requires Node.js 22+ for developer integration; the bundled native Runtime CLI does not. Canonical API v1 retains its 96 operations. GitHub source archives contain SDK source, not the native Runtime installation.
+SDK 0.3.2 requires Node.js 22+ for developer integration. The included native Runtime and Desktop do not require Node.js. Canonical API v1 retains its 96 operations. GitHub source archives contain the public SDK, not the native Runtime installation.
 
 ```js
 import { NoraClient } from 'nora-sdk';
-// Read the protected local Runtime connection file in your trusted backend.
+// Read the protected Runtime connection file only in your trusted backend.
 const client = new NoraClient(connection);
 const status = await client.runtimeStatus();
 ```
 
-Never expose the local connection token in browser code or public logs. The HTTP adapter is an integration layer. See [OpenAPI](openapi/openapi.json), [contract](docs/contract.md) and [examples](examples).
+Never expose the connection token in browser code or public logs. The HTTP adapter is an integration layer. [OpenAPI](openapi/openapi.json) · [Contract](docs/contract.md) · [Examples](examples).

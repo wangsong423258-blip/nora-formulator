@@ -10,13 +10,30 @@
         "87e555b8200c8e385282ba4b0a96f1ecb9ba3fe0b9be8700baf5b1dc84163cf0"
       ],
       "README.md": [
-        "57ecd6b15c84f9d364b11e03665925da261d84e5e0792029d5640efdb7726f2e"
+        "57ecd6b15c84f9d364b11e03665925da261d84e5e0792029d5640efdb7726f2e",
+        "237d6b0adb71fa5fca0ccce2c3d8904c0019269508979e1dbf207105ed57cd21",
+        "e213d08b56911f4f22dd61f16d335bde46c35429ad77293832b4c3e4f00e084d"
       ],
       "docs/licensing.md": [
         "dd723451364e489b93fb343fe2fede8e6ddaf688597375b2111b7f1284ff687a"
       ],
       "LICENSE_INFO.md": [
-        "5c48924836b9353cef8feb3b90b5433e62b095af3f26c3f884630f7a7aa85458"
+        "5c48924836b9353cef8feb3b90b5433e62b095af3f26c3f884630f7a7aa85458",
+        "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
+      ],
+      "CHANGELOG.md": [
+        "77993db5c7b72982a11d6b5a7ae6dd1bef20159903c7ee3c74ebcdd8c59dcb2d"
+      ],
+      "docs/macos-local.md": [
+        "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
+      ],
+      "docs/windows-local.md": [
+        "237d6b0adb71fa5fca0ccce2c3d8904c0019269508979e1dbf207105ed57cd21",
+        "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
+      ],
+      "docs/windows-self-hosted.md": [
+        "237d6b0adb71fa5fca0ccce2c3d8904c0019269508979e1dbf207105ed57cd21",
+        "71ef35ae76c5d87a4d766ee1d7314e9a5b1a27932ae941e109a3b062fe624af1"
       ]
     },
     "PRIVATE_PATH_SCAN": {},
@@ -38,7 +55,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "bbde02fd935bab52753e22b6f379115662ce1a3f1f763b4603872f4382e118d6",
+      "sha256": "7583d3fe2ad2e296b5421a89d16828d085091408c9c32a886f870c2a212b7043",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -56,7 +73,7 @@
     },
     {
       "path": "LICENSE_INFO.md",
-      "sha256": "5d0f13498e5dd40e62f522897b9f692ace916c1fb7b3eed4e0fdffe6c649c8eb",
+      "sha256": "5f7ea7cd9c83d01511e1b3d3feb62defc8f639787cb31518f3b97a05f7d37e26",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -74,13 +91,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "cdedd70208c8dd278beca95720225ae70f9aeab25e31b5e7fd02436f26f69f89",
+      "sha256": "629c2d22429eed967e7294762284cb16b83264d9f3cbcc7e1c291d821fadfc67",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "RELEASE_MANIFEST.json",
-      "sha256": "c6a15d3ca9612ff653531ca248108dca79b59601a6a5fa722171f78a5b552b4d",
+      "sha256": "3ed49e526a9b08c78c386e80a47ebe5ef58d267e7754e72f7d89d742b4e7d8dd",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -92,13 +109,13 @@
     },
     {
       "path": "SHA256SUMS.txt",
-      "sha256": "38ab1f21f4b68b7da48579f2743ec9135bdb00dab4201899e17a4d246c4d2060",
+      "sha256": "2202676d578f99ec8d8b232aceb5e5dd0f8dc890c0ddaee5937b63a7ae8ff476",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "VERSION.json",
-      "sha256": "ad27eeffac272410861734e5d979b685dd45686e17dfbacdf648ae284566d95f",
+      "sha256": "99d381da77ff0a6aed82b38c0d1215d11887ff775a21d9d6e8ae3e4e594d7bd3",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -146,7 +163,7 @@
     },
     {
       "path": "docs/integration.md",
-      "sha256": "962e57c88dd4f5d2d0b83abe711e7830af5670e2c0fd8f289ca0c17b1d305aeb",
+      "sha256": "b43a706e43cd748fcac0d93b015c44eb6529a5979e1f12386fcd1af65c24ab0f",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -158,7 +175,7 @@
     },
     {
       "path": "docs/macos-local.md",
-      "sha256": "e1e7b6c7f1abe8a67ad071fe20cc541456df5d70110932749f5eb055c9e35cf3",
+      "sha256": "8a5dfb41c07059438605a9d04166e560cb2e85a119a2afa485b54511f80abdc2",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -188,13 +205,13 @@
     },
     {
       "path": "docs/windows-local.md",
-      "sha256": "4a7abce9fff9302af560e7959b6c90815ea2fe4f2a93e9febb2d8d1420c64d34",
+      "sha256": "1610f71a496eac804c52dca9607793691bb4c88cc7689f69e8165e708b0c320e",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/windows-self-hosted.md",
-      "sha256": "7047c7aafbdcdbf56bc80609261b74d44e1e8b8753c2cfa898abb3c74da446ee",
+      "sha256": "e0b4678b795ff899ed070cbf8ed4b08d1a83c007d18c5083cab0935780ceb3a1",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -224,7 +241,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4e221199a1cde12afde23e5fa01df860d8fd6c2870453594acd5c5e2bcc2220b",
+      "sha256": "a1803bb0c64c3e6ac9e5d2a847d38ff1401cd7495c386e49b623e37ac68bfa3f",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },

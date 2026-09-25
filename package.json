@@ -43,7 +43,8 @@
     "windowsNativeValidated": false,
     "runtimeDownloadsAvailable": true,
     "macosCommunityPreviewAvailable": true,
-    "windowsPackageAvailable": false
+    "windowsPackageAvailable": true,
+    "desktopGuiAvailable": true
   },
   "repository": {
     "type": "git",

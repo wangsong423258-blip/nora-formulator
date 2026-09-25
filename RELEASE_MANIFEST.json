@@ -12,9 +12,10 @@
     "canonical_api_version": "v1",
     "license_schema_version": 1,
     "macos_status": "COMMUNITY_PREVIEW",
-    "windows_status": "EXPERIMENTAL_PREVIEW_PACKAGE_PENDING",
+    "windows_status": "EXPERIMENTAL_PREVIEW",
     "community_device_binding": false,
-    "community_manual_approval_required": false
+    "community_manual_approval_required": false,
+    "desktop_ui": "SHARED_NATIVE_HOST_UI"
   },
   "community": {
     "free": true,
@@ -26,15 +27,15 @@
     "device_binding": false,
     "manual_approval_required": false,
     "attribution_required": true,
-    "attribution_text": "Powered by Nora · PalEcho"
+    "attribution_text": "Powered by Nora \u00b7 PalEcho"
   },
   "commercial": {
     "attribution_required": false,
     "separate_authorization_required": true
   },
-  "runtime_release_complete": false,
+  "runtime_release_complete": true,
   "macos_preview_available": true,
-  "windows_package_pending": true,
+  "windows_package_pending": false,
   "waivers": {
     "macos": {
       "apple_signing": "WAIVED_BY_OWNER",
@@ -42,7 +43,6 @@
       "clean_machine_final": "WAIVED_BY_OWNER"
     },
     "windows": {
-      "native_160_regression": "WAIVED_BY_OWNER",
       "code_signing": "WAIVED_BY_OWNER",
       "clean_machine_final": "WAIVED_BY_OWNER",
       "production_support": false
@@ -51,9 +51,20 @@
   "validation": {
     "arm64_reference": "160/160 EXACT PASS (existing unchanged reference)",
     "full_160_rerun": false,
-    "macos_preview_smoke": "PASS",
-    "windows_native_160": "NOT_MEASURED",
-    "windows_decision_affecting": null
+    "macos_desktop_e2e": "PASS",
+    "windows_desktop_e2e": "PASS",
+    "frontend_tests": "90/90 PASS",
+    "windows_native_runner": "Windows Server 2022 AMD64",
+    "windows_native_comparison": {
+      "total": 160,
+      "exact_match": 61,
+      "internal_numeric_difference": 97,
+      "display_equivalent": 0,
+      "user_affecting_difference": 2,
+      "timeout_or_failure": 1,
+      "business_equivalent": 158,
+      "production_validated": false
+    }
   },
   "runtime_assets": [
     {
@@ -65,9 +76,12 @@
       "status": "COMMUNITY_PREVIEW",
       "stability": "PREVIEW",
       "available": true,
-      "bytes": 56051173,
-      "sha256": "20cc1bcdb8e16dd0280e59480bed465e03143ad7d8696ba54e1c02366069184c",
-      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg"
+      "bytes": 56060267,
+      "sha256": "daef4143d510707fc7da7d1d79c8a9d86ad9e3a6ce29925b8f537d77d2a69e19",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg",
+      "file": "Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg",
+      "OS": "macos",
+      "deployment": "Desktop Local"
     },
     {
       "filename": "Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz",
@@ -78,9 +92,12 @@
       "status": "COMMUNITY_PREVIEW",
       "stability": "PREVIEW",
       "available": true,
-      "bytes": 47676349,
-      "sha256": "f60ba289d38da13d122ea4f3e3d5468e47b93fa6afa596b3db545a0e23689120",
-      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz"
+      "bytes": 47693464,
+      "sha256": "835a55ef6333544f68d123a3c969d63c0e534492830ea7e63e4ead33d4b04e88",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz",
+      "file": "Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz",
+      "OS": "macos",
+      "deployment": "Self-hosted"
     },
     {
       "filename": "Nora-Setup-v1.1.1-Windows-x64-Experimental.exe",
@@ -88,13 +105,15 @@
       "platform": "windows",
       "architecture": "x64",
       "edition": "Local",
-      "status": "PENDING",
+      "status": "EXPERIMENTAL_PREVIEW",
       "stability": "EXPERIMENTAL",
-      "available": false,
-      "bytes": null,
-      "sha256": null,
-      "download_url": null,
-      "reason": "Windows package pending: no runnable PE Runtime in the available environment."
+      "available": true,
+      "bytes": 44710980,
+      "sha256": "0deeb5b176328f13ef1889c2164ca3a062b8de534a964c33f5b79a6da9671bd2",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Setup-v1.1.1-Windows-x64-Experimental.exe",
+      "file": "Nora-Setup-v1.1.1-Windows-x64-Experimental.exe",
+      "OS": "windows",
+      "deployment": "Desktop Local"
     },
     {
       "filename": "Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
@@ -102,14 +121,18 @@
       "platform": "windows",
       "architecture": "x64",
       "edition": "Self-hosted",
-      "status": "PENDING",
+      "status": "EXPERIMENTAL_PREVIEW",
       "stability": "EXPERIMENTAL",
-      "available": false,
-      "bytes": null,
-      "sha256": null,
-      "download_url": null,
-      "reason": "Windows package pending: no runnable PE Runtime in the available environment."
+      "available": true,
+      "bytes": 71143666,
+      "sha256": "9660eefaf3a97b3cbb2b97e5f6d7394c73b5087fba3229ce0d57b29da5c2c7c7",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
+      "file": "Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
+      "OS": "windows",
+      "deployment": "Self-hosted"
     }
   ],
-  "checksum_policy": "SHA256SUMS.txt covers the two real Runtime downloads and the manifest, VERSION.json and LICENSE_INFO.md. This public inventory is not the signed installation envelope."
+  "checksum_policy": "SHA256SUMS.txt covers the four Runtime/Desktop downloads, RELEASE_MANIFEST.json, VERSION.json and LICENSE_INFO.md. This inventory is separate from signed Runtime installation envelopes.",
+  "local_selfhosted_engine_identical": true,
+  "shared_desktop_ui_identical": true
 }

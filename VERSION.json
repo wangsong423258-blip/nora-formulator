@@ -8,7 +8,8 @@
   "canonical_api_version": "v1",
   "license_schema_version": 1,
   "macos_status": "COMMUNITY_PREVIEW",
-  "windows_status": "EXPERIMENTAL_PREVIEW_PACKAGE_PENDING",
+  "windows_status": "EXPERIMENTAL_PREVIEW",
   "community_device_binding": false,
-  "community_manual_approval_required": false
+  "community_manual_approval_required": false,
+  "desktop_ui": "SHARED_NATIVE_HOST_UI"
 }

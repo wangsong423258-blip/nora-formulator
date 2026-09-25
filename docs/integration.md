@@ -16,4 +16,4 @@ Use `./nora stop` to stop, `./nora update --bundle /path/to/new/runtime` for a n
 
 For developer use, the public Node CLI also accepts `node cli/nora.mjs install --bundle DIR --home DIR`. Its release trust pins verify this Preview's publisher signature. A separately issued Commercial / Enterprise authorization may use `license import FILE --grant FILE`; those additional issuance steps do not apply to the included Community license.
 
-Windows packages remain pending. Linux and macOS Intel are outside Nora v1 scope.
+Windows x64 Desktop and Self-hosted downloads are Experimental Preview; see windows-self-hosted.md for the numerical audit limits. Linux is not part of this Desktop release. macOS Intel remains outside the Preview targets.
