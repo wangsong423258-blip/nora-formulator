@@ -1,13 +1,11 @@
-# Windows x64 Local Edition
+# Windows x64 Local — Experimental Preview
 
-Target: Windows 11 x64.
+**Windows package pending.** Planned filename: `Nora-Setup-v1.1.1-Windows-x64-Experimental.exe`. No Windows package is attached because a runnable PE Runtime has not been built in the available environment.
 
-Planned asset: `Nora-Setup-v1.1.1-Windows-x64-Experimental.exe`.
+**尚未完成完整 Native 数值验证。** Full Native Validation Pending. Native 160-case regression, Windows code signing and final clean-machine acceptance are WAIVED_BY_OWNER, not PASS. Decision-affecting cases are NOT_MEASURED. Production support is NO. Future Experimental packages are for evaluation, testing and integration only; do not use them for production nutrition decisions.
 
-**Release withheld: no runnable Windows PE Runtime is available.** No EXE is published in v1.1.1-preview. Native 160-case validation, decision-affecting case count and clean-machine acceptance are NOT MEASURED. The macOS result does not establish Windows numerical behavior.
+Unsigned Windows packages may display Unknown Publisher or SmartScreen prompts. This Preview makes no claim that those installation paths or Windows Server background operation have been tested.
 
-Any future package without native acceptance must be labeled **Experimental Preview**, for evaluation, testing and integration only. It must not be used for production nutrition decisions. Windows is not officially supported or production validated by this preview.
+The intended Community flow is download → install/extract → automatic signed License and encrypted DataPack verification → start. Community will not require device registration, a device grant, contact with PalEcho or manual approval. Self-hosted deployment is intended for Windows PCs and Windows Server on enterprise-controlled infrastructure, without a PalEcho cloud calculation dependency.
 
-The intended experience is download EXE → install → launch. The installer must include the Runtime, encrypted DataPack, license verifier, necessary dependencies, CLI bridge, application directories, updater and uninstaller. Windows code signing is pending. Those installation steps and SmartScreen behavior have not been verified.
-
-Community permits personal, company, commercial and local deployment for free with **Powered by Nora · PalEcho**. A separate Commercial / Enterprise authorization can remove attribution. See [licensing](licensing.md).
+Both editions share the same version contract and calculation capabilities. Community permits free personal, company, commercial, Local and Self-hosted use with **Powered by Nora · PalEcho**. See [licensing](licensing.md).

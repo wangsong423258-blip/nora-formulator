@@ -2,11 +2,11 @@
 
 **Open SDK. Private Runtime. Private DataPack.**
 
-The public SDK, CLI, schemas, OpenAPI, examples, documentation and attribution components in this repository use [Apache-2.0](../LICENSE). This repository's license does not grant rights to the separately distributed Nora Runtime or DataPack.
+The public SDK, CLI integration, schemas, OpenAPI, examples, docs and attribution components use [Apache-2.0](../LICENSE). This repository's license does not grant rights to separately distributed Runtime or DataPack assets.
 
-Nora Runtime and Nora DataPack remain Proprietary and require their separate terms and publisher-issued authorization. Neither is included in this source-only preview. This policy summary is not a signed Runtime license or a device grant.
+Nora Runtime and DataPack are Proprietary under their included terms. The Community packages include a universal Nora / PalEcho-signed license with no device binding.
 
-| Community permission | Policy |
+| Community policy | Value |
 | --- | --- |
 | Free | Yes |
 | Personal use | Yes |
@@ -14,10 +14,12 @@ Nora Runtime and Nora DataPack remain Proprietary and require their separate ter
 | Commercial use | Yes |
 | Local deployment | Yes |
 | Self-hosted deployment | Yes |
+| Device binding | No |
+| Manual approval required | No |
 | Attribution required | Yes |
 
-Reasonably display **Powered by Nora · PalEcho** in the Nora feature, results, About, Settings or support area. For headless integrations, use integration documentation, an administration interface or support material visible to users. See [attribution](attribution.md).
+The Runtime automatically verifies the included Community License signature, compatibility and integrity, plus the encrypted DataPack. Users do not submit machine identifiers, contact PalEcho or wait for approval. Calculation does not require an activation service.
 
-A separately issued Commercial / Enterprise authorization may remove attribution. Separate terms may cover white-label, OEM, batch deployment and enterprise offline licenses. Absence of an authenticated waiver does not remove Community attribution.
+Reasonably display **Powered by Nora · PalEcho** in the Nora feature, result, About, Settings or support area. Headless integrations may use documentation or an administration interface visible to their users. See [attribution](attribution.md).
 
-Local and Self-hosted have the same calculation capabilities. These deployment modes do not create different mathematical implementations. The target license schema is version 1 across both platforms. See [version metadata](../VERSION.json).
+A separately signed Commercial / Enterprise authorization can remove attribution and allow white-label / OEM use. Its issuance policy is separate from Community. Community Local and Self-hosted retain the same calculation capabilities, engine version, DataPack version, license schema 1 and Canonical API v1.

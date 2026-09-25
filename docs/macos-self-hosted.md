@@ -1,23 +1,22 @@
-# macOS Self-hosted Edition
+# macOS Self-hosted — Community Preview
 
-Target: an Apple Silicon / ARM64 Mac running macOS 14 or later.
+Requires an Apple Silicon / ARM64 Mac running macOS 14+.
 
-Planned asset: `Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz`.
+[Download Runtime TAR.GZ](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz) · [Checksums](https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/SHA256SUMS.txt)
 
-**Not available in v1.1.1-preview.** No runnable self-hosted bundle is published. Encrypted DataPack provisioning, publisher authorization and final installation acceptance remain pending. Apple signing and notarization are incomplete.
-
-The intended package contains `runtime/`, `data/`, `license/`, `config/`, `cli/` and `docs/`. It installs on a host you control and requires no development Python environment or private source checkout. The current public developer CLI requires Node.js 22 or later.
-
-The following commands describe the integration interface for a future verified bundle; they cannot install this source-only preview:
+Extract and run from the extracted directory:
 
 ```sh
-nora install --bundle /path/to/signed-bundle
-nora enroll
-nora license import /path/to/license.json --grant /path/to/device-grant.json
-nora start
-nora status
-nora stop
-nora update --bundle /path/to/new-signed-bundle
+./nora install
+./nora start
+./nora status
+./nora stop
 ```
 
-The license and matching device grant must be issued by the publisher. Integrate your backend through the SDK or CLI; an optional local HTTP adapter is only an integration layer. Calculation and user data can remain on your own infrastructure without a PalEcho cloud calculation service. Local and Self-hosted use the same calculation capabilities and version contract. Community self-hosting is free with **Powered by Nora · PalEcho** attribution. See [licensing](licensing.md).
+The archive includes runtime/, data/, license/, config/, cli/ and docs/. The encrypted DataPack and universal Community License reside inside the authenticated runtime/ bundle. Installation verifies them automatically. No machine code, device grant, registration or manual approval is required. No Python, Node.js, compiler or private checkout is required.
+
+The default installation is the current user's .nora directory. Use --home DIR consistently for a dedicated service account. Connection credentials are private to that account. Run `./nora update --bundle /path/to/new/runtime` for a newer authenticated bundle, or `./nora uninstall` to remove the local installation. The native CLI can be invoked from your own process supervisor. Automatic operating-system boot registration is not installed by this Preview.
+
+Your application, website backend or enterprise service can use the public SDK or local adapter on your own host. Calculation and user data can remain on your infrastructure; no PalEcho activation or cloud calculation service is required. The local HTTP adapter is an integration option. Local and Self-hosted use an identical Runtime bundle, encrypted data version, license schema and Canonical Contract.
+
+Apple signing, notarization and final clean-machine acceptance are WAIVED_BY_OWNER. macOS may require first-open approval in System Settings → Privacy & Security. Community is free with **Powered by Nora · PalEcho** attribution. See [integration](integration.md) and [licensing](licensing.md).

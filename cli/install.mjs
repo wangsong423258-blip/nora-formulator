@@ -175,6 +175,7 @@ async function tree(root, prefix = '') {
 
 function allowedAsset(path, entry, pack) {
   if (path === entry || path === pack) return true;
+  if (path === 'licenses/community.license.json') return true;
   if (path.split('/').some(x => !x || x === '.' || x === '..' || x.startsWith('.'))) return false;
   if (/\.(?:so|dylib|dll|pyd)$/.test(path)) return true;
   if (/^[A-Za-z0-9_+./-]+\.npz$/.test(path)) return true;

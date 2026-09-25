@@ -10,21 +10,19 @@
         "87e555b8200c8e385282ba4b0a96f1ecb9ba3fe0b9be8700baf5b1dc84163cf0"
       ],
       "README.md": [
-        "ffa4a543ecd920242cbe04b28b67f16d3f6811da4fc3764eebf4672510f38b68"
+        "57ecd6b15c84f9d364b11e03665925da261d84e5e0792029d5640efdb7726f2e"
       ],
       "docs/licensing.md": [
-        "5c9222d5e9ece6cf145df41234b61254490c6c47b704719dad41bac53342bfdd"
+        "dd723451364e489b93fb343fe2fede8e6ddaf688597375b2111b7f1284ff687a"
       ],
       "LICENSE_INFO.md": [
-        "abd83a722ad6c7e5c0b1d8e4d5dd5370e73869c038613e2821ce83d2b6f93e85"
+        "5c48924836b9353cef8feb3b90b5433e62b095af3f26c3f884630f7a7aa85458"
       ]
     },
     "PRIVATE_PATH_SCAN": {},
     "PROPRIETARY_DATA_SCAN": {},
     "INTERNAL_URL_SCAN": {
-      "README.md": [
-        "d7ef266c7dec2296fa37d545402745eb8d89d708342a02fc0b4f799769358321"
-      ],
+      "README.md": [],
       "sdk/client.mjs": [
         "e3cc9ef9caea2a674b05208f691de3c7f1691bfc34ae9cbe4a9cfca230a2973e",
         "44d14f0d23313351193292204d652acd436f28ea08c297b2364f62702e8f6b55"
@@ -40,7 +38,7 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "0550b61ba16496e4c11453bf201f26916b1a5193baa23ed793b0718728e1f59f",
+      "sha256": "bbde02fd935bab52753e22b6f379115662ce1a3f1f763b4603872f4382e118d6",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -58,7 +56,7 @@
     },
     {
       "path": "LICENSE_INFO.md",
-      "sha256": "2d09c27cd4e62b88d27f02ffebccc45999e63ba91e686abd1e3a2b65f39eac17",
+      "sha256": "5d0f13498e5dd40e62f522897b9f692ace916c1fb7b3eed4e0fdffe6c649c8eb",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -76,13 +74,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "35f9a7298fde3321a6d554e4ddb23f137bd375989eb02d5d826a8731bb00c8f2",
+      "sha256": "cdedd70208c8dd278beca95720225ae70f9aeab25e31b5e7fd02436f26f69f89",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "RELEASE_MANIFEST.json",
-      "sha256": "65be44acb5a391da911152f3f19e3ec96a1cb5c6658d4b1b23c6fc2a8a19c45b",
+      "sha256": "c6a15d3ca9612ff653531ca248108dca79b59601a6a5fa722171f78a5b552b4d",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -94,13 +92,13 @@
     },
     {
       "path": "SHA256SUMS.txt",
-      "sha256": "9799c3d74dec6ba80d0aca7d883516f4d7934c20ddcf1b520aaae99fee3ff9ec",
+      "sha256": "38ab1f21f4b68b7da48579f2743ec9135bdb00dab4201899e17a4d246c4d2060",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "VERSION.json",
-      "sha256": "005f4c8a04208ec8b2975f60f56daa5ce4de2fd8df7c13d629b68e5c27811cb8",
+      "sha256": "ad27eeffac272410861734e5d979b685dd45686e17dfbacdf648ae284566d95f",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -118,13 +116,13 @@
     },
     {
       "path": "cli/install.mjs",
-      "sha256": "bf45a6c16e8498bdcdc4f93c4c3ab02ad2b56eb5081d6b8ad09b5f2857989e26",
+      "sha256": "df8c2e54281b0006e07dca8edc1f41367dee0e8c89b4cb769c8fe43fd2ead073",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "cli/nora.mjs",
-      "sha256": "87d220c286f4e573fba65e0bc95d9bd1698f6662b9ce9d7f44e8ef31d2b4abc7",
+      "sha256": "ba80bd3bce94c07c72e6ea077c88ac56cd1badf3d743d0b3c765381517be809f",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -148,25 +146,25 @@
     },
     {
       "path": "docs/integration.md",
-      "sha256": "4d9868fdedef398053cebfa4327ab93a6380e143877b9e2051e40ede31c63197",
+      "sha256": "962e57c88dd4f5d2d0b83abe711e7830af5670e2c0fd8f289ca0c17b1d305aeb",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/licensing.md",
-      "sha256": "046a824cdbc964216b447b529bb96c2934464526ba9d5b97579aa93b06324185",
+      "sha256": "a57a2be1393dc5b7299ef992ac06158abfd0ce13a6f355c198e9997ee97ddc89",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/macos-local.md",
-      "sha256": "20685b2d981bd065c613bc9dfbc89f8e8ff8cdf88f0797bd03e377365f60e86a",
+      "sha256": "e1e7b6c7f1abe8a67ad071fe20cc541456df5d70110932749f5eb055c9e35cf3",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/macos-self-hosted.md",
-      "sha256": "9a91a210c4d5b3b851fee4c50d5ce1c6b05862dbd1594991de6123f71af7ee58",
+      "sha256": "c42fe43a936e23e15f227c69d696173f229700200448c654b724e33e289e6d3d",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -178,25 +176,25 @@
     },
     {
       "path": "docs/release-policy.md",
-      "sha256": "47265ceca3bfd103160c02fa62a04f583e037bab5f12d620af0575e7bcbca530",
+      "sha256": "f88e7c81a16137e7450cd03a87a0800f309b1ce29cf265003d8a8099a97a5fca",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/security.md",
-      "sha256": "cbff25af50027755efd44d0ce35f7514fc2515f262dc1b0aefd3e4f73939e208",
+      "sha256": "38132651d2ac49f71b2bc926a61ad49fadd1b53c9ac0b4e5eb3fb14eba062f49",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/windows-local.md",
-      "sha256": "80d5af60534a7f7c7096e42cdf0a633e4fa224afb2d513d7c108d24574675e89",
+      "sha256": "4a7abce9fff9302af560e7959b6c90815ea2fe4f2a93e9febb2d8d1420c64d34",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
     {
       "path": "docs/windows-self-hosted.md",
-      "sha256": "f1bd96f28ce9b5ea69a9188173c85206e7a5e2b4ca32eb15715da07a82a30185",
+      "sha256": "7047c7aafbdcdbf56bc80609261b74d44e1e8b8753c2cfa898abb3c74da446ee",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -226,7 +224,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e54a1d323307266e27a85591aa60937beb71dc32edd7d9b256e8b2209048a29d",
+      "sha256": "4e221199a1cde12afde23e5fa01df860d8fd6c2870453594acd5c5e2bcc2220b",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     },
@@ -838,10 +836,10 @@
     },
     {
       "path": "sdk/release-trust.mjs",
-      "sha256": "ba6745bb47b90cee458e418d9a99ec128361fb28ff6178aa3364603f5b0705ad",
+      "sha256": "833113f8265281d884f5937f86055af6807d1aaf06211b5c5b15350ce99398ab",
       "source_classification": "PUBLIC_SDK_OR_CONTRACT",
       "public_approval_status": "APPROVED"
     }
   ],
-  "sdk_version": "0.3.1"
+  "sdk_version": "0.3.2"
 }

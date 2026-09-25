@@ -2,41 +2,72 @@
   "manifest_version": 1,
   "release": "Nora v1.1.1 Community Preview",
   "tag": "v1.1.1-preview",
-  "release_version": "1.1.1",
-  "publication_scope": "SDK_AND_STATUS_METADATA_ONLY",
-  "runtime_release_complete": false,
   "versions": {
     "product": "Nora",
     "release_tag": "v1.1.1-preview",
-    "publication_scope": "SDK_AND_STATUS_METADATA_ONLY",
     "runtime_version": "1.1.1",
-    "sdk_version": "0.3.1",
+    "sdk_version": "0.3.2",
     "engine_version": "freshfood-ingredient-first-1.9.0",
     "datapack_version": "1.1.0",
     "canonical_api_version": "v1",
     "license_schema_version": 1,
-    "runtime_available": false,
-    "target_platforms": [
-      "macos-arm64",
-      "windows-x64"
-    ],
-    "shared_version_policy": "Same engine, DataPack, license schema and Canonical Contract for both editions and platforms."
+    "macos_status": "COMMUNITY_PREVIEW",
+    "windows_status": "EXPERIMENTAL_PREVIEW_PACKAGE_PENDING",
+    "community_device_binding": false,
+    "community_manual_approval_required": false
   },
-  "available_runtime_assets": [],
-  "planned_runtime_assets": [
+  "community": {
+    "free": true,
+    "personal_use": true,
+    "company_use": true,
+    "commercial_use": true,
+    "local_deployment": true,
+    "self_hosted": true,
+    "device_binding": false,
+    "manual_approval_required": false,
+    "attribution_required": true,
+    "attribution_text": "Powered by Nora · PalEcho"
+  },
+  "commercial": {
+    "attribution_required": false,
+    "separate_authorization_required": true
+  },
+  "runtime_release_complete": false,
+  "macos_preview_available": true,
+  "windows_package_pending": true,
+  "waivers": {
+    "macos": {
+      "apple_signing": "WAIVED_BY_OWNER",
+      "notarization": "WAIVED_BY_OWNER",
+      "clean_machine_final": "WAIVED_BY_OWNER"
+    },
+    "windows": {
+      "native_160_regression": "WAIVED_BY_OWNER",
+      "code_signing": "WAIVED_BY_OWNER",
+      "clean_machine_final": "WAIVED_BY_OWNER",
+      "production_support": false
+    }
+  },
+  "validation": {
+    "arm64_reference": "160/160 EXACT PASS (existing unchanged reference)",
+    "full_160_rerun": false,
+    "macos_preview_smoke": "PASS",
+    "windows_native_160": "NOT_MEASURED",
+    "windows_decision_affecting": null
+  },
+  "runtime_assets": [
     {
       "filename": "Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg",
       "version": "1.1.1",
       "platform": "macos",
       "architecture": "arm64",
       "edition": "Local",
-      "channel": "Community Preview",
+      "status": "COMMUNITY_PREVIEW",
       "stability": "PREVIEW",
-      "available": false,
-      "sha256": null,
-      "bytes": null,
-      "download_url": null,
-      "reason": "Usable encrypted DataPack, publisher authorization and final installation acceptance pending."
+      "available": true,
+      "bytes": 56051173,
+      "sha256": "20cc1bcdb8e16dd0280e59480bed465e03143ad7d8696ba54e1c02366069184c",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-v1.1.1-macOS-ARM64-Community-Preview.dmg"
     },
     {
       "filename": "Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz",
@@ -44,13 +75,12 @@
       "platform": "macos",
       "architecture": "arm64",
       "edition": "Self-hosted",
-      "channel": "Community Preview",
+      "status": "COMMUNITY_PREVIEW",
       "stability": "PREVIEW",
-      "available": false,
-      "sha256": null,
-      "bytes": null,
-      "download_url": null,
-      "reason": "Usable encrypted DataPack, publisher authorization and final installation acceptance pending."
+      "available": true,
+      "bytes": 47676349,
+      "sha256": "f60ba289d38da13d122ea4f3e3d5468e47b93fa6afa596b3db545a0e23689120",
+      "download_url": "https://github.com/wangsong423258-blip/nora-formulator/releases/download/v1.1.1-preview/Nora-Runtime-v1.1.1-macOS-ARM64.tar.gz"
     },
     {
       "filename": "Nora-Setup-v1.1.1-Windows-x64-Experimental.exe",
@@ -58,13 +88,13 @@
       "platform": "windows",
       "architecture": "x64",
       "edition": "Local",
-      "channel": "Experimental Preview",
+      "status": "PENDING",
       "stability": "EXPERIMENTAL",
       "available": false,
-      "sha256": null,
       "bytes": null,
+      "sha256": null,
       "download_url": null,
-      "reason": "No runnable Windows PE Runtime; native numerical validation not measured."
+      "reason": "Windows package pending: no runnable PE Runtime in the available environment."
     },
     {
       "filename": "Nora-Runtime-v1.1.1-Windows-x64-Experimental.zip",
@@ -72,49 +102,14 @@
       "platform": "windows",
       "architecture": "x64",
       "edition": "Self-hosted",
-      "channel": "Experimental Preview",
+      "status": "PENDING",
       "stability": "EXPERIMENTAL",
       "available": false,
-      "sha256": null,
       "bytes": null,
+      "sha256": null,
       "download_url": null,
-      "reason": "No runnable Windows PE Runtime; native numerical validation not measured."
+      "reason": "Windows package pending: no runnable PE Runtime in the available environment."
     }
   ],
-  "available_metadata_assets": [
-    {
-      "filename": "VERSION.json",
-      "bytes": 541,
-      "sha256": "005f4c8a04208ec8b2975f60f56daa5ce4de2fd8df7c13d629b68e5c27811cb8"
-    },
-    {
-      "filename": "LICENSE_INFO.md",
-      "bytes": 980,
-      "sha256": "2d09c27cd4e62b88d27f02ffebccc45999e63ba91e686abd1e3a2b65f39eac17"
-    }
-  ],
-  "validation": {
-    "macos_arm64_reference": {
-      "cases": 160,
-      "exact_match": 160,
-      "basis": "Existing native reference candidate; not final installer or clean-machine acceptance"
-    },
-    "windows_x64_native": {
-      "status": "NOT_MEASURED",
-      "exact_match": null,
-      "display_equivalent": null,
-      "decision_affecting": null
-    },
-    "final_clean_machine": {
-      "macos": "PENDING",
-      "windows": "PENDING",
-      "windows_server": "PENDING"
-    }
-  },
-  "platform_signing": {
-    "macos_developer_id": "PENDING",
-    "macos_notarization": "PENDING",
-    "windows_authenticode": "PENDING"
-  },
-  "checksum_policy": "SHA256SUMS.txt covers the attached manifest, VERSION.json and LICENSE_INFO.md. Missing runtime assets have no hashes. This status manifest is not a signed installation manifest."
+  "checksum_policy": "SHA256SUMS.txt covers the two real Runtime downloads and the manifest, VERSION.json and LICENSE_INFO.md. This public inventory is not the signed installation envelope."
 }

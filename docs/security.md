@@ -1,13 +1,11 @@
 # Security and distribution boundary
 
-Only SDK transport, CLI integration, contracts, examples, documentation and attribution components are published here. The calculation engine, nutritional source assets, signing authority and private validation inputs are excluded.
+This repository publishes developer interfaces only. Runtime and encrypted DataPack downloads are separate release assets. Signing private keys, source data and publisher tooling are excluded from both repository source and release assets.
 
-The current preview includes no runnable Runtime or encrypted DataPack. The public installer deliberately rejects bundles until reviewed publisher trust configuration is supplied. Do not add arbitrary trust keys or bypass verification to make an unapproved bundle install.
+Community uses a universal signed license and an authenticated encrypted DataPack. The license is not device-bound. No registration, manual approval or activation server is needed. The Runtime checks signature, compatibility, full ciphertext integrity and chunk authentication before calculation, and does not write the complete decrypted database to disk.
 
-A future Runtime distribution must authenticate its DataPack signature, version compatibility and integrity, and reject altered content. It must not write a complete decrypted database to disk. The release checksum list detects byte changes; it is not a publisher signature and is not a substitute for the Runtime's trust checks.
+Publisher signing private keys are retained outside the project in the owner's macOS Keychain. The Runtime contains public signature-verification keys. Offline DataPack reading also requires symmetric decryption material encapsulated in the native reader. This protects packaged storage and avoids a plaintext key file; it is not a claim of resistance to all reverse engineering by a machine owner.
 
-Treat a running Nora instance as a local service with protected connection credentials. Keep credentials out of frontend bundles, source control and logs. Integrate through a trusted application backend. An HTTP adapter is optional; calculation does not require a PalEcho cloud service.
+SHA256SUMS.txt verifies published download bytes; it is not itself a digital signature. The included release, License and DataPack envelopes carry publisher signatures. Those signatures are separate from Apple Developer ID and Windows Authenticode. Apple signing, notarization and final clean-machine acceptance are WAIVED_BY_OWNER. Windows native full regression, code signing and final clean-machine acceptance are WAIVED_BY_OWNER, with no Windows package currently published.
 
-macOS signing and notarization are incomplete. Windows code signing, native numerical validation and Windows Server operation are pending. No production security or clean-machine certification is claimed for these unavailable Runtime packages.
-
-Report vulnerabilities using the private procedure in [SECURITY.md](../SECURITY.md). Public issues must not contain credentials, user profiles, service responses or sensitive reproduction data.
+Keep the protected local Runtime connection token in a trusted backend and out of browser bundles or public logs. See [SECURITY.md](../SECURITY.md) for private vulnerability reporting.

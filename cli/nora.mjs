@@ -8,7 +8,7 @@ import { spawn } from 'node:child_process';
 import { NoraClient } from '../sdk/client.mjs';
 import { installBundle, runtimeCommand, inspectBundle, updateBundle, activate, uninstallBundle } from './install.mjs';
 
-const usage = 'Usage: nora version | status | install --bundle DIR | start | stop | update --bundle DIR | uninstall | enroll [--provider NAME] | license import FILE --grant FILE [--home DIR]';
+const usage = 'Usage: nora version | status | install --bundle DIR | start | stop | update --bundle DIR | uninstall | enroll [--provider NAME] | license import FILE [--grant FILE] [--home DIR]';
 
 async function invoke(home, args, unlock) {
   const executable = await runtimeCommand(home);

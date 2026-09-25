@@ -1,6 +1,6 @@
 {
   "name": "nora-sdk",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Developer tools and API contract for Nora. No formulation engine or nutritional dataset included.",
   "type": "module",
   "license": "Apache-2.0",
@@ -41,7 +41,9 @@
     "minimumMacOS": "14",
     "productionAvailable": false,
     "windowsNativeValidated": false,
-    "runtimeDownloadsAvailable": false
+    "runtimeDownloadsAvailable": true,
+    "macosCommunityPreviewAvailable": true,
+    "windowsPackageAvailable": false
   },
   "repository": {
     "type": "git",
