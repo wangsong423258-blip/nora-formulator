@@ -1,0 +1,72 @@
+[
+  {
+    "limit_id": "FDC_171061_ORGAN_REVIEW",
+    "ingredient_id": "FDC_171061",
+    "species": "BOTH",
+    "life_stage": "ALL",
+    "disease_id": null,
+    "operator": "EXCLUDE",
+    "value": null,
+    "unit": null,
+    "basis": null,
+    "source_id": "PALECHO_SPEC",
+    "reason": "No source-verified ingredient-specific upper share; do not force nutrient adequacy with large liver amounts.",
+    "status": "POLICY"
+  },
+  {
+    "limit_id": "TOX_CHOCOLATE_EXCLUDE",
+    "ingredient_id": "TOX_CHOCOLATE",
+    "species": "BOTH",
+    "life_stage": "ALL",
+    "disease_id": null,
+    "operator": "EXCLUDE",
+    "value": 0.0,
+    "unit": "g",
+    "basis": "PER_DAY",
+    "source_id": "FEDIAF2025",
+    "reason": "FEDIAF pp66–71; grape evidence is canine; exclude from feline candidates as product policy.",
+    "status": "SOURCE_VERIFIED"
+  },
+  {
+    "limit_id": "TOX_GARLIC_EXCLUDE",
+    "ingredient_id": "TOX_GARLIC",
+    "species": "BOTH",
+    "life_stage": "ALL",
+    "disease_id": null,
+    "operator": "EXCLUDE",
+    "value": 0.0,
+    "unit": "g",
+    "basis": "PER_DAY",
+    "source_id": "FEDIAF2025",
+    "reason": "FEDIAF pp66–71; grape evidence is canine; exclude from feline candidates as product policy.",
+    "status": "SOURCE_VERIFIED"
+  },
+  {
+    "limit_id": "TOX_GRAPE_EXCLUDE",
+    "ingredient_id": "TOX_GRAPE",
+    "species": "BOTH",
+    "life_stage": "ALL",
+    "disease_id": null,
+    "operator": "EXCLUDE",
+    "value": 0.0,
+    "unit": "g",
+    "basis": "PER_DAY",
+    "source_id": "FEDIAF2025",
+    "reason": "FEDIAF pp66–71; grape evidence is canine; exclude from feline candidates as product policy.",
+    "status": "SOURCE_VERIFIED"
+  },
+  {
+    "limit_id": "TOX_ONION_EXCLUDE",
+    "ingredient_id": "TOX_ONION",
+    "species": "BOTH",
+    "life_stage": "ALL",
+    "disease_id": null,
+    "operator": "EXCLUDE",
+    "value": 0.0,
+    "unit": "g",
+    "basis": "PER_DAY",
+    "source_id": "FEDIAF2025",
+    "reason": "FEDIAF pp66–71; grape evidence is canine; exclude from feline candidates as product policy.",
+    "status": "SOURCE_VERIFIED"
+  }
+]

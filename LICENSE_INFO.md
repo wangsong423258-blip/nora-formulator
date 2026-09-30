@@ -1,4 +1,12 @@
-# Nora v1.1.1 Preview licensing
+# Nora licensing
+
+The SDK and Python algorithm source under `engine/palecho_nutrition/*.py` are
+Apache-2.0. The published nutrition tables and JSON resources are separately
+covered by [engine/DATA_LICENSE.md](engine/DATA_LICENSE.md). Public readability
+does not grant permission to republish the data as a separate dataset.
+
+The terms below describe the earlier v1.1.1 native Preview assets, which still
+use an encrypted DataPack.
 
 Community is free for personal, company and commercial use, including Local and Self-hosted deployment. The bundled universal signed Community License has no device binding, machine-code submission, activation server or manual approval. Reasonably display **Powered by Nora · PalEcho**. Commercial / Enterprise attribution removal is available through a separate license, including white-label / OEM authorization. SDK: Apache-2.0. Runtime and DataPack: Proprietary.
 

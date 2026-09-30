@@ -1,0 +1,42 @@
+[
+  {
+    "quality_category": "FOOD_SAFETY_MANAGEMENT",
+    "scope": "ISO 22000食品安全管理",
+    "limitations": "体系认证不是成品有效成分实测",
+    "required": false,
+    "ranking": null,
+    "source_id": "USI_ISO"
+  },
+  {
+    "quality_category": "MANUFACTURING_QUALITY_SYSTEM",
+    "scope": "GMP、FSSC 22000等生产管理体系",
+    "limitations": "不能替代具体产品营养标签",
+    "required": false,
+    "ranking": null,
+    "source_id": "USI_POLICY"
+  },
+  {
+    "quality_category": "PET_SUPPLEMENT_QUALITY_SYSTEM",
+    "scope": "宠物补剂质量体系，例如NASC",
+    "limitations": "体系及抽检不等于每批COA或所有有效含量",
+    "required": false,
+    "ranking": null,
+    "source_id": "USI_NASC"
+  },
+  {
+    "quality_category": "PRODUCT_LEVEL_TESTING",
+    "scope": "成品或具体批次第三方检测",
+    "limitations": "核对样品、批次、检测指标与日期；不能证明其他批次或所有营养",
+    "required": false,
+    "ranking": null,
+    "source_id": "USI_POLICY"
+  },
+  {
+    "quality_category": "REGULATORY_COMPLIANCE",
+    "scope": "对应市场法规适用信息",
+    "limitations": "不按国家排名；法规合规不等于本配方剂量合适",
+    "required": false,
+    "ranking": null,
+    "source_id": "USI_POLICY"
+  }
+]

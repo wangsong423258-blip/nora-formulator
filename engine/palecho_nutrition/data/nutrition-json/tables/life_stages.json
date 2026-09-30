@@ -1,0 +1,178 @@
+[
+  {
+    "stage_id": "CAT_ADULT",
+    "species": "CAT",
+    "name_zh": "成年",
+    "supported": true,
+    "definition": "1至6岁",
+    "nutrition_profile": "CAT_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_CAT_STAGE2021",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "CAT_GROWTH",
+    "species": "CAT",
+    "name_zh": "幼猫生长",
+    "supported": true,
+    "definition": "V1仅已断奶且>=8周；<1岁",
+    "nutrition_profile": "DYNAMIC_GROWTH",
+    "source_id": "FEDIAF2025",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{\"min_age_weeks\": 8, \"growth_end_months\": 12}"
+  },
+  {
+    "stage_id": "CAT_LACTATION",
+    "species": "CAT",
+    "name_zh": "哺乳",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "CAT_MATURE",
+    "species": "CAT",
+    "name_zh": "熟龄",
+    "supported": true,
+    "definition": "7至10岁",
+    "nutrition_profile": "CAT_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_CAT_STAGE2021",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{\"min_age_years\": 7}"
+  },
+  {
+    "stage_id": "CAT_PREGNANCY",
+    "species": "CAT",
+    "name_zh": "妊娠",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "CAT_SENIOR",
+    "species": "CAT",
+    "name_zh": "老年",
+    "supported": true,
+    "definition": ">10岁",
+    "nutrition_profile": "CAT_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_CAT_STAGE2021",
+    "notes": "Adult maintenance nutrient requirements; individual age/activity/BCS/MCS/weight-trend energy review. No separate senior minimum or automatic protein restriction. FEDIAF senior statement November 2017; AAHA senior care 2023.",
+    "classification_json": "{\"min_completed_age_years\": 11}"
+  },
+  {
+    "stage_id": "CAT_UNWEANED",
+    "species": "CAT",
+    "name_zh": "未断奶／新生",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_ADULT",
+    "species": "DOG",
+    "name_zh": "成年",
+    "supported": true,
+    "definition": "已完成生长",
+    "nutrition_profile": "DOG_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_DOG_STAGE2019",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_EARLY_GROWTH",
+    "species": "DOG",
+    "name_zh": "早期生长",
+    "supported": true,
+    "definition": "年龄<14周；V1仅已断奶且>=8周",
+    "nutrition_profile": "DYNAMIC_GROWTH",
+    "source_id": "FEDIAF2025",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{\"min_age_weeks\": 8, \"early_growth_end_weeks\": 14}"
+  },
+  {
+    "stage_id": "DOG_LACTATION",
+    "species": "DOG",
+    "name_zh": "哺乳",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_LATE_GROWTH_LARGE",
+    "species": "DOG",
+    "name_zh": "后期生长（成年>15kg）",
+    "supported": true,
+    "definition": "≥14周；约6月龄前后分钙要求",
+    "nutrition_profile": "DYNAMIC_GROWTH",
+    "source_id": "FEDIAF2025",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{\"adult_size_boundary_kg\": 15, \"calcium_age_boundary_months\": 6}"
+  },
+  {
+    "stage_id": "DOG_LATE_GROWTH_SMALL",
+    "species": "DOG",
+    "name_zh": "后期生长（成年≤15kg）",
+    "supported": true,
+    "definition": "≥14周且尚未完成生长",
+    "nutrition_profile": "DYNAMIC_GROWTH",
+    "source_id": "FEDIAF2025",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{\"adult_size_boundary_kg\": 15}"
+  },
+  {
+    "stage_id": "DOG_MATURE",
+    "species": "DOG",
+    "name_zh": "熟龄",
+    "supported": true,
+    "definition": "个体成熟评估；不硬编码统一年龄",
+    "nutrition_profile": "DOG_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_DOG_STAGE2019",
+    "notes": "Stage classification support does not mean a production recipe is available; no automatic age-only protein/fat reduction.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_PREGNANCY",
+    "species": "DOG",
+    "name_zh": "妊娠",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_SENIOR",
+    "species": "DOG",
+    "name_zh": "老年",
+    "supported": true,
+    "definition": "预计寿命最后25%；需个体估计",
+    "nutrition_profile": "DOG_ADULT_LOW_ENERGY",
+    "source_id": "AAHA_DOG_STAGE2019",
+    "notes": "Adult maintenance nutrient requirements; individual age/activity/BCS/MCS/weight-trend energy review. No separate senior minimum or automatic protein restriction. FEDIAF senior statement November 2017; AAHA senior care 2023.",
+    "classification_json": "{}"
+  },
+  {
+    "stage_id": "DOG_UNWEANED",
+    "species": "DOG",
+    "name_zh": "未断奶／新生",
+    "supported": false,
+    "definition": "V1不自动制作鲜食主食",
+    "nutrition_profile": null,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Professional feeding plan required.",
+    "classification_json": "{}"
+  }
+]

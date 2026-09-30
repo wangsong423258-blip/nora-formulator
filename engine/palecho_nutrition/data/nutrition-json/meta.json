@@ -1,0 +1,15 @@
+{
+  "schema_version": 6,
+  "production_ready": false,
+  "build_mode": "REVIEW_ONLY",
+  "master_sha256": "6d1a7e54309ce4a3c7984fc292ee51c71b174adfea2d56d2b5bde80aafcf21a6",
+  "approved_recipe_hashes": [],
+  "preparation_protocols": {},
+  "runtime_network_allowed": false,
+  "data_content_sha256": "834295d9174137e765a2079fc1fe4567d383c9fbbfe868c63bb6eb8fae90609b",
+  "data_version": "0.8.0-scientific-v2-ple-20260924",
+  "source_of_truth": "Master.xlsx plus audit/scientific-closure-2026-09-24/fix_ple_catalog.py reviewed migration",
+  "data_hash_basis": "NORMALIZED_SQL_TABLES_SORTED_BY_PRIMARY_KEY",
+  "reviewed_migration": "PLE species BOTH, Merck malabsorption source, 2026-09-24; no clinical complete-diet release authorization",
+  "parent_data_content_sha256": "f9823ba2825a727d97add0fc9a71301bc35eb815cf8dae33de13ad738fa874ee"
+}

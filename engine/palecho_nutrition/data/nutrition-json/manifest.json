@@ -1,0 +1,28 @@
+{
+  "format": "nora-plain-data-v1",
+  "files": {
+    "meta.json": "a7e3c1932f3463bd7065eab10bcd85e027b56966dab2c80fa3df2f6298dbe0f2",
+    "tables/nutrients.json": "9a75ff6424b80e63e194200c143048cf9db6b4267e6ced19d96fa292787afe6d",
+    "tables/requirements.json": "e436e17beb44c9e502cbd2c91b6d92f3daa1ebceb9ecfa8201b95fdd9347442f",
+    "tables/energy_rules.json": "c259b8e25af79147751b4c16ee833bd957f298840833814bb5784665904aa79f",
+    "tables/life_stages.json": "0a9729f6e478ae4843adf941d43a8ebb805ec2edf263edfdbbfb54aedd53f24c",
+    "tables/diseases.json": "7ddc0edebb348d97e0166ee9fd71361241f5cc5a6878f84bd0dacce7c12f0fb4",
+    "tables/disease_rules.json": "5486a09669ee2bb93043c1ead4d9f444d0da65c65734207d8fbc7641e576e3e9",
+    "tables/disease_conflicts.json": "d774e48bba0398d17cda64f45617814933b8457ba1ecb1ada8ffc469039be1cc",
+    "tables/ingredients.json": "f67b4662c49b2a2ec1a20239e3f03ce0fc20a954c08a94b6fa7e4c62d1c5819b",
+    "tables/ingredient_nutrients.json": "d692baf6c21bd9d216aee75c84ef999144bf33b3fe627444cc461214c5f5964e",
+    "tables/ingredient_limits.json": "9a910154d3921f66ec2ea7afce382eb0d489c0844442e3f695991c245afe5145",
+    "tables/substitution_groups.json": "2398706ffa3fe4012c33ca30a323fb9c7398a8d2e1910af94e7ca5b921abe4dc",
+    "tables/cooking_methods.json": "bd9c155df5f9c3a30dbb8dbc8b5158aa2fe4650ad1b429598075b4046e70255b",
+    "tables/disease_lifestyle.json": "9d510e354ad15f4f91615216340fb50d98c17e1cd7564ea41c1cecb813fdf9eb",
+    "tables/supplements.json": "64230706f1d9cdc7672cbe79942037250f9920df13a1d2314409507b837c9e80",
+    "tables/sources.json": "7508851ccf4c9f899db0def2bb8bf21763ef3b575a4057f82105e55ec056b303",
+    "tables/evidence_map.json": "ebbc6b46386f3b36bd21824907fe86eac0c8c6c23a22b2703f4a84bd7631fb2c",
+    "tables/test_cases.json": "0280ba2466ff209ac13393f949d93348611b4b6e851214cf3cdf09a506e7f372",
+    "tables/versions.json": "225d2d7adc0417fe7b07a59a8e5b2a6d91d685d2619c8e0341a69a739eb4a743",
+    "tables/me_methods.json": "e468c9b5eb64456f562bc00f49ce2506fef6a2ed1e55e654aa1ec548985d5b2a",
+    "tables/supplement_nutrients.json": "e9e9cb2019d93eca576fd2d69b074074fa351a15354b5a7cf84515d947e5d7e8",
+    "tables/supplement_selection_guides.json": "620fd1836d3782f3b603b8278f1a67e6318a2711fe6f29e791aa4e3232e8615b",
+    "tables/supplement_quality_guides.json": "f41a3bc7d621101464fe8f17c4dd854c551717056200ee4cab349e522ee78f9f"
+  }
+}

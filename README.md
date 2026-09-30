@@ -1,8 +1,12 @@
 # Nora
 
-**Open SDK. Private Engine. Local or Self-hosted.**
+**Open SDK and formulation source. Plaintext nutrition data. Local or Self-hosted.**
 
-Fresh-food formulation for dogs and cats. Open SDK. Private Runtime. Private DataPack.
+Fresh-food formulation for dogs and cats. The [engine source and readable data](engine/README.md) are now in this repository. The Python engine runs directly from plaintext JSON files. The older v1.1.1 native downloads below retain their original encrypted DataPack until new native installers are built and verified.
+
+## Plaintext engine and data
+
+The full formulation logic is under [`engine/palecho_nutrition/`](engine/palecho_nutrition/). Its 22 nutrition tables and the ingredient, mapping and rule resources are readable JSON. Install and run the Python command line package with the steps in the [engine README](engine/README.md). Python source uses Apache-2.0; the data remain PalEcho copyrighted under the [data terms](engine/DATA_LICENSE.md). The published JSON has no DataPack encryption or decryption key.
 
 ## Downloads — v1.1.1 Community Preview
 
@@ -67,13 +71,13 @@ Linux x64 is **Experimental Self-hosted Preview**, with **no production support*
 
 ## Community / Commercial licensing
 
-Community is free for personal, company and commercial use, including Local and Self-hosted deployment. The bundled universal signed Community License has no device binding, machine-code submission, activation server or manual approval. Reasonably display **Powered by Nora · PalEcho**. Commercial / Enterprise attribution removal is available through a separate license, including white-label / OEM authorization. SDK: Apache-2.0. Runtime and DataPack: Proprietary; they are not included in this repository and are distributed only as separate Release assets.
+Community is free for personal, company and commercial use, including Local and Self-hosted deployment. The bundled universal signed Community License has no device binding, machine-code submission, activation server or manual approval. Reasonably display **Powered by Nora · PalEcho**. Commercial / Enterprise attribution removal is available through a separate license, including white-label / OEM authorization. SDK and Python engine source: Apache-2.0. Published nutrition data: [PalEcho data terms](engine/DATA_LICENSE.md). The older v1.1.1 native Runtime and encrypted DataPack remain proprietary Release assets.
 
 Local and Self-hosted have the same algorithm capabilities, Engine version, DataPack version, License schema and Canonical API. [Licensing](docs/licensing.md) · [Attribution](docs/attribution.md) · [Security](docs/security.md).
 
 ## Public SDK
 
-SDK 0.3.2 requires Node.js 22+ for developer integration. The included native Runtime and Desktop do not require Node.js. Canonical API v1 retains its 96 operations. GitHub source archives contain the public SDK, not the native Runtime installation.
+SDK 0.3.2 requires Node.js 22+ for developer integration. The older native Runtime and Desktop do not require Node.js. Canonical API v1 retains its 96 operations. GitHub source archives now contain the SDK plus the plaintext Python engine and data; native installers remain separate Release assets.
 
 ```js
 import { NoraClient } from 'nora-sdk';

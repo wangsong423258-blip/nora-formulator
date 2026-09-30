@@ -1,0 +1,2632 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:palecho:freshfood:1.4",
+  "title": "FreshFood 1.4 practical food advice and nutrient reminders",
+  "$defs": {
+    "ConfirmedRecipeResult": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "status": {
+          "const": "CONFIRMED"
+        },
+        "confirmed_recipe_id": {
+          "type": "string"
+        },
+        "confirmed_recipe_snapshot": {
+          "$ref": "#/$defs/ConfirmedRecipeSnapshot"
+        },
+        "snapshot_hash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_engine_version",
+        "status",
+        "confirmed_recipe_id",
+        "confirmed_recipe_snapshot",
+        "snapshot_hash"
+      ],
+      "additionalProperties": false
+    },
+    "ConfirmedRecipeSnapshot": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "confirmed_recipe_id": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "recipe_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ingredient_data_version": {
+          "type": "string"
+        },
+        "nutrition_rule_version": {
+          "type": "string"
+        },
+        "supplement_specs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/UserSupplementSpec"
+          }
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "profile": {
+          "$ref": "#/$defs/PetNutritionProfile"
+        },
+        "recipe": {
+          "$ref": "#/$defs/DailyFreshFoodRecipe"
+        },
+        "recipe_goal": {
+          "const": "DAILY_FRESH_FOOD_RECIPE"
+        },
+        "nutrition_design_target": {
+          "type": "object"
+        },
+        "nutrient_reminders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NutrientReminder"
+          }
+        },
+        "presentation_mode": {
+          "const": "PRACTICAL_REMINDER"
+        }
+      },
+      "required": [
+        "api_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_engine_version",
+        "confirmed_recipe_id",
+        "recipe_id",
+        "recipe_version",
+        "profile_version",
+        "ingredient_data_version",
+        "nutrition_rule_version",
+        "supplement_specs",
+        "timestamp",
+        "profile",
+        "recipe",
+        "recipe_goal",
+        "nutrition_design_target",
+        "nutrient_reminders",
+        "presentation_mode"
+      ],
+      "additionalProperties": false
+    },
+    "CookingPlan": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "confirmed_recipe_id": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "recipe_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "READY"
+          ]
+        },
+        "batch_days": {
+          "enum": [
+            1,
+            3,
+            7
+          ]
+        },
+        "shopping_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "daily_amount": {
+                "type": "number"
+              },
+              "batch_amount": {
+                "type": "number"
+              },
+              "unit": {
+                "const": "g"
+              },
+              "amount_basis": {
+                "type": "string"
+              },
+              "purchase_note": {
+                "type": "string"
+              },
+              "raw_purchase_amount_g": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "first_cook_batch_g": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "repeat_cook_every_days": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "display_name",
+              "daily_amount",
+              "batch_amount",
+              "unit",
+              "amount_basis",
+              "purchase_note",
+              "raw_purchase_amount_g",
+              "first_cook_batch_g",
+              "repeat_cook_every_days"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ingredient_preparation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "trim_instruction": {
+                "type": "string"
+              },
+              "bone_instruction": {
+                "type": "string"
+              },
+              "skin_instruction": {
+                "type": "string"
+              },
+              "cut_instruction": {
+                "type": "string"
+              },
+              "weight_basis": {
+                "type": "string"
+              },
+              "source_food_identity": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "trim_instruction",
+              "bone_instruction",
+              "skin_instruction",
+              "cut_instruction",
+              "weight_basis",
+              "source_food_identity"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "cooking_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "ingredients": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "method": {
+                "type": "string"
+              },
+              "instruction": {
+                "type": "string"
+              },
+              "important_notes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "minimum_internal_temperature_c": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "rest_minutes": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "step",
+              "ingredients",
+              "method",
+              "instruction",
+              "important_notes",
+              "minimum_internal_temperature_c",
+              "rest_minutes",
+              "source_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "daily_feeding_plan": {
+          "$ref": "#/$defs/DailyFeedingPlan"
+        },
+        "storage_plan": {
+          "type": "object",
+          "properties": {
+            "recommended_batch_days": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "requested_batch_days": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "refrigeration_guidance": {
+              "type": "object"
+            },
+            "freezing_guidance": {
+              "type": "object"
+            },
+            "thawing_guidance": {
+              "type": "string"
+            },
+            "food_safety_notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "portions": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "recommended_batch_days",
+            "requested_batch_days",
+            "refrigeration_guidance",
+            "freezing_guidance",
+            "thawing_guidance",
+            "food_safety_notes",
+            "source_ids",
+            "portions"
+          ],
+          "additionalProperties": false
+        },
+        "transition_plan": {
+          "type": "object"
+        },
+        "disease_lifestyle_notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DiseaseAdaptation"
+          }
+        },
+        "safety_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "nutrition_validation_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "advanced_validated": {
+          "const": false
+        },
+        "nutrient_reminders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NutrientReminder"
+          }
+        },
+        "presentation_mode": {
+          "const": "PRACTICAL_REMINDER"
+        },
+        "complete_balanced_claim": {
+          "const": false
+        },
+        "long_term_feeding_note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_engine_version",
+        "confirmed_recipe_id",
+        "recipe_id",
+        "recipe_version",
+        "status",
+        "batch_days",
+        "shopping_list",
+        "ingredient_preparation",
+        "cooking_steps",
+        "daily_feeding_plan",
+        "storage_plan",
+        "transition_plan",
+        "disease_lifestyle_notes",
+        "safety_notes",
+        "warnings",
+        "errors",
+        "nutrition_validation_level",
+        "advanced_validated",
+        "nutrient_reminders",
+        "presentation_mode",
+        "complete_balanced_claim",
+        "long_term_feeding_note"
+      ],
+      "additionalProperties": false
+    },
+    "CurrentDietContext": {
+      "type": "object",
+      "properties": {
+        "main_diet": {
+          "type": "object",
+          "properties": {
+            "intake_class": {
+              "const": "CURRENT_MAIN_DIET"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "DRY_FOOD",
+                "WET_FOOD",
+                "COMPLETE_COMMERCIAL",
+                "HOMEMADE",
+                "MIXED",
+                "UNKNOWN"
+              ]
+            },
+            "is_complete": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "display_name": {
+              "type": "string"
+            },
+            "amount_g": {
+              "type": "number",
+              "minimum": 0
+            },
+            "energy_kcal_per_day": {
+              "type": "number",
+              "minimum": 0
+            },
+            "energy_kcal_per_100g": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "extra_foods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentExtraIntake"
+          }
+        },
+        "snacks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentExtraIntake"
+          }
+        },
+        "freeze_dried": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentExtraIntake"
+          }
+        },
+        "human_foods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentExtraIntake"
+          }
+        },
+        "commercial_extras": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentExtraIntake"
+          }
+        },
+        "current_supplements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "intake_class": {
+                "const": "CURRENT_SUPPLEMENT"
+              },
+              "spec": {
+                "$ref": "#/$defs/UserSupplementSpec"
+              },
+              "supplement_type": {
+                "type": "string",
+                "enum": [
+                  "TAURINE",
+                  "CALCIUM",
+                  "OMEGA3_FISH_OIL",
+                  "DOG_VITAMIN_MINERAL",
+                  "CAT_VITAMIN_MINERAL",
+                  "OTHER"
+                ]
+              },
+              "daily_amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "adjustment_allowed": {
+                "type": "boolean"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "frequency": {
+                "type": "string",
+                "enum": [
+                  "OCCASIONAL",
+                  "WEEKLY",
+                  "DAILY_SMALL",
+                  "DAILY_MODERATE",
+                  "DAILY_LARGE"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "deprecated": true,
+      "description": "Legacy adapter only. Never used to design a FreshFood 1.3 daily recipe."
+    },
+    "CurrentExtraIntake": {
+      "type": "object",
+      "properties": {
+        "intake_class": {
+          "type": "string",
+          "enum": [
+            "CURRENT_EXTRA_FOOD",
+            "COMMERCIAL_EXTRA"
+          ]
+        },
+        "type": {
+          "type": "string"
+        },
+        "subtype": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "OCCASIONAL",
+            "WEEKLY",
+            "DAILY_SMALL",
+            "DAILY_MODERATE",
+            "DAILY_LARGE"
+          ]
+        },
+        "portion_level": {
+          "type": "string",
+          "enum": [
+            "TASTE",
+            "SMALL",
+            "MEDIUM",
+            "LARGE",
+            "UNKNOWN"
+          ]
+        },
+        "food_pattern": {
+          "type": "string"
+        },
+        "amount_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "energy_kcal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "energy_kcal_per_100g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ingredient_id": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "FreshFoodError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "ERROR"
+          ]
+        },
+        "recoverable": {
+          "type": "boolean"
+        },
+        "suggested_action": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "field",
+        "severity",
+        "recoverable",
+        "suggested_action"
+      ],
+      "additionalProperties": false
+    },
+    "FreshFoodFailure": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "status": {
+          "const": "ERROR"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        }
+      },
+      "required": [
+        "api_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_engine_version",
+        "status",
+        "errors",
+        "warnings"
+      ],
+      "additionalProperties": true
+    },
+    "FreshFoodWarning": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "WARNING"
+          ]
+        },
+        "related_field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "severity",
+        "related_field"
+      ],
+      "additionalProperties": false
+    },
+    "NutritionDesignTarget": {
+      "type": "object",
+      "properties": {
+        "daily_energy_kcal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fresh_food_energy_kcal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "life_stage": {
+          "type": "string"
+        },
+        "nutrient_constraints": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "disease_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "design_policy": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "daily_energy_kcal",
+        "fresh_food_energy_kcal",
+        "life_stage",
+        "nutrient_constraints",
+        "disease_constraints",
+        "design_policy"
+      ],
+      "additionalProperties": false
+    },
+    "PetNutritionProfile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string"
+        },
+        "species": {
+          "enum": [
+            "DOG",
+            "CAT"
+          ]
+        },
+        "breed_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "breed_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "as_of_date": {
+          "type": "string"
+        },
+        "age_years": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 40
+        },
+        "age_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 11
+        },
+        "life_stage": {
+          "enum": [
+            null,
+            "GROWTH",
+            "ADULT",
+            "MATURE",
+            "SENIOR",
+            "EARLY_GROWTH",
+            "LATE_GROWTH_SMALL_MEDIUM",
+            "LATE_GROWTH_LARGE",
+            "UNWEANED",
+            "DOG_GROWTH",
+            "DOG_ADULT",
+            "DOG_MATURE",
+            "DOG_SENIOR",
+            "DOG_EARLY_GROWTH",
+            "DOG_LATE_GROWTH_SMALL_MEDIUM",
+            "DOG_LATE_GROWTH_LARGE",
+            "DOG_UNWEANED",
+            "CAT_GROWTH",
+            "CAT_ADULT",
+            "CAT_SENIOR"
+          ]
+        },
+        "sex": {
+          "enum": [
+            "FEMALE",
+            "MALE",
+            "UNKNOWN"
+          ]
+        },
+        "neutered": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "weight_kg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "body_condition": {
+          "oneOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 9
+            },
+            {
+              "enum": [
+                "VERY_THIN",
+                "THIN",
+                "IDEAL",
+                "NORMAL",
+                "OVERWEIGHT",
+                "OBESE",
+                "SEVERE_UNDERWEIGHT",
+                "MILD_UNDERWEIGHT",
+                "MILD_OVERWEIGHT"
+              ]
+            }
+          ]
+        },
+        "muscle_condition": {
+          "enum": [
+            "NORMAL",
+            "MILD_LOSS",
+            "MODERATE_LOSS",
+            "SEVERE_LOSS",
+            "UNKNOWN"
+          ]
+        },
+        "weight_trend": {
+          "enum": [
+            "STABLE",
+            "GAINING",
+            "LOSING",
+            "UNKNOWN",
+            "LOSS",
+            "GAIN"
+          ]
+        },
+        "activity_level": {
+          "enum": [
+            "LOW",
+            "MODERATE_LOW_IMPACT",
+            "MODERATE_HIGH_IMPACT",
+            "HIGH",
+            "ACTIVE",
+            "NORMAL"
+          ]
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "recent_symptoms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "food_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "reason": {
+                "enum": [
+                  "ALLERGY",
+                  "INTOLERANCE",
+                  "VET_RESTRICTED",
+                  "CONFIRMED_ALLERGY",
+                  "VET_AVOID"
+                ]
+              },
+              "ingredient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "disliked_foods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_adult_weight_kg": {
+          "type": "number"
+        },
+        "growth_complete": {
+          "type": "boolean"
+        },
+        "weaned": {
+          "type": "boolean"
+        },
+        "available_ingredient_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "daily_label_servings": {
+          "type": "number"
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feeding_goal": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_diet_type": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "main_diet": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "extra_foods": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "commercial_extras": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_supplements": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_diet_context": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "disease_subtypes": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "subtype": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "disease_id",
+                  "subtype"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "current_intake": {
+          "deprecated": true,
+          "description": "Ignored before daily recipe design and profile identity hashing."
+        },
+        "current_main_diet": {
+          "deprecated": true,
+          "description": "Ignored before daily recipe design and profile identity hashing."
+        }
+      },
+      "required": [
+        "species",
+        "weight_kg"
+      ],
+      "additionalProperties": false
+    },
+    "RecipeComponent": {
+      "type": "object",
+      "properties": {
+        "component_type": {
+          "type": "string",
+          "enum": [
+            "ANIMAL_PROTEIN",
+            "ENERGY_SOURCE",
+            "FIBER_VEGETABLE",
+            "OPTIONAL_EGG",
+            "OPTIONAL_ORGAN"
+          ]
+        },
+        "ingredient_id": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "amount_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "amount_min_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "amount_max_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "purpose": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "replaceable": {
+          "type": "boolean"
+        },
+        "replacement_options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "requires_whole_recipe_recalculation": {
+                "const": true
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "display_name",
+              "requires_whole_recipe_recalculation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "weight_basis": {
+          "type": "string"
+        },
+        "food_state": {
+          "type": "string"
+        },
+        "portion_basis": {
+          "const": "EDIBLE_WEIGHT"
+        },
+        "china_availability": {
+          "type": "string"
+        },
+        "cost_level": {
+          "type": "string"
+        },
+        "preparation_hint": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "component_type",
+        "ingredient_id",
+        "display_name",
+        "amount_g",
+        "amount_min_g",
+        "amount_max_g",
+        "purpose",
+        "replaceable",
+        "replacement_options"
+      ],
+      "additionalProperties": false
+    },
+    "RecipeRecalculationResult": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "previous_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "new_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION",
+            "REPLACEMENT_ACCEPTED",
+            "REPLACEMENT_REJECTED"
+          ]
+        },
+        "recipe": {
+          "$ref": "#/$defs/DailyFreshFoodRecipe"
+        },
+        "whole_recipe_recalculated": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "equal_weight_swap": {
+          "const": false
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "diagnostic_reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attempted_status": {
+          "type": "string",
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION"
+          ]
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_id",
+        "previous_version",
+        "new_version",
+        "status",
+        "recipe",
+        "whole_recipe_recalculated",
+        "errors",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "UserSupplementSpec": {
+      "title": "UserSupplementSpec",
+      "type": "object",
+      "required": [
+        "id",
+        "supplement_type",
+        "species",
+        "label_source",
+        "user_confirmed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$"
+        },
+        "supplement_type": {
+          "enum": [
+            "TAURINE",
+            "CALCIUM",
+            "OMEGA3_FISH_OIL",
+            "DOG_VITAMIN_MINERAL",
+            "CAT_VITAMIN_MINERAL"
+          ]
+        },
+        "species": {
+          "oneOf": [
+            {
+              "enum": [
+                "DOG",
+                "CAT",
+                "BOTH"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "enum": [
+                  "DOG",
+                  "CAT"
+                ]
+              }
+            }
+          ]
+        },
+        "supplement_mode": {
+          "enum": [
+            "LABEL_GUIDED",
+            "NUTRIENT_CALCULATED"
+          ]
+        },
+        "serving_amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "serving_unit": {
+          "enum": [
+            "g",
+            "mg",
+            "scoop",
+            "mL",
+            "capsule",
+            "tablet"
+          ]
+        },
+        "active_components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nutrient_id",
+              "amount",
+              "unit",
+              "basis"
+            ],
+            "properties": {
+              "nutrient_id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "g",
+                  "mg",
+                  "ug",
+                  "μg",
+                  "µg",
+                  "IU"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "PER_SERVING",
+                  "PER_G",
+                  "PER_UNIT"
+                ]
+              },
+              "chemical_form": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "per_serving_amount": {
+                "type": "number"
+              },
+              "serving_unit": {
+                "type": "string"
+              },
+              "evidence_type": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "label_source": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "user_confirmed": {
+          "const": true
+        },
+        "optional_quality_data": {
+          "type": "object"
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "manufacturer": {
+          "type": "string"
+        },
+        "dosage_form": {
+          "enum": [
+            "CAPSULE",
+            "TABLET",
+            "POWDER",
+            "LIQUID"
+          ]
+        },
+        "measurement_increment": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "grams_per_scoop": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "complete_homemade_diet": {
+          "type": "boolean"
+        },
+        "usage_basis": {
+          "enum": [
+            "PER_BODY_WEIGHT",
+            "PER_FOOD_WEIGHT",
+            "PER_DAILY_DIET",
+            "PER_SERVING"
+          ]
+        },
+        "taurine_mg_per_serving": {
+          "type": "number"
+        },
+        "elemental_calcium_mg_per_serving": {
+          "type": "number"
+        },
+        "elemental_calcium_mg": {
+          "type": "number"
+        },
+        "epa_mg_per_serving": {
+          "type": "number"
+        },
+        "dha_mg_per_serving": {
+          "type": "number"
+        },
+        "fish_oil_total_mg": {
+          "type": "number"
+        },
+        "total_omega3_mg": {
+          "type": "number"
+        },
+        "energy_kcal_per_serving": {
+          "type": "number"
+        },
+        "product_mass_g_per_serving": {
+          "type": "number"
+        },
+        "recommended_amount": {
+          "type": "number"
+        },
+        "usage_basis_amount": {
+          "type": "number"
+        },
+        "max_daily_amount": {
+          "type": "number"
+        },
+        "dose_increment": {
+          "type": "number"
+        },
+        "product_name": {
+          "type": "string"
+        },
+        "recommended_unit": {
+          "type": "string"
+        },
+        "usage_basis_unit": {
+          "type": "string"
+        },
+        "food_weight_basis": {
+          "type": "string"
+        },
+        "max_daily_unit": {
+          "type": "string"
+        },
+        "division_label_source": {
+          "type": "string"
+        },
+        "product_usage_basis": {
+          "type": "string"
+        },
+        "division_allowed": {
+          "type": "boolean"
+        },
+        "pure_inorganic": {
+          "type": "boolean"
+        },
+        "pure_oil": {
+          "type": "boolean"
+        },
+        "extra_active_components_unknown": {
+          "type": "boolean"
+        },
+        "calcium_compound": {
+          "type": "object",
+          "properties": {
+            "form": {
+              "type": "string"
+            },
+            "mg_per_serving": {
+              "type": "number"
+            },
+            "purity_fraction": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "form",
+            "mg_per_serving",
+            "purity_fraction"
+          ],
+          "additionalProperties": false
+        },
+        "carrier": {
+          "type": "object"
+        },
+        "life_stages": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "ALL",
+              "GROWTH",
+              "ADULT",
+              "HEALTHY_SENIOR"
+            ]
+          }
+        },
+        "label_constraints": {
+          "type": "object",
+          "properties": {
+            "required_food_categories": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "declared_active_nutrients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "undeclared_active_ingredients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nutrient_panel": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nutrient_id",
+              "amount",
+              "unit",
+              "basis"
+            ],
+            "properties": {
+              "nutrient_id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "g",
+                  "mg",
+                  "ug",
+                  "μg",
+                  "µg",
+                  "IU"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "PER_SERVING",
+                  "PER_G",
+                  "PER_UNIT"
+                ]
+              },
+              "chemical_form": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "per_serving_amount": {
+                "type": "number"
+              },
+              "serving_unit": {
+                "type": "string"
+              },
+              "evidence_type": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "description": "Structural API contract. SupplementInputValidator additionally enforces physical mass, species, nutrient units and forms, serving conversion, chemical rules, label guidance, quality consistency and practical dispensing. Convenience nutrient fields are accepted as alternatives to active_components, never duplicates.",
+      "additionalProperties": false
+    },
+    "IngredientReplacementRequest": {
+      "type": "object",
+      "properties": {
+        "recipe_id": {
+          "type": "string"
+        },
+        "source_ingredient_id": {
+          "type": "string"
+        },
+        "target_ingredient_id": {
+          "type": "string"
+        },
+        "user_requested_amount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "expected_version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "recipe_id",
+        "source_ingredient_id",
+        "target_ingredient_id"
+      ],
+      "additionalProperties": false
+    },
+    "DailyFeedingPlan": {
+      "type": "object",
+      "properties": {
+        "daily_total_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "daily_food_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "meals_per_day": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "amount_per_meal_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "amount_basis": {
+          "type": "string"
+        },
+        "amount_per_meal_basis": {
+          "type": "string"
+        },
+        "diet_scope": {
+          "const": "DAILY_FRESH_FOOD_RECIPE"
+        },
+        "supplements_separate": {
+          "type": "boolean"
+        },
+        "feeding_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "daily_total_g",
+        "meals_per_day",
+        "amount_per_meal_g"
+      ],
+      "additionalProperties": true
+    },
+    "RequiredSupplement": {
+      "type": "object",
+      "properties": {
+        "supplement_type": {
+          "enum": [
+            "TAURINE",
+            "CALCIUM",
+            "OMEGA3_FISH_OIL",
+            "DOG_VITAMIN_MINERAL",
+            "CAT_VITAMIN_MINERAL"
+          ]
+        },
+        "purpose": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "user_spec_required": {
+          "type": "boolean"
+        },
+        "user_spec_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "daily_amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "calculated_dose": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "dose_unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_reference_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "spec_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "specification": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "supplement_type",
+        "purpose",
+        "user_spec_required"
+      ],
+      "additionalProperties": true
+    },
+    "RecipeCompositionPolicy": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "target_component_count": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "soft_target": {
+          "const": true
+        }
+      }
+    },
+    "DiseaseAdaptation": {
+      "type": "object",
+      "properties": {
+        "disease_id": {
+          "type": "string"
+        },
+        "foods_to_limit": {
+          "type": "array",
+          "items": {}
+        },
+        "foods_to_avoid": {
+          "type": "array",
+          "items": {}
+        },
+        "foods_preferred": {
+          "type": "array",
+          "items": {}
+        },
+        "hydration_notes": {
+          "type": "array",
+          "items": {}
+        },
+        "feeding_notes": {
+          "type": "array",
+          "items": {}
+        },
+        "weight_monitoring": {
+          "type": "array",
+          "items": {}
+        },
+        "appetite_monitoring": {
+          "type": "array",
+          "items": {}
+        },
+        "stool_monitoring": {
+          "type": "array",
+          "items": {}
+        },
+        "red_flags": {
+          "type": "array",
+          "items": {}
+        },
+        "classification": {
+          "enum": [
+            "GENERAL_DISEASE_ADAPTED_RECIPE"
+          ]
+        }
+      },
+      "required": [
+        "disease_id",
+        "foods_to_limit",
+        "foods_to_avoid",
+        "foods_preferred",
+        "hydration_notes",
+        "feeding_notes",
+        "weight_monitoring",
+        "appetite_monitoring",
+        "stool_monitoring",
+        "red_flags"
+      ]
+    },
+    "DailyFreshFoodRecipe": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "recipe_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recipe_kind": {
+          "const": "DAILY_FRESH_FOOD_RECIPE"
+        },
+        "status": {
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION"
+          ]
+        },
+        "pet_summary": {
+          "$ref": "#/$defs/PetNutritionProfile"
+        },
+        "daily_energy_target": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "kcal": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unit": {
+              "const": "kcal/day"
+            },
+            "life_stage": {
+              "type": "string"
+            },
+            "source_id": {
+              "type": "string"
+            },
+            "energy_strategy": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kcal",
+            "unit",
+            "life_stage",
+            "source_id",
+            "energy_strategy"
+          ],
+          "additionalProperties": false
+        },
+        "recipe_components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RecipeComponent"
+          }
+        },
+        "disease_adaptations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DiseaseAdaptation"
+          }
+        },
+        "nutrition_explanation": {
+          "type": "array",
+          "items": {}
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "replacement_options": {
+          "type": "array",
+          "items": {}
+        },
+        "daily_feeding_plan": {
+          "$ref": "#/$defs/DailyFeedingPlan"
+        },
+        "recipe_summary": {
+          "type": "object"
+        },
+        "calculation_metadata": {
+          "type": "object"
+        },
+        "nutrition_audit": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "recipe_composition_policy": {
+          "$ref": "#/$defs/RecipeCompositionPolicy"
+        },
+        "single_component_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blocking_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "body_condition_strategy": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "disease_lifestyle_notes": {
+          "type": "object"
+        },
+        "preference_warning": {
+          "type": "array"
+        },
+        "recipe_scope": {
+          "enum": [
+            "GENERAL_DISEASE_ADAPTED_RECIPE",
+            "DAILY_FRESH_FOOD_RECIPE"
+          ]
+        },
+        "nutrient_reminders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NutrientReminder"
+          }
+        },
+        "presentation_mode": {
+          "const": "PRACTICAL_REMINDER"
+        },
+        "advanced_supplement_layer": {
+          "const": "AVAILABLE"
+        },
+        "nutrition_scope": {
+          "const": "FOOD_CORE_WITH_NUTRIENT_REMINDERS"
+        },
+        "complete_balanced_claim": {
+          "const": false
+        },
+        "long_term_feeding_note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_id",
+        "recipe_version",
+        "profile_version",
+        "status",
+        "pet_summary",
+        "daily_energy_target",
+        "recipe_components",
+        "disease_adaptations",
+        "nutrition_explanation",
+        "warnings",
+        "errors",
+        "replacement_options",
+        "daily_feeding_plan",
+        "reason_codes",
+        "blocking_reasons",
+        "body_condition_strategy",
+        "disease_lifestyle_notes",
+        "preference_warning",
+        "recipe_scope",
+        "single_component_reason",
+        "nutrient_reminders",
+        "presentation_mode",
+        "advanced_supplement_layer",
+        "nutrition_scope",
+        "complete_balanced_claim",
+        "long_term_feeding_note"
+      ],
+      "additionalProperties": false
+    },
+    "DiseaseCatalog": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "status": {
+          "const": "READY"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "category_id",
+              "display_name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "disease_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "species": {
+                "enum": [
+                  "DOG",
+                  "CAT",
+                  "BOTH"
+                ]
+              },
+              "nutrition_action_level": {
+                "enum": [
+                  "GENERAL_DISEASE_ADAPTED_RECIPE"
+                ]
+              }
+            },
+            "required": [
+              "disease_id",
+              "display_name",
+              "category",
+              "species",
+              "nutrition_action_level"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "accepted_id_aliases": {
+          "type": "object"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "status",
+        "categories",
+        "diseases",
+        "accepted_id_aliases",
+        "warnings",
+        "errors"
+      ],
+      "additionalProperties": false
+    },
+    "IngredientReplacementResult": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "previous_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "new_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION",
+            "REPLACEMENT_ACCEPTED",
+            "REPLACEMENT_REJECTED"
+          ]
+        },
+        "recipe": {
+          "$ref": "#/$defs/DailyFreshFoodRecipe"
+        },
+        "whole_recipe_recalculated": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "equal_weight_swap": {
+          "const": false
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "diagnostic_reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attempted_status": {
+          "type": "string",
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION"
+          ]
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_id",
+        "previous_version",
+        "new_version",
+        "status",
+        "recipe",
+        "whole_recipe_recalculated",
+        "errors",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "ProfileValidationResult": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "VALID",
+            "WARNING"
+          ]
+        },
+        "normalized": {
+          "$ref": "#/$defs/PetNutritionProfile"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "status",
+        "normalized",
+        "errors",
+        "warnings"
+      ],
+      "additionalProperties": false
+    },
+    "NutrientReminder": {
+      "type": "object",
+      "properties": {
+        "reminder_id": {
+          "type": "string"
+        },
+        "nutrient_id": {
+          "enum": [
+            "CALCIUM",
+            "VITAMIN_MINERAL",
+            "TAURINE",
+            "OMEGA3_EPA_DHA",
+            "OTHER"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "importance": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "long_term_note": {
+          "type": "string"
+        },
+        "disease_note": {
+          "type": "string"
+        },
+        "applies_to": {
+          "type": "object"
+        },
+        "display_order": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "reminder_id",
+        "nutrient_id",
+        "title",
+        "reason",
+        "importance",
+        "long_term_note",
+        "disease_note",
+        "applies_to",
+        "display_order"
+      ]
+    },
+    "DailyFreshFoodRecipeV14": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.4"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_id": {
+          "type": "string"
+        },
+        "recipe_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profile_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recipe_kind": {
+          "const": "DAILY_FRESH_FOOD_RECIPE"
+        },
+        "status": {
+          "enum": [
+            "RECOMMENDED",
+            "RECOMMENDED_WITH_SUPPLEMENTS",
+            "NO_SAFE_RECIPE",
+            "BLOCKED_ACUTE_CONDITION"
+          ]
+        },
+        "pet_summary": {
+          "$ref": "#/$defs/PetNutritionProfile"
+        },
+        "daily_energy_target": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "kcal": {
+              "type": "number",
+              "minimum": 0
+            },
+            "unit": {
+              "const": "kcal/day"
+            },
+            "life_stage": {
+              "type": "string"
+            },
+            "source_id": {
+              "type": "string"
+            },
+            "energy_strategy": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kcal",
+            "unit",
+            "life_stage",
+            "source_id",
+            "energy_strategy"
+          ],
+          "additionalProperties": false
+        },
+        "recipe_components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/RecipeComponent"
+          }
+        },
+        "disease_adaptations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DiseaseAdaptation"
+          }
+        },
+        "nutrition_explanation": {
+          "type": "array",
+          "items": {}
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodWarning"
+          }
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FreshFoodError"
+          }
+        },
+        "replacement_options": {
+          "type": "array",
+          "items": {}
+        },
+        "daily_feeding_plan": {
+          "$ref": "#/$defs/DailyFeedingPlan"
+        },
+        "recipe_summary": {
+          "type": "object"
+        },
+        "calculation_metadata": {
+          "type": "object"
+        },
+        "nutrition_audit": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "recipe_composition_policy": {
+          "$ref": "#/$defs/RecipeCompositionPolicy"
+        },
+        "single_component_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blocking_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "body_condition_strategy": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "disease_lifestyle_notes": {
+          "type": "object"
+        },
+        "preference_warning": {
+          "type": "array"
+        },
+        "recipe_scope": {
+          "enum": [
+            "GENERAL_DISEASE_ADAPTED_RECIPE",
+            "DAILY_FRESH_FOOD_RECIPE"
+          ]
+        },
+        "nutrient_reminders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NutrientReminder"
+          }
+        },
+        "presentation_mode": {
+          "const": "PRACTICAL_REMINDER"
+        },
+        "advanced_supplement_layer": {
+          "const": "AVAILABLE"
+        },
+        "nutrition_scope": {
+          "const": "FOOD_CORE_WITH_NUTRIENT_REMINDERS"
+        },
+        "complete_balanced_claim": {
+          "const": false
+        },
+        "long_term_feeding_note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_version",
+        "recipe_engine_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_id",
+        "recipe_version",
+        "profile_version",
+        "status",
+        "pet_summary",
+        "daily_energy_target",
+        "recipe_components",
+        "disease_adaptations",
+        "nutrition_explanation",
+        "warnings",
+        "errors",
+        "replacement_options",
+        "daily_feeding_plan",
+        "reason_codes",
+        "blocking_reasons",
+        "body_condition_strategy",
+        "disease_lifestyle_notes",
+        "preference_warning",
+        "recipe_scope",
+        "single_component_reason",
+        "nutrient_reminders",
+        "presentation_mode",
+        "advanced_supplement_layer",
+        "nutrition_scope",
+        "complete_balanced_claim",
+        "long_term_feeding_note"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

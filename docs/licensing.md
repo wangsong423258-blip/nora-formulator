@@ -1,10 +1,10 @@
 # Licensing
 
-**Open SDK. Private Runtime. Private DataPack.**
+**Open SDK and Python engine source. PalEcho copyrighted nutrition data.**
 
-The public SDK, CLI integration, schemas, OpenAPI, examples, docs and attribution components use [Apache-2.0](../LICENSE). This repository's license does not grant rights to separately distributed Runtime or DataPack assets.
+The public SDK, CLI integration, schemas, OpenAPI, examples, docs, attribution components and Python engine source use [Apache-2.0](../LICENSE). The readable JSON nutrition tables, ingredient records, mappings and rule data follow the separate [data terms](../engine/DATA_LICENSE.md). The old native Runtime and encrypted DataPack assets keep their included terms.
 
-Nora Runtime and DataPack are Proprietary under their included terms. The Community packages include a universal Nora / PalEcho-signed license with no device binding.
+The v1.1.1 native Runtime and DataPack are proprietary under their included terms. Those Community packages include a universal Nora / PalEcho-signed license with no device binding. The new Python command line runtime reads plaintext JSON and requires no DataPack decryption key.
 
 | Community policy | Value |
 | --- | --- |

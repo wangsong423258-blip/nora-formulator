@@ -1,0 +1,1412 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:palecho:freshfood:1.8",
+  "title": "FreshFood Quick Meal V1",
+  "type": "object",
+  "$ref": "#/$defs/QuickFreshMealResult",
+  "$defs": {
+    "IngredientSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "const": "CANDIDATE_POOL"
+        },
+        "categories": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ANIMAL_PROTEIN": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ENERGY_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "FIBER_SOURCE": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "QuickMealProfile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string"
+        },
+        "species": {
+          "enum": [
+            "DOG",
+            "CAT"
+          ]
+        },
+        "breed_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "breed_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "as_of_date": {
+          "type": "string"
+        },
+        "age_years": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 40
+        },
+        "age_months": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 11
+        },
+        "life_stage": {
+          "enum": [
+            null,
+            "GROWTH",
+            "ADULT",
+            "MATURE",
+            "SENIOR",
+            "EARLY_GROWTH",
+            "LATE_GROWTH_SMALL_MEDIUM",
+            "LATE_GROWTH_LARGE",
+            "UNWEANED",
+            "DOG_GROWTH",
+            "DOG_ADULT",
+            "DOG_MATURE",
+            "DOG_SENIOR",
+            "DOG_EARLY_GROWTH",
+            "DOG_LATE_GROWTH_SMALL_MEDIUM",
+            "DOG_LATE_GROWTH_LARGE",
+            "DOG_UNWEANED",
+            "CAT_GROWTH",
+            "CAT_ADULT",
+            "CAT_SENIOR",
+            "LATE_GROWTH",
+            "LARGE_BREED_GROWTH"
+          ]
+        },
+        "sex": {
+          "enum": [
+            "FEMALE",
+            "MALE",
+            "UNKNOWN"
+          ]
+        },
+        "neutered": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "weight_kg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "body_condition": {
+          "oneOf": [
+            {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 9
+            },
+            {
+              "enum": [
+                "VERY_THIN",
+                "THIN",
+                "IDEAL",
+                "NORMAL",
+                "OVERWEIGHT",
+                "OBESE",
+                "SEVERE_UNDERWEIGHT",
+                "MILD_UNDERWEIGHT",
+                "MILD_OVERWEIGHT"
+              ]
+            }
+          ]
+        },
+        "muscle_condition": {
+          "enum": [
+            "NORMAL",
+            "MILD_LOSS",
+            "MODERATE_LOSS",
+            "SEVERE_LOSS",
+            "UNKNOWN"
+          ]
+        },
+        "weight_trend": {
+          "enum": [
+            "STABLE",
+            "GAINING",
+            "LOSING",
+            "UNKNOWN",
+            "LOSS",
+            "GAIN"
+          ]
+        },
+        "activity_level": {
+          "enum": [
+            "LOW",
+            "NORMAL",
+            "HIGH",
+            "VERY_HIGH",
+            "ACTIVE",
+            "MODERATE_LOW_IMPACT",
+            "MODERATE_HIGH_IMPACT"
+          ]
+        },
+        "diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "recent_symptoms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "food_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "reason": {
+                "enum": [
+                  "ALLERGY",
+                  "INTOLERANCE",
+                  "VET_RESTRICTED",
+                  "CONFIRMED_ALLERGY",
+                  "VET_AVOID"
+                ]
+              },
+              "ingredient": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "disliked_foods": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_adult_weight_kg": {
+          "type": "number"
+        },
+        "growth_complete": {
+          "type": "boolean"
+        },
+        "weaned": {
+          "type": "boolean"
+        },
+        "available_ingredient_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "daily_label_servings": {
+          "type": "number"
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feeding_goal": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_diet_type": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "main_diet": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "extra_foods": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "commercial_extras": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_supplements": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "current_diet_context": {
+          "deprecated": true,
+          "description": "Accepted by the compatibility adapter, ignored and removed before daily design."
+        },
+        "disease_subtypes": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "subtype": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "disease_id",
+                  "subtype"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "current_intake": {
+          "deprecated": true,
+          "description": "Ignored before daily recipe design and profile identity hashing."
+        },
+        "current_main_diet": {
+          "deprecated": true,
+          "description": "Ignored before daily recipe design and profile identity hashing."
+        },
+        "ingredient_selection": {
+          "$ref": "#/$defs/IngredientSelection"
+        },
+        "clinical_nutrition": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "documented_deficiencies": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "active_nutrient",
+                  "clinician_confirmed",
+                  "report_reference"
+                ],
+                "properties": {
+                  "active_nutrient": {
+                    "enum": [
+                      "TAURINE",
+                      "COBALAMIN"
+                    ]
+                  },
+                  "clinician_confirmed": {
+                    "const": true
+                  },
+                  "report_reference": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 300
+                  }
+                }
+              }
+            },
+            "risk_factors": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "MOBILITY_DECLINE",
+                  "STIFFNESS",
+                  "OBESITY"
+                ]
+              }
+            },
+            "mmvd_stage": {
+              "enum": [
+                null,
+                "A",
+                "B1",
+                "B2",
+                "C",
+                "D"
+              ]
+            },
+            "cognitive_dysfunction_report": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 300
+            }
+          }
+        },
+        "meal_scope": {
+          "enum": [
+            "DAY",
+            "MEAL"
+          ]
+        },
+        "diagnosed_diseases": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "disease_id": {
+                    "type": "string"
+                  },
+                  "confirmed": {
+                    "type": "boolean"
+                  },
+                  "stage": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "clinical_status": {
+                    "enum": [
+                      "STABLE",
+                      "ACUTE",
+                      "SEVERE",
+                      "UNSTABLE"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "breed": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "species"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "weight_kg"
+          ]
+        },
+        {
+          "required": [
+            "weight"
+          ]
+        }
+      ]
+    },
+    "QuickMealComponent": {
+      "type": "object",
+      "properties": {
+        "ingredient_id": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "amount_g": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "category": {
+          "enum": [
+            "ANIMAL_PROTEIN",
+            "ENERGY_SOURCE",
+            "FIBER_SOURCE",
+            "SECONDARY_ANIMAL_FOOD",
+            "OIL",
+            "ORGAN",
+            "OTHER"
+          ]
+        },
+        "food_state": {
+          "type": "string"
+        },
+        "weight_basis": {
+          "enum": [
+            "COOKED_WEIGHT",
+            "AS_SOLD_WEIGHT"
+          ]
+        },
+        "portion_basis": {
+          "const": "EDIBLE_WEIGHT"
+        },
+        "source_id": {
+          "type": "string"
+        },
+        "energy_kcal": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "ingredient_id",
+        "display_name",
+        "amount_g",
+        "category",
+        "food_state",
+        "weight_basis",
+        "portion_basis",
+        "source_id",
+        "energy_kcal"
+      ],
+      "additionalProperties": false
+    },
+    "QuickNutritionAdvice": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "active_nutrient": {
+          "type": "string"
+        },
+        "purpose": {
+          "enum": [
+            "NUTRIENT_REMINDER",
+            "HEALTH_SUPPORT",
+            "DISEASE_SUPPORT"
+          ]
+        },
+        "evidence_goal": {
+          "enum": [
+            "NUTRIENT_COMPLETION",
+            "HEALTH_RISK_SUPPORT",
+            "DISEASE_SUPPORT"
+          ]
+        },
+        "why_recommended": {
+          "type": "string"
+        },
+        "physiologic_role": {
+          "type": "string"
+        },
+        "evidence_level": {
+          "enum": [
+            "EVIDENCE_A",
+            "EVIDENCE_B"
+          ]
+        },
+        "evidence_source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "target_amount": {
+          "type": "null"
+        },
+        "target_min": {
+          "type": "null"
+        },
+        "target_max": {
+          "type": "null"
+        },
+        "target_basis": {
+          "type": "string"
+        },
+        "label_should_show": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditional_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contraindications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "clinical_outcome_supported": {
+          "type": "boolean"
+        },
+        "safety_status": {
+          "const": "CONDITIONAL"
+        },
+        "interaction_status": {
+          "const": "UNKNOWN"
+        },
+        "required_for_this_meal": {
+          "const": false
+        },
+        "automatic_dose_allowed": {
+          "const": false
+        },
+        "user_message": {
+          "type": "string"
+        },
+        "indications": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "title",
+        "active_nutrient",
+        "purpose",
+        "evidence_goal",
+        "why_recommended",
+        "physiologic_role",
+        "evidence_level",
+        "evidence_source_ids",
+        "evidence_sources",
+        "target_amount",
+        "target_min",
+        "target_max",
+        "target_basis",
+        "label_should_show",
+        "conditional_requirements",
+        "contraindications",
+        "clinical_outcome_supported",
+        "safety_status",
+        "interaction_status",
+        "required_for_this_meal",
+        "automatic_dose_allowed",
+        "user_message",
+        "indications"
+      ],
+      "additionalProperties": false
+    },
+    "QuickCookingPlan": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "READY"
+        },
+        "meal_scope": {
+          "enum": [
+            "DAY",
+            "MEAL"
+          ]
+        },
+        "shopping_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "amount_g": {
+                "type": "number",
+                "minimum": 0
+              },
+              "weight_basis": {
+                "type": "string"
+              },
+              "food_state": {
+                "type": "string"
+              },
+              "raw_purchase_amount_g": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "display_name",
+              "amount_g",
+              "weight_basis",
+              "food_state",
+              "raw_purchase_amount_g"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "weighing_note": {
+          "type": "string"
+        },
+        "preparation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "instruction": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "instruction"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "cooking_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "food_state": {
+                "type": "string"
+              },
+              "instruction": {
+                "type": "string"
+              },
+              "minimum_internal_temperature_c": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "rest_minutes": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "required": [
+              "ingredient_ids",
+              "food_state",
+              "instruction",
+              "minimum_internal_temperature_c",
+              "rest_minutes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "mixing": {
+          "type": "object",
+          "properties": {
+            "ingredient_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "instruction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ingredient_ids",
+            "instruction"
+          ],
+          "additionalProperties": false
+        },
+        "feeding": {
+          "type": "object",
+          "properties": {
+            "total_g": {
+              "type": "number",
+              "minimum": 0
+            },
+            "meal_count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "portions_g": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "instruction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "total_g",
+            "meal_count",
+            "portions_g",
+            "instruction"
+          ],
+          "additionalProperties": false
+        },
+        "hydration_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "storage": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nutrition_reminders": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "health_support_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disease_support_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "object"
+        },
+        "product_doses_included": {
+          "const": false
+        }
+      },
+      "required": [
+        "status",
+        "meal_scope",
+        "shopping_list",
+        "weighing_note",
+        "preparation",
+        "cooking_steps",
+        "mixing",
+        "feeding",
+        "hydration_notes",
+        "storage",
+        "nutrition_reminders",
+        "health_support_notes",
+        "disease_support_notes",
+        "sources",
+        "product_doses_included"
+      ],
+      "additionalProperties": false
+    },
+    "EstimatedEnergyTarget": {
+      "type": "object",
+      "properties": {
+        "kcal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "range_kcal": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "unit": {
+          "enum": [
+            "kcal/day",
+            "kcal/meal"
+          ]
+        },
+        "basis": {
+          "const": "HOUSEHOLD_STARTING_ESTIMATE"
+        },
+        "tolerance_fraction": {
+          "const": 0.05
+        }
+      },
+      "required": [
+        "kcal",
+        "range_kcal",
+        "unit",
+        "basis",
+        "tolerance_fraction"
+      ],
+      "additionalProperties": false
+    },
+    "QuickFreshMealResult": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.8"
+        },
+        "nutrition_db_version": {
+          "type": "string"
+        },
+        "nutrition_rules_version": {
+          "type": "string"
+        },
+        "recipe_engine_version": {
+          "type": "string"
+        },
+        "meal_id": {
+          "type": "string",
+          "pattern": "meal18_[a-f0-9]{32}"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "QUICK_MEAL_RECOMMENDED",
+            "QUICK_MEAL_DISEASE_ADAPTED",
+            "QUICK_MEAL_WITH_NUTRITION_NOTES",
+            "ACUTE_SUPPORT_RESULT",
+            "NO_SAFE_INGREDIENT_COMBINATION"
+          ]
+        },
+        "product": {
+          "const": "FreshFood Quick Meal"
+        },
+        "product_layer": {
+          "const": "QUICK_MEAL_V1"
+        },
+        "meal_scope": {
+          "enum": [
+            "DAY",
+            "MEAL"
+          ]
+        },
+        "pet_summary": {
+          "type": "object"
+        },
+        "estimated_energy_target": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/EstimatedEnergyTarget"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "estimated_daily_energy_target": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "recipe_energy": {
+          "type": "number",
+          "minimum": 0
+        },
+        "recipe_components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QuickMealComponent"
+          }
+        },
+        "daily_or_meal_total_g": {
+          "type": "number",
+          "minimum": 0
+        },
+        "meal_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suggested_daily_meal_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ingredient_options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "category": {
+                "enum": [
+                  "ANIMAL_PROTEIN",
+                  "ENERGY_SOURCE",
+                  "FIBER_SOURCE"
+                ]
+              },
+              "requires_whole_recipe_recalculation": {
+                "const": true
+              },
+              "within_current_pool": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "ingredient_id",
+              "display_name",
+              "category",
+              "requires_whole_recipe_recalculation",
+              "within_current_pool"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "nutrition_notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QuickNutritionAdvice"
+          }
+        },
+        "health_support_recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QuickNutritionAdvice"
+          }
+        },
+        "disease_support_recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QuickNutritionAdvice"
+          }
+        },
+        "disease_notes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "disease_id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "food_direction": {
+                "type": "string"
+              },
+              "source_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "feeding_notes": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "hydration_notes": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "numerical_treatment_prescription": {
+                "const": false
+              }
+            },
+            "required": [
+              "disease_id",
+              "display_name",
+              "food_direction",
+              "source_id",
+              "feeding_notes",
+              "hydration_notes",
+              "numerical_treatment_prescription"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "cooking_plan": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/QuickCookingPlan"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "support_result": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "key_nutrients": {
+          "type": "object"
+        },
+        "scientific_checks": {
+          "type": "object",
+          "properties": {
+            "ENERGY_REASONABLE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "SPECIES_APPROPRIATE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "LIFE_STAGE_APPROPRIATE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "BODY_CONDITION_APPROPRIATE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "DISEASE_APPROPRIATE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "INGREDIENT_SAFE": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "USER_SELECTION_RESPECTED": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "RECIPE_NOT_OVERCOMPLEX": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "PRACTICAL_PORTION": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "COOKING_CONSISTENT": {
+              "enum": [
+                "PASS",
+                "PARTIAL",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            }
+          },
+          "required": [
+            "ENERGY_REASONABLE",
+            "SPECIES_APPROPRIATE",
+            "LIFE_STAGE_APPROPRIATE",
+            "BODY_CONDITION_APPROPRIATE",
+            "DISEASE_APPROPRIATE",
+            "INGREDIENT_SAFE",
+            "USER_SELECTION_RESPECTED",
+            "RECIPE_NOT_OVERCOMPLEX",
+            "PRACTICAL_PORTION",
+            "COOKING_CONSISTENT"
+          ],
+          "additionalProperties": false
+        },
+        "quick_meal_scientific_acceptance": {
+          "enum": [
+            "PASS",
+            "PARTIAL",
+            "FAIL",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "complete_balanced_claim": {
+          "const": false
+        },
+        "scope_note": {
+          "type": "string"
+        },
+        "advanced_complete_diet_layer": {
+          "type": "object",
+          "properties": {
+            "layer": {
+              "const": "ADVANCED_COMPLETE_DIET_LAYER"
+            },
+            "api_version": {
+              "const": "1.7"
+            },
+            "status": {
+              "const": "UNCHANGED_INDEPENDENT"
+            },
+            "scientific_acceptance": {
+              "const": "PARTIAL"
+            },
+            "blocks_quick_meal": {
+              "const": false
+            },
+            "complete_balanced_claim": {
+              "const": false
+            },
+            "capabilities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "layer",
+            "api_version",
+            "status",
+            "scientific_acceptance",
+            "blocks_quick_meal",
+            "complete_balanced_claim",
+            "capabilities"
+          ],
+          "additionalProperties": false
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "calculation_metadata": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "api_version",
+        "nutrition_db_version",
+        "nutrition_rules_version",
+        "recipe_engine_version",
+        "meal_id",
+        "version",
+        "status",
+        "product",
+        "product_layer",
+        "meal_scope",
+        "pet_summary",
+        "estimated_energy_target",
+        "estimated_daily_energy_target",
+        "recipe_energy",
+        "recipe_components",
+        "daily_or_meal_total_g",
+        "meal_count",
+        "suggested_daily_meal_count",
+        "ingredient_options",
+        "nutrition_notes",
+        "health_support_recommendations",
+        "disease_support_recommendations",
+        "disease_notes",
+        "cooking_plan",
+        "warnings",
+        "support_result",
+        "key_nutrients",
+        "scientific_checks",
+        "quick_meal_scientific_acceptance",
+        "complete_balanced_claim",
+        "scope_note",
+        "advanced_complete_diet_layer",
+        "reason_codes",
+        "calculation_metadata"
+      ],
+      "additionalProperties": false
+    },
+    "DesignQuickFreshMealRequest": {
+      "type": "object",
+      "properties": {
+        "api_version": {
+          "const": "1.8"
+        },
+        "method": {
+          "const": "designQuickFreshMeal"
+        },
+        "params": {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "$ref": "#/$defs/QuickMealProfile"
+            },
+            "ingredientSelection": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "mode": {
+                  "const": "CANDIDATE_POOL"
+                },
+                "categories": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "ANIMAL_PROTEIN": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "ENERGY_SOURCE": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "FIBER_SOURCE": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "profile"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "api_version",
+        "method",
+        "params"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

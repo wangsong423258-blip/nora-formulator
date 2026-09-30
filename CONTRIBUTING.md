@@ -1,11 +1,11 @@
 # Contributing
 
-Contributions cover client transport, types, schemas, CLI behavior, accessibility of documentation and integrations. Keep calculation services and data assets outside this repository.
+Contributions may cover client transport, types, schemas, CLI behavior, documentation and the Python engine. Changes to nutrition data require source attribution, review and updates to the plaintext manifest.
 
-Use artificial minimal inputs and mocked HTTP responses. Do not add real meal results, nutritional reference tables, service dumps, customer data, credentials or bulk fixtures. Do not add implementation details for calculation services to comments or documentation.
+Use artificial inputs for tests. Do not add customer data, credentials or service dumps. The published nutrition tables are the reviewed reference data; new tables or changes need provenance and review.
 
-Use Node.js 22 or later. Run `node cli/nora.mjs --help` for a CLI smoke check. Runtime installation requires a separately supplied verified bundle; no runnable bundle is available in this preview. The publisher performs the contract and release-content checks before publication.
+Use Node.js 22 or later for SDK checks. Run `node cli/nora.mjs --help` for a CLI smoke check. For the Python engine, follow `engine/README.md`. The v1.1.1 native Runtime still requires its separate release bundle.
 
-A file absent from PUBLIC_MANIFEST.json is denied, including hidden files. Review each added or modified file before updating its hash. Do not broaden scan exceptions to make a failed build pass. Exact license statements and the documented local loopback endpoint have narrowly reviewed line-hash exceptions.
+`PUBLIC_MANIFEST.json` records the historical SDK export; it does not cover the newly published engine. Review new engine and data files directly, including paths, credentials and provenance.
 
-Intentional contributions are provided under Apache-2.0. Maintainers must verify that contributors have the right to publish submitted material. Inclusion here does not license separately held services or data.
+Code contributions are provided under Apache-2.0. Nutrition data contributions follow `engine/DATA_LICENSE.md` and require documented source rights and review. Maintainers must verify that contributors have the right to publish submitted material.

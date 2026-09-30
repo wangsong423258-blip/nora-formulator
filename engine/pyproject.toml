@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palecho-nutrition"
+version = "0.14.0"
+description = "Open source offline canine and feline nutrition engine with plaintext data"
+license-files = ["LICENSE", "DATA_LICENSE.md"]
+requires-python = ">=3.11"
+dependencies = ["numpy==2.2.6", "scipy==1.15.3"]
+
+[project.scripts]
+palecho-nutrition = "palecho_nutrition.__main__:main"
+
+[tool.setuptools.package-data]
+palecho_nutrition = ["*.json", "data/nutrition-json/*.json", "data/nutrition-json/tables/*.json"]
+
+[tool.setuptools.packages.find]
+include = ["palecho_nutrition*"]
