@@ -1,0 +1,282 @@
+[
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_168231",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_168231",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_168249",
+    "group_id": "RAW_RESEARCH_ONLY",
+    "ingredient_id": "FDC_168249",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Raw research reference; ineligible for cooked recipe replacement without reviewed process conversion."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_168250",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_168250",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_170633",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_170633",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_171077",
+    "group_id": "RAW_RESEARCH_ONLY",
+    "ingredient_id": "FDC_171077",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Raw research reference; ineligible for cooked recipe replacement without reviewed process conversion."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_171287",
+    "group_id": "RAW_RESEARCH_ONLY",
+    "ingredient_id": "FDC_171287",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Raw research reference; ineligible for cooked recipe replacement without reviewed process conversion."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_171477",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_171477",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_171478",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_171478",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_171956",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_171956",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_172389",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_172389",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_172411",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_172411",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_173424",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_173424",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_173627",
+    "group_id": "RAW_RESEARCH_ONLY",
+    "ingredient_id": "FDC_173627",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Raw research reference; ineligible for cooked recipe replacement without reviewed process conversion."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_174185",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_174185",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_175168",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_175168",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_PROTEIN:FDC_175177",
+    "group_id": "COOKED_PROTEIN",
+    "ingredient_id": "FDC_175177",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_STARCH:FDC_168484",
+    "group_id": "COOKED_STARCH",
+    "ingredient_id": "FDC_168484",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_STARCH:FDC_169757",
+    "group_id": "COOKED_STARCH",
+    "ingredient_id": "FDC_169757",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_STARCH:FDC_170440",
+    "group_id": "COOKED_STARCH",
+    "ingredient_id": "FDC_170440",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "COOKED_STARCH:FDC_173905",
+    "group_id": "COOKED_STARCH",
+    "ingredient_id": "FDC_173905",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "OIL:FDC_171411",
+    "group_id": "OIL",
+    "ingredient_id": "FDC_171411",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "OIL:FDC_172336",
+    "group_id": "OIL",
+    "ingredient_id": "FDC_172336",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "ORGAN:FDC_171061",
+    "group_id": "ORGAN",
+    "ingredient_id": "FDC_171061",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "VEGETABLE:FDC_168449",
+    "group_id": "VEGETABLE",
+    "ingredient_id": "FDC_168449",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "VEGETABLE:FDC_169292",
+    "group_id": "VEGETABLE",
+    "ingredient_id": "FDC_169292",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "VEGETABLE:FDC_169967",
+    "group_id": "VEGETABLE",
+    "ingredient_id": "FDC_169967",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "VEGETABLE:FDC_169976",
+    "group_id": "VEGETABLE",
+    "ingredient_id": "FDC_169976",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  },
+  {
+    "substitution_id": "VEGETABLE:FDC_170394",
+    "group_id": "VEGETABLE",
+    "ingredient_id": "FDC_170394",
+    "candidate_only": true,
+    "fixed_weight_ratio": null,
+    "requires_full_resolve": true,
+    "source_id": "PALECHO_SPEC",
+    "notes": "Candidate set only; every change reruns complete constraints."
+  }
+]

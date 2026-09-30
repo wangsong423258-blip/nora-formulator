@@ -1,0 +1,354 @@
+[
+  {
+    "test_id": "allergy_exclusion",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [\"CHICKEN\"], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_adult",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1000, \"sex\": \"FEMALE\", \"neutered\": false, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"ACTIVE\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_kitten",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 100, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 1.5, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_mature",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 2900, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_neutered",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1000, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_normal",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_overweight",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 7, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_senior",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 4400, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "cat_thin",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 3, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_CALCIUM_OXALATE",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"CALCIUM_OXALATE\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_CHF",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"CHF\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_CKD",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"CKD\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_COPPER_HEPATOPATHY",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"COPPER_HEPATOPATHY\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_CYSTINE",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"CYSTINE\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_DIABETES_CAT",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"DIABETES_CAT\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_HEPATIC_ENCEPHALOPATHY",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"HEPATIC_ENCEPHALOPATHY\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_HYPERLIPIDEMIA",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"HYPERLIPIDEMIA\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_OBESITY",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"OBESITY\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_PANCREATITIS_DOG",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"PANCREATITIS_DOG\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_PLE",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"PLE\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_PLN",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"PLN\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_STRUVITE",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"STRUVITE\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_URATE",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"URATE\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "disease_A_UROLITH_UNKNOWN",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"UROLITH_UNKNOWN\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_adult_intact",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1000, \"sex\": \"FEMALE\", \"neutered\": false, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"MODERATE_LOW_IMPACT\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_adult_neutered",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1000, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_early",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 70, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 3, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"expected_adult_weight_kg\": 20}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_great_dane",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"GREAT_DANE\", \"age_days\": 160, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 20, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"expected_adult_weight_kg\": 60}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_late_large",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 150, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 16, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"expected_adult_weight_kg\": 35}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_late_large_o6",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 240, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 25, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"expected_adult_weight_kg\": 35}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_late_small",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 150, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"expected_adult_weight_kg\": 7}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_mature",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 2200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true, \"life_stage_hint\": \"MATURE\"}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_normal",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_overweight",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 7, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_senior",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 4300, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true, \"life_stage_hint\": \"SENIOR\"}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "dog_thin",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 3, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "double_CKD_DM",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 3000, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"CKD\"}, {\"id\": \"DIABETES_CAT\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "low_budget",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true, \"budget_preference\": \"LOW\"}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "no_ingredients",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true, \"available_ingredients\": []}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "pregnancy",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1500, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"reproductive_status\": \"PREGNANCY\"}",
+    "expected_status": "UNSUPPORTED",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "reject_major_protein",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1500, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [\"FDC_171477\", \"FDC_171478\", \"FDC_172389\"], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "NO_VALID_RECIPE",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "triple_stones_CKD",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 2000, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [{\"id\": \"STRUVITE\"}, {\"id\": \"CALCIUM_OXALATE\"}, {\"id\": \"CKD\"}], \"recent_abnormalities\": [], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "urinary_obstruction",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"CAT\", \"breed\": \"MIXED\", \"age_days\": 1500, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 4, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [\"UNABLE_TO_URINATE\"], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true}",
+    "expected_status": "AUTO_RECIPE_BLOCKED",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  },
+  {
+    "test_id": "vomiting",
+    "category": "SAFETY_MATRIX",
+    "input_json": "{\"species\": \"DOG\", \"breed\": \"MIXED\", \"age_days\": 1200, \"sex\": \"FEMALE\", \"neutered\": true, \"weight_kg\": 10, \"bcs\": 5, \"muscle_condition\": \"NORMAL\", \"activity\": \"LOW\", \"weight_trend\": \"STABLE\", \"diseases\": [], \"recent_abnormalities\": [\"PERSISTENT_SEVERE_VOMITING\"], \"current_diet\": \"COMPLETE_COMMERCIAL\", \"allergies\": [], \"dislikes\": [], \"purpose\": \"COMPLETE_DIET\", \"weaned\": true, \"growth_complete\": true}",
+    "expected_status": "AUTO_RECIPE_BLOCKED",
+    "assertion": "Production dataset must never be mislabelled VALIDATED with missing essential data.",
+    "source_id": "PALECHO_SPEC"
+  }
+]

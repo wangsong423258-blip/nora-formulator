@@ -1,0 +1,20 @@
+{
+  "species": "DOG",
+  "breed": "MIXED",
+  "age_days": 1095,
+  "sex": "FEMALE",
+  "neutered": true,
+  "weight_kg": 10,
+  "bcs": 5,
+  "muscle_condition": "NORMAL",
+  "activity": "LOW",
+  "weight_trend": "STABLE",
+  "diseases": [],
+  "recent_abnormalities": [],
+  "current_diet": "COMPLETE_COMMERCIAL",
+  "allergies": [],
+  "dislikes": [],
+  "purpose": "COMPLETE_DIET",
+  "weaned": true,
+  "growth_complete": true
+}

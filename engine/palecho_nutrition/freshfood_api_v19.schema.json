@@ -1,0 +1,490 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:palecho:freshfood:1.9",
+  "$defs": {
+    "IngredientSelection": {
+      "type": "object",
+      "required": [
+        "mode",
+        "ingredient_ids",
+        "categories"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "const": "USER_SELECTED_SET"
+        },
+        "ingredient_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "categories": {
+          "type": "object"
+        }
+      }
+    },
+    "RecipeComponent": {
+      "type": "object",
+      "required": [
+        "ingredient_id",
+        "amount_g",
+        "category",
+        "food_state",
+        "weight_basis",
+        "record_sha256",
+        "energy_model",
+        "dog_me",
+        "cat_me"
+      ],
+      "properties": {
+        "ingredient_id": {
+          "type": "string"
+        },
+        "amount_g": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "category": {
+          "enum": [
+            "ANIMAL_MEAT",
+            "FISH",
+            "OTHER_SEAFOOD",
+            "EGG",
+            "ORGAN",
+            "ENERGY_SOURCE",
+            "FIBER_VEGETABLE",
+            "PLANT_ASSIST",
+            "FAT_OIL",
+            "OPTIONAL_OTHER"
+          ]
+        },
+        "dog_me": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cat_me": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "food_state": {
+          "type": "string"
+        },
+        "weight_basis": {
+          "enum": [
+            "COOKED_WEIGHT",
+            "AS_SOLD_WEIGHT"
+          ]
+        },
+        "record_sha256": {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        "energy_model": {
+          "type": "object",
+          "required": [
+            "basis",
+            "pet_me_kcal_per_100g",
+            "formula_source",
+            "formula_version",
+            "assumptions"
+          ],
+          "properties": {
+            "pet_me_kcal_per_100g": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        }
+      }
+    },
+    "IngredientFirstQuickMealResult": {
+      "type": "object",
+      "required": [
+        "api_version",
+        "status",
+        "selected_ingredient_set",
+        "recipe_components",
+        "recipe_pet_me_kcal",
+        "dog_me",
+        "cat_me",
+        "energy_validation",
+        "scientific_checks",
+        "complete_balanced_claim",
+        "calculation_metadata",
+        "cooking_plan",
+        "scientific_audit",
+        "meal_id",
+        "version",
+        "persisted",
+        "explanations",
+        "combination_conflict",
+        "ingredient_eligibility"
+      ],
+      "properties": {
+        "api_version": {
+          "const": "1.9"
+        },
+        "status": {
+          "enum": [
+            "QUICK_MEAL_RECOMMENDED",
+            "QUICK_MEAL_WITH_NUTRITION_NOTES",
+            "QUICK_MEAL_DISEASE_ADAPTED",
+            "SELECTION_REQUIRED",
+            "SELECTION_REJECTED",
+            "MISSING_REQUIRED_CATEGORY",
+            "SELECTION_COMBINATION_CONFLICT",
+            "SCIENTIFIC_AUDIT_FAILED",
+            "ACUTE_SUPPORT_RESULT"
+          ]
+        },
+        "selected_ingredient_set": {
+          "type": "object",
+          "required": [
+            "mode",
+            "ingredient_ids",
+            "categories"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "const": "USER_SELECTED_SET"
+            },
+            "ingredient_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "categories": {
+              "type": "object"
+            }
+          }
+        },
+        "recipe_components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "ingredient_id",
+              "amount_g",
+              "category",
+              "food_state",
+              "weight_basis",
+              "record_sha256",
+              "energy_model",
+              "dog_me",
+              "cat_me"
+            ],
+            "properties": {
+              "ingredient_id": {
+                "type": "string"
+              },
+              "amount_g": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "category": {
+                "enum": [
+                  "ANIMAL_MEAT",
+                  "FISH",
+                  "OTHER_SEAFOOD",
+                  "EGG",
+                  "ORGAN",
+                  "ENERGY_SOURCE",
+                  "FIBER_VEGETABLE",
+                  "PLANT_ASSIST",
+                  "FAT_OIL",
+                  "OPTIONAL_OTHER"
+                ]
+              },
+              "dog_me": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "cat_me": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "food_state": {
+                "type": "string"
+              },
+              "weight_basis": {
+                "enum": [
+                  "COOKED_WEIGHT",
+                  "AS_SOLD_WEIGHT"
+                ]
+              },
+              "record_sha256": {
+                "type": "string",
+                "pattern": "[0-9a-f]{64}"
+              },
+              "energy_model": {
+                "type": "object",
+                "required": [
+                  "basis",
+                  "pet_me_kcal_per_100g",
+                  "formula_source",
+                  "formula_version",
+                  "assumptions"
+                ],
+                "properties": {
+                  "pet_me_kcal_per_100g": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "recipe_pet_me_kcal": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "dog_me": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "cat_me": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "energy_validation": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "scientific_checks": {
+          "type": "object",
+          "required": [
+            "ENERGY",
+            "PROTEIN",
+            "FAT",
+            "SPECIES",
+            "LIFE_STAGE",
+            "DISEASE",
+            "FOOD_SAFETY",
+            "ALL_USER_SELECTED_USED",
+            "MEANINGFUL_AMOUNT",
+            "CATEGORY_DOMINANCE",
+            "PRACTICAL_GRAMS",
+            "DATA_PROVENANCE"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "ENERGY": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "PROTEIN": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "FAT": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "SPECIES": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "LIFE_STAGE": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "DISEASE": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "FOOD_SAFETY": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "ALL_USER_SELECTED_USED": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "MEANINGFUL_AMOUNT": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "CATEGORY_DOMINANCE": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "PRACTICAL_GRAMS": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "DATA_PROVENANCE": {
+              "enum": [
+                "PASS",
+                "WARN",
+                "FAIL",
+                "NOT_APPLICABLE"
+              ]
+            }
+          }
+        },
+        "complete_balanced_claim": {
+          "const": false
+        },
+        "calculation_metadata": {
+          "type": "object",
+          "required": [
+            "selection_mode",
+            "input_hash",
+            "ingredient_data_hash",
+            "model"
+          ],
+          "properties": {
+            "selection_mode": {
+              "const": "USER_SELECTED_SET"
+            },
+            "equal_split_used": {
+              "const": false
+            },
+            "food_adoption_variables": {
+              "const": false
+            }
+          }
+        },
+        "cooking_plan": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "scientific_audit": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "meal_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "persisted": {
+          "type": "boolean"
+        },
+        "explanations": {
+          "type": "object"
+        },
+        "combination_conflict": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "ingredient_eligibility": {
+          "type": "array"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "QUICK_MEAL_RECOMMENDED",
+                  "QUICK_MEAL_WITH_NUTRITION_NOTES",
+                  "QUICK_MEAL_DISEASE_ADAPTED"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "recipe_pet_me_kcal": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "dog_me": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "cat_me": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "energy_validation": {
+                "type": "object",
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "PASS"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

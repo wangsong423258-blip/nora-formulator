@@ -1,8 +1,10 @@
 # Security and distribution boundary
 
-This repository publishes developer interfaces only. Runtime and encrypted DataPack downloads are separate release assets. Signing private keys, source data and publisher tooling are excluded from both repository source and release assets.
+This repository publishes developer interfaces, Python formulation source and plaintext JSON nutrition data. The original v1.1.1 Runtime and encrypted DataPack downloads remain separate release assets. Signing private keys and publisher tooling are not published.
 
-Community uses a universal signed license and an authenticated encrypted DataPack. The license is not device-bound. No registration, manual approval or activation server is needed. The Runtime checks signature, compatibility, full ciphertext integrity and chunk authentication before calculation, and does not write the complete decrypted database to disk.
+The plaintext Python engine reads JSON files directly and checks their SHA-256 manifest before calculation. The JSON is readable by anyone with access to this public repository. The manifest detects accidental file changes; it is not a signature or access control.
+
+The original v1.1.1 native Community packages use a universal signed license and an authenticated encrypted DataPack. The license is not device-bound. No registration, manual approval or activation server is needed. The Runtime checks signature, compatibility, full ciphertext integrity and chunk authentication before calculation, and does not write the complete decrypted database to disk.
 
 Publisher signing private keys are retained outside the project in the owner's macOS Keychain. The Runtime contains public signature-verification keys. Offline DataPack reading also requires symmetric decryption material encapsulated in the native reader. This protects packaged storage and avoids a plaintext key file; it is not a claim of resistance to all reverse engineering by a machine owner.
 

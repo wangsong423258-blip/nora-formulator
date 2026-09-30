@@ -1,0 +1,1703 @@
+{
+  "version": "2.0",
+  "review_date": "2026-09-22",
+  "clinical_approval": false,
+  "grading_scope": "INDICATION_AND_INTERVENTION_SPECIFIC_NOT_MARKET_POPULARITY",
+  "sources": {
+    "FEDIAF2025": {
+      "source_id": "FEDIAF2025",
+      "organization": "FEDIAF",
+      "document": "Nutritional Guidelines",
+      "year": 2025,
+      "version": "2025",
+      "URL": "https://europeanpetfood.org/wp-content/uploads/2025/09/FEDIAF-Nutritional-Guidelines_2025-ONLINE.pdf",
+      "basis": "Species/life-stage reference intake; wet-food taurine is not a home-cooking retention coefficient.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAHA_PAIN2022": {
+      "source_id": "AAHA_PAIN2022",
+      "organization": "AAHA",
+      "document": "Pain Management Guidelines",
+      "year": 2022,
+      "version": "2022",
+      "URL": "https://www.aaha.org/resources/2022-aaha-pain-management-guidelines-for-dogs-and-cats/nonpharmacologic-modalities-for-pain-management/",
+      "basis": "Canine OA omega-3 evidence differs from other nutraceuticals.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "OA_META2022": {
+      "source_id": "OA_META2022",
+      "organization": "Veterinary Sciences",
+      "document": "Systematic Review and Meta-Analysis of Enriched Therapeutic Diets and Nutraceuticals in Canine and Feline Osteoarthritis",
+      "year": 2022,
+      "version": "2022",
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9499673/",
+      "basis": "Canine omega-3 clinical outcomes; very few feline studies; glucosamine/chondroitin lacks meaningful efficacy.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "IRIS_DOG2026": {
+      "source_id": "IRIS_DOG2026",
+      "organization": "IRIS",
+      "document": "DOG CKD Treatment Recommendations",
+      "year": 2026,
+      "version": "2026",
+      "URL": "https://www.iris-kidney.com/s/IRIS-DOG-Treatment_Recommendations_may-2026.pdf",
+      "basis": "Stage, phosphate and electrolyte monitoring. Cat potassium intervention requires hypokalemia; no generic vitamin D or isolated omega-3 target inferred.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "IRIS_CAT2026": {
+      "source_id": "IRIS_CAT2026",
+      "organization": "IRIS",
+      "document": "CAT CKD Treatment Recommendations",
+      "year": 2026,
+      "version": "2026",
+      "URL": "https://www.iris-kidney.com/s/IRIS_CAT_Treatment_Recommendations_-2026.pdf",
+      "basis": "Stage, phosphate and electrolyte monitoring. Cat potassium intervention requires hypokalemia; no generic vitamin D or isolated omega-3 target inferred.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "IRIS_RENAL_DIET": {
+      "source_id": "IRIS_RENAL_DIET",
+      "organization": "IRIS",
+      "document": "Diets for cats with chronic kidney disease",
+      "year": null,
+      "version": null,
+      "URL": "https://www.iris-kidney.com/diets-for-cats-with-chronic-kidney-disease-ckd",
+      "basis": "Renal diet is a multicomponent intervention, not proof of isolated omega-3 benefit.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "IRIS_HYPERCALCEMIA": {
+      "source_id": "IRIS_HYPERCALCEMIA",
+      "organization": "IRIS",
+      "document": "Hypercalcemia in CKD",
+      "year": null,
+      "version": null,
+      "URL": "https://www.iris-kidney.com/new-page-3",
+      "basis": "Calcitriol is distinct from nutritional vitamin D; cat calcitriol not routinely recommended. Article date unconfirmed.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "ACVIM_MMVD2019": {
+      "source_id": "ACVIM_MMVD2019",
+      "organization": "ACVIM",
+      "document": "Diagnosis and treatment of myxomatous mitral valve disease in dogs",
+      "year": 2019,
+      "version": "2019",
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6524084/",
+      "basis": "Stage C nutritional support; not all cardiac disease.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "DCM_KAPLAN2018": {
+      "source_id": "DCM_KAPLAN2018",
+      "organization": "PLOS ONE",
+      "document": "Taurine deficiency and dilated cardiomyopathy in golden retrievers fed commercial diets",
+      "year": 2018,
+      "version": "2018",
+      "URL": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0209112",
+      "basis": "Observational deficient dogs, combined diet and supplementation; not breed prevention or isolated carnitine efficacy.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "ACVIM_CIE2026": {
+      "source_id": "ACVIM_CIE2026",
+      "organization": "ACVIM",
+      "document": "Consensus statement on diagnosis and management of chronic inflammatory enteropathy in dogs",
+      "year": 2026,
+      "version": "2026",
+      "URL": "https://academic.oup.com/jvim/article/40/1/aalaf017/8429723",
+      "basis": "Treat suboptimal cobalamin status; route/course and follow-up are clinical decisions. Strain-specific probiotic evidence cannot support generic products.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "MERCK_EPI2026": {
+      "source_id": "MERCK_EPI2026",
+      "organization": "Merck Veterinary Manual",
+      "document": "Malabsorption Syndromes in Small Animals",
+      "year": 2026,
+      "version": "Full review Aug 2025; modified Mar 2026",
+      "URL": "https://www.merckvetmanual.com/digestive-system/diseases-of-the-small-intestine-in-small-animals/malabsorption-syndromes-in-small-animals",
+      "basis": "EPI enzyme therapy and nutrition; cobalamin status and absorption, not diarrhea alone.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "MERCK_PANC2025": {
+      "source_id": "MERCK_PANC2025",
+      "organization": "Merck Veterinary Manual",
+      "document": "Pancreatitis in Dogs and Cats",
+      "year": 2025,
+      "version": "Full review Sep 2025",
+      "URL": "https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats",
+      "basis": "Enteral nutrition/tolerance; canine fat strategy not blindly transferred to cats.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "CDS_DIET2018": {
+      "source_id": "CDS_DIET2018",
+      "organization": "Frontiers in Nutrition",
+      "document": "Efficacy of a Therapeutic Diet on Dogs With Signs of Cognitive Dysfunction Syndrome",
+      "year": 2018,
+      "version": "2018",
+      "URL": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2018.00127/full",
+      "basis": "MCT plus nutrient blend complete diets; cannot infer pure MCT supplement dose.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAHA_SENIOR2023": {
+      "source_id": "AAHA_SENIOR2023",
+      "organization": "AAHA",
+      "document": "Senior Care Guidelines",
+      "year": 2023,
+      "version": "2023",
+      "URL": "https://www.aaha.org/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats/disease-management-nutritional/",
+      "basis": "Cognitive status and individual nutrition, not universal senior supplement pack.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "ICADA2015": {
+      "source_id": "ICADA2015",
+      "organization": "ICADA",
+      "document": "Treatment of canine atopic dermatitis: updated guidelines",
+      "year": 2015,
+      "version": "2015",
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4537558/",
+      "basis": "Possible limited chronic EFA benefit, no acute or universal allergy supplement. ICADA publication index checked 2026-09-22.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "ACVIM_LIVER2019": {
+      "source_id": "ACVIM_LIVER2019",
+      "organization": "ACVIM",
+      "document": "Diagnosis and treatment of chronic hepatitis in dogs",
+      "year": 2019,
+      "version": "2019",
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6524396/",
+      "basis": "Copper restriction for copper-associated disease; adjuncts and zinc require disease-specific clinical plans, monitoring and interaction review.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "ACVIM_UROLITH2016": {
+      "source_id": "ACVIM_UROLITH2016",
+      "organization": "ACVIM",
+      "document": "Treatment and prevention of uroliths in dogs and cats",
+      "year": 2016,
+      "version": "2016",
+      "URL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5032870/",
+      "basis": "Stone-specific urine chemistry; avoid opposing acidification/alkalinization and unknown-stone empiricism.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAHA_DM_DOG2026": {
+      "source_id": "AAHA_DM_DOG2026",
+      "organization": "AAHA",
+      "document": "Diabetes Management Guidelines: Dietary Management in Dogs",
+      "year": 2026,
+      "version": "2026",
+      "URL": "https://www.aaha.org/resources/2026-aaha-diabetes-management-guidelines-for-dogs/section-6-dietary-management-in-diabetic-dogs/",
+      "basis": "Body condition, consistent intake, comorbid priorities; no glucose-lowering supplement substitute.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAHA_DM_CAT2026": {
+      "source_id": "AAHA_DM_CAT2026",
+      "organization": "AAHA",
+      "document": "Diabetes Management Guidelines: Dietary Management in Cats",
+      "year": 2026,
+      "version": "2026",
+      "URL": "https://www.aaha.org/resources/2026-aaha-diabetes-management-guidelines-for-cats/section-8-dietary-management/",
+      "basis": "Consistent nutrition, feline carbohydrate/protein strategy, medication-compatible meals.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAHA_NUTRITION2021": {
+      "source_id": "AAHA_NUTRITION2021",
+      "organization": "AAHA",
+      "document": "Nutrition and Weight Management Guidelines",
+      "year": 2021,
+      "version": "2021",
+      "URL": "https://www.aaha.org/resources/2021-aaha-nutrition-and-weight-management-guidelines/",
+      "basis": "Energy and nutrient density with serial body-condition monitoring.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    },
+    "AAFP_FEEDING2018": {
+      "source_id": "AAFP_FEEDING2018",
+      "organization": "AAFP",
+      "document": "How to Feed a Cat Consensus Statement",
+      "year": 2018,
+      "version": "2018",
+      "URL": "https://catvets.com/resource/how-to-feed-how-to-feed-a-cat-consensus-statement/",
+      "basis": "Frequent small meals; exact household meal count is an implementation choice, not a validated clinical dose.",
+      "retrieved": "2026-09-22",
+      "evidence_status": "VERIFIED"
+    }
+  },
+  "rows": [
+    {
+      "evidence_id": "COMP_CA",
+      "supplement": "CALCIUM",
+      "active_nutrient": "ELEMENTAL_CALCIUM",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "EARLY_GROWTH",
+        "LATE_GROWTH_SMALL_MEDIUM",
+        "LATE_GROWTH_LARGE",
+        "GROWTH",
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "RECIPE_GAP"
+      ],
+      "goal": "NUTRIENT_COMPLETION",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "FEDIAF2025"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": true,
+      "target_basis": "SPECIES_STAGE_ENERGY_MINUS_KNOWN_FOOD",
+      "lab_required": false,
+      "conditional_requirements": [
+        "KNOWN_COOKED_FOOD_CONTRIBUTION",
+        "APPLICABLE_NUTRIENT_TARGET",
+        "ALL_PRODUCT_PANELS"
+      ],
+      "contraindications": [
+        "食物已达到目标且无有依据的更高疾病目标",
+        "疾病限制同一营养素"
+      ],
+      "automatic_recommendation_allowed": true,
+      "physiologic_role": "骨骼和牙齿结构、神经肌肉功能及钙磷平衡。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "COMP_TAU",
+      "supplement": "TAURINE",
+      "active_nutrient": "TAURINE",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "EARLY_GROWTH",
+        "LATE_GROWTH_SMALL_MEDIUM",
+        "LATE_GROWTH_LARGE",
+        "GROWTH",
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "RECIPE_GAP"
+      ],
+      "goal": "NUTRIENT_COMPLETION",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "FEDIAF2025"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": true,
+      "target_basis": "SPECIES_STAGE_ENERGY_MINUS_KNOWN_FOOD",
+      "lab_required": false,
+      "conditional_requirements": [
+        "KNOWN_COOKED_FOOD_CONTRIBUTION",
+        "APPLICABLE_NUTRIENT_TARGET",
+        "ALL_PRODUCT_PANELS"
+      ],
+      "contraindications": [
+        "食物已达到目标且无有依据的更高疾病目标",
+        "疾病限制同一营养素"
+      ],
+      "automatic_recommendation_allowed": true,
+      "physiologic_role": "支持视网膜和心肌正常功能，参与猫的胆汁酸结合。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "COMP_OMEGA",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "EARLY_GROWTH",
+        "LATE_GROWTH_SMALL_MEDIUM",
+        "LATE_GROWTH_LARGE",
+        "GROWTH",
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "RECIPE_GAP"
+      ],
+      "goal": "NUTRIENT_COMPLETION",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "FEDIAF2025"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": true,
+      "target_basis": "SPECIES_STAGE_ENERGY_MINUS_KNOWN_FOOD",
+      "lab_required": false,
+      "conditional_requirements": [
+        "KNOWN_COOKED_FOOD_CONTRIBUTION",
+        "APPLICABLE_NUTRIENT_TARGET",
+        "ALL_PRODUCT_PANELS"
+      ],
+      "contraindications": [
+        "食物已达到目标且无有依据的更高疾病目标",
+        "疾病限制同一营养素"
+      ],
+      "automatic_recommendation_allowed": true,
+      "physiologic_role": "参与细胞膜构成，支持适用生长阶段神经与视网膜发育。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "COMP_MICRO",
+      "supplement": "VITAMIN_MINERAL",
+      "active_nutrient": "MICRONUTRIENT_MATRIX",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "EARLY_GROWTH",
+        "LATE_GROWTH_SMALL_MEDIUM",
+        "LATE_GROWTH_LARGE",
+        "GROWTH",
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "RECIPE_GAP"
+      ],
+      "goal": "NUTRIENT_COMPLETION",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "FEDIAF2025"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": true,
+      "target_basis": "SPECIES_STAGE_ENERGY_MINUS_KNOWN_FOOD",
+      "lab_required": false,
+      "conditional_requirements": [
+        "KNOWN_COOKED_FOOD_CONTRIBUTION",
+        "APPLICABLE_NUTRIENT_TARGET",
+        "ALL_PRODUCT_PANELS"
+      ],
+      "contraindications": [
+        "食物已达到目标且无有依据的更高疾病目标",
+        "疾病限制同一营养素"
+      ],
+      "automatic_recommendation_allowed": true,
+      "physiologic_role": "补足逐项核实的维生素和矿物质需求，支持相应代谢功能。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "OA_DOG",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "OSTEOARTHRITIS",
+        "JOINT_CHRONIC"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "AAHA_PAIN2022",
+        "OA_META2022"
+      ],
+      "clinical_outcome": "CANINE_OA_PAIN_MOBILITY",
+      "clinical_outcome_supported": true,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "INDIVIDUAL_EPA_DHA_TARGET",
+        "FAT_ENERGY_RECALCULATION",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [
+        "油脂使胰腺炎或高脂血症配方超出脂肪上限"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "EPA/DHA参与脂质介质代谢，适用犬OA中可辅助改善疼痛和活动表现。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "OA_CAT",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "OSTEOARTHRITIS",
+        "JOINT_CHRONIC"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "OA_META2022"
+      ],
+      "clinical_outcome": "FELINE_OA_LIMITED_TRIALS",
+      "clinical_outcome_supported": true,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "INDIVIDUAL_EPA_DHA_TARGET",
+        "FAT_ENERGY_RECALCULATION",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "部分猫OA研究支持活动相关获益，但临床研究数量少。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "OA_GLU",
+      "supplement": "GLUCOSAMINE_CHONDROITIN",
+      "active_nutrient": "GLUCOSAMINE_CHONDROITIN",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "OSTEOARTHRITIS",
+        "JOINT_CHRONIC"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "OA_META2022"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "拟支持软骨基质；现有综合证据不支持作为可靠OA补充方案。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "OA_COLLAGEN",
+      "supplement": "COLLAGEN",
+      "active_nutrient": "COLLAGEN",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "OSTEOARTHRITIS"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "OA_META2022"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "PRODUCT_SPECIFIC_TRIAL"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "部分制剂有初步研究，不能推广到所有胶原产品。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_OMEGA_DOG",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD",
+        "PLN"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "IRIS_DOG2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "RENAL_STAGE",
+        "INDIVIDUAL_EPA_DHA_TARGET",
+        "FAT_ENERGY_RECALCULATION"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "EPA/DHA是肾病饮食中可审查的成分；不能把复合肾脏饮食效果归于单一补剂。",
+      "intervention_scope": "COMBINATION_DIET",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_K_DOG",
+      "supplement": "POTASSIUM",
+      "active_nutrient": "POTASSIUM",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "IRIS_DOG2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "SERUM_POTASSIUM",
+        "RENAL_STAGE",
+        "VETERINARY_ROUTE_AND_DOSE",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [
+        "高血钾或未复核的含钾产品叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "维持膜电位和神经肌肉功能；补充取决于低血钾等明确指征。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_D_DOG",
+      "supplement": "VITAMIN_D",
+      "active_nutrient": "VITAMIN_D",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "IRIS_DOG2026",
+        "IRIS_HYPERCALCEMIA"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "IONIZED_CALCIUM",
+        "SERUM_PHOSPHORUS",
+        "RENAL_STAGE",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "高钙血症",
+        "猫不得由CKD标签常规推荐骨化三醇"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "参与钙磷代谢；普通维D、骨化三醇和磷结合剂不能混为一谈。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_OMEGA_CAT",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD",
+        "PLN"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "IRIS_RENAL_DIET"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "RENAL_STAGE",
+        "INDIVIDUAL_EPA_DHA_TARGET",
+        "FAT_ENERGY_RECALCULATION"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "EPA/DHA是肾病饮食中可审查的成分；不能把复合肾脏饮食效果归于单一补剂。",
+      "intervention_scope": "COMBINATION_DIET",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_K_CAT",
+      "supplement": "POTASSIUM",
+      "active_nutrient": "POTASSIUM",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "IRIS_CAT2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "SERUM_POTASSIUM",
+        "RENAL_STAGE",
+        "VETERINARY_ROUTE_AND_DOSE",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [
+        "高血钾或未复核的含钾产品叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "维持膜电位和神经肌肉功能；补充取决于低血钾等明确指征。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RENAL_D_CAT",
+      "supplement": "VITAMIN_D",
+      "active_nutrient": "VITAMIN_D",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CKD"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "IRIS_CAT2026",
+        "IRIS_HYPERCALCEMIA"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "IONIZED_CALCIUM",
+        "SERUM_PHOSPHORUS",
+        "RENAL_STAGE",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "高钙血症",
+        "猫不得由CKD标签常规推荐骨化三醇"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "参与钙磷代谢；普通维D、骨化三醇和磷结合剂不能混为一谈。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "MMVD_OMEGA",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "MMVD"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "ACVIM_MMVD2019"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_MMVD_STAGE_C",
+        "APPETITE_MUSCLE_REVIEW",
+        "INDIVIDUAL_EPA_DHA_TARGET",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "适用Stage C犬可评估EPA/DHA作为整体心脏营养支持。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "CHF_UNSPECIFIED",
+      "supplement": "CARDIAC_PACK",
+      "active_nutrient": "TAURINE_CARNITINE_EPA_DHA",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CHF",
+        "HCM"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "SPECIFIC_ETIOLOGY_AND_CLINICAL_PLAN"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "未明确心脏病类型与适用研究时，不建立通用心脏补剂套餐。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "DCM_TAU",
+      "supplement": "TAURINE",
+      "active_nutrient": "TAURINE",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "DCM"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "DCM_KAPLAN2018"
+      ],
+      "clinical_outcome": "DEFICIENT_GOLDEN_RETRIEVERS_COMBINED_INTERVENTION",
+      "clinical_outcome_supported": true,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "BLOOD_TAURINE",
+        "DIET_HISTORY",
+        "CARDIOLOGY_PLAN"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "牛磺酸支持心肌功能；应鉴别DCM是否伴营养缺乏。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "DCM_CAR",
+      "supplement": "L_CARNITINE",
+      "active_nutrient": "L_CARNITINE",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "DCM"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "DCM_KAPLAN2018"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "SPECIFIC_DCM_ETIOLOGY",
+        "CARDIOLOGY_PLAN"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "参与长链脂肪酸进入线粒体的转运；联合干预无法证明独立获益。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "GI_B12_DOG",
+      "supplement": "COBALAMIN_B12",
+      "active_nutrient": "COBALAMIN",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CIE_DOG",
+        "EPI",
+        "PLE",
+        "FOOD_RESPONSIVE_ENTEROPATHY",
+        "CHRONIC_DIARRHEA"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "ACVIM_CIE2026",
+        "MERCK_EPI2026"
+      ],
+      "clinical_outcome": "BIOCHEMICAL_STATUS_NOT_PROVEN_SYMPTOM_CURE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "SERUM_COBALAMIN",
+        "CONFIRMED_SUBOPTIMAL_B12",
+        "VETERINARY_ROUTE_AND_DOSE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "钴胺素参与细胞代谢；吸收不良时食物含量不能代表吸收量。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "GI_B12_CAT",
+      "supplement": "COBALAMIN_B12",
+      "active_nutrient": "COBALAMIN",
+      "species": [
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CIE_CAT",
+        "EPI",
+        "PLE",
+        "FOOD_RESPONSIVE_ENTEROPATHY",
+        "CHRONIC_DIARRHEA"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "MERCK_EPI2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "SERUM_COBALAMIN",
+        "CONFIRMED_SUBOPTIMAL_B12",
+        "VETERINARY_ROUTE_AND_DOSE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "钴胺素支持细胞代谢；需结合吸收不良和低钴胺素证据。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "GI_PROBIOTIC",
+      "supplement": "PROBIOTIC",
+      "active_nutrient": "STRAIN_SPECIFIC_PROBIOTIC",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CIE_DOG",
+        "CIE_CAT",
+        "EPI",
+        "CHRONIC_DIARRHEA"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_CIE2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "IDENTIFIED_STRAIN",
+        "MATCHED_CLINICAL_TRIAL",
+        "IMMUNE_STATUS_REVIEW"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "效果取决于菌株、组合与适应证，不推荐未指定菌株的通用益生菌。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "DM_FIBER",
+      "supplement": "FIBER",
+      "active_nutrient": "DIETARY_FIBER",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "DIABETES_DOG"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_A",
+      "source": [
+        "AAHA_DM_DOG2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "FOOD_FIBER_CONTRIBUTION",
+        "FIBER_TYPE",
+        "BODY_CONDITION_TOLERANCE"
+      ],
+      "contraindications": [
+        "体重不足或不耐受时不能机械加量"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "适用犬中影响饱腹与餐后血糖；偏瘦犬不能机械增加低能量高纤维饮食。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "CONSTIPATION_FIBER",
+      "supplement": "FIBER",
+      "active_nutrient": "DIETARY_FIBER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CONSTIPATION"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "HYDRATION",
+        "OBSTRUCTION_EXCLUSION",
+        "MATCHED_FIBER_EVIDENCE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "纤维类型与便秘原因未确定，不能自动加量。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "CDS_MCT",
+      "supplement": "MCT",
+      "active_nutrient": "MCT",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "SENIOR"
+      ],
+      "condition": [
+        "COGNITIVE_DYSFUNCTION"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "CDS_DIET2018",
+        "AAHA_SENIOR2023"
+      ],
+      "clinical_outcome": "CANINE_CDS_SIGNS_COMBINATION_DIET",
+      "clinical_outcome_supported": true,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_COGNITIVE_DYSFUNCTION",
+        "COMPLETE_DIET_REFORMULATION",
+        "FAT_TOLERANCE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "含MCT及营养组合的饮食可支持已出现认知障碍表现的老年犬。",
+      "intervention_scope": "COMBINATION_DIET",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "CDS_ANTIOX",
+      "supplement": "ANTIOXIDANT_BLEND",
+      "active_nutrient": "ANTIOXIDANTS",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "SENIOR"
+      ],
+      "condition": [
+        "COGNITIVE_DYSFUNCTION"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "CDS_DIET2018"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "COMPLETE_DIET_REFORMULATION"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "组合营养中的抗氧化成分不能拆分成有确定剂量和独立效果的保健品。",
+      "intervention_scope": "COMBINATION_DIET",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "ATOPY_EFA",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "ATOPIC_DERMATITIS"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "ICADA2015"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_ATOPY",
+        "PRODUCT_SPECIFIC_EVIDENCE",
+        "FAT_ENERGY_REVIEW"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "慢性特应性皮炎中可能有有限辅助价值；不用于自动替代主要管理。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "ALLERGY_PACK",
+      "supplement": "SKIN_PACK",
+      "active_nutrient": "EPA_DHA_VITAMIN_E_ZINC",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "FOOD_ALLERGY",
+        "SKIN_DISEASE"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ICADA2015"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "ALLERGEN_FREE_CARRIER"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "食物过敏优先控制致敏原，不能由皮肤病名称建立固定补剂套餐。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "LIVER_ADJUNCT",
+      "supplement": "HEPATIC_ANTIOXIDANTS",
+      "active_nutrient": "SAME_VITAMIN_E",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "COPPER_HEPATOPATHY",
+        "CHRONIC_HEPATITIS"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "ACVIM_LIVER2019"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_ETIOLOGY",
+        "HEPATOLOGY_PLAN",
+        "ALL_PRODUCT_PANELS"
+      ],
+      "contraindications": [
+        "铜相关肝病不得用含新增铜的维矿方案抵消限铜策略"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "部分肝病情境可评估抗氧化辅助，临床获益和制剂适用性仍有限。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "LIVER_ZINC",
+      "supplement": "ZINC",
+      "active_nutrient": "ZINC",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "COPPER_HEPATOPATHY"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "EVIDENCE_C",
+      "source": [
+        "ACVIM_LIVER2019"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": true,
+      "conditional_requirements": [
+        "HEPATOLOGY_PLAN",
+        "SERUM_ZINC",
+        "MEDICATION_REVIEW"
+      ],
+      "contraindications": [
+        "与D-青霉胺联合可互相影响，不自动并用"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "特定维护方案中可能影响铜吸收；需要临床监测。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "URINARY_STRUVITE",
+      "supplement": "URINARY_MODIFIER",
+      "active_nutrient": "URINE_PH_MODIFIER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "STRUVITE"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_UROLITH2016"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_STONE_TYPE",
+        "URINE_PH",
+        "URINE_CULTURE_WHEN_INDICATED",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "结石类型未知",
+        "相反酸碱方向的补充剂叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "尿液pH方向必须匹配结石类型和监测，不存在通用尿路补剂。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "URINARY_CALCIUM_OXALATE",
+      "supplement": "URINARY_MODIFIER",
+      "active_nutrient": "URINE_PH_MODIFIER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CALCIUM_OXALATE"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_UROLITH2016"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_STONE_TYPE",
+        "URINE_PH",
+        "URINE_CULTURE_WHEN_INDICATED",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "结石类型未知",
+        "相反酸碱方向的补充剂叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "尿液pH方向必须匹配结石类型和监测，不存在通用尿路补剂。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "URINARY_URATE",
+      "supplement": "URINARY_MODIFIER",
+      "active_nutrient": "URINE_PH_MODIFIER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "URATE"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_UROLITH2016"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_STONE_TYPE",
+        "URINE_PH",
+        "URINE_CULTURE_WHEN_INDICATED",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "结石类型未知",
+        "相反酸碱方向的补充剂叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "尿液pH方向必须匹配结石类型和监测，不存在通用尿路补剂。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "URINARY_CYSTINE",
+      "supplement": "URINARY_MODIFIER",
+      "active_nutrient": "URINE_PH_MODIFIER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "CYSTINE"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_UROLITH2016"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_STONE_TYPE",
+        "URINE_PH",
+        "URINE_CULTURE_WHEN_INDICATED",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "结石类型未知",
+        "相反酸碱方向的补充剂叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "尿液pH方向必须匹配结石类型和监测，不存在通用尿路补剂。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "URINARY_UROLITH_UNKNOWN",
+      "supplement": "URINARY_MODIFIER",
+      "active_nutrient": "URINE_PH_MODIFIER",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "UROLITH_UNKNOWN"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "ACVIM_UROLITH2016"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CONFIRMED_STONE_TYPE",
+        "URINE_PH",
+        "URINE_CULTURE_WHEN_INDICATED",
+        "VETERINARY_PLAN"
+      ],
+      "contraindications": [
+        "结石类型未知",
+        "相反酸碱方向的补充剂叠加"
+      ],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "尿液pH方向必须匹配结石类型和监测，不存在通用尿路补剂。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RISK_AGE_BREED",
+      "supplement": "JOINT_OR_CARDIAC_PACK",
+      "active_nutrient": "UNSPECIFIED",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "AGE_OR_BREED_ONLY"
+      ],
+      "goal": "HEALTH_RISK_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "AAHA_SENIOR2023"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "DOCUMENTED_RISK",
+        "MATCHED_PREVENTIVE_TRIAL"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "年龄、体型或品种本身不构成某补剂有效预防疾病的证据。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "RISK_MOBILITY",
+      "supplement": "OMEGA3_EPA_DHA",
+      "active_nutrient": "EPA_DHA",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "MOBILITY_DECLINE_OR_OBESITY"
+      ],
+      "goal": "HEALTH_RISK_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "AAHA_PAIN2022"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CLINICAL_ASSESSMENT",
+        "MATCHED_PREVENTIVE_TRIAL"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "活动下降或肥胖需要评估原因和体重管理，OA治疗研究不能直接证明未患病个体的预防获益。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "METABOLIC_PACK",
+      "supplement": "SLIMMING_GLUCOSE_SUPPLEMENT",
+      "active_nutrient": "UNSPECIFIED",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "OBESITY",
+        "DIABETES_DOG",
+        "DIABETES_CAT"
+      ],
+      "goal": "DISEASE_SUPPORT",
+      "evidence_level": "INSUFFICIENT",
+      "source": [
+        "AAHA_NUTRITION2021",
+        "AAHA_DM_DOG2026",
+        "AAHA_DM_CAT2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "体重和糖尿病管理以能量、配方及既定治疗为核心，不推荐燃脂或降糖保健品。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "DEF_B12",
+      "supplement": "COBALAMIN_B12",
+      "active_nutrient": "COBALAMIN",
+      "species": [
+        "DOG",
+        "CAT"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "DOCUMENTED_DEFICIENCY"
+      ],
+      "goal": "DEFICIENCY_CORRECTION",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "ACVIM_CIE2026",
+        "MERCK_EPI2026"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CLINICIAN_CONFIRMED_DEFICIENCY",
+        "REPORT_REFERENCE",
+        "VETERINARY_ROUTE_AND_DOSE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "在有记录的缺乏证据下纠正对应营养状态；不等于由食物估算缺口诊断缺乏。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    },
+    {
+      "evidence_id": "DEF_TAU",
+      "supplement": "TAURINE",
+      "active_nutrient": "TAURINE",
+      "species": [
+        "DOG"
+      ],
+      "life_stage": [
+        "ADULT",
+        "SENIOR"
+      ],
+      "condition": [
+        "DOCUMENTED_DEFICIENCY"
+      ],
+      "goal": "DEFICIENCY_CORRECTION",
+      "evidence_level": "EVIDENCE_B",
+      "source": [
+        "DCM_KAPLAN2018"
+      ],
+      "clinical_outcome": "NONE",
+      "clinical_outcome_supported": false,
+      "target_available": false,
+      "target_basis": "NO_INDIVIDUAL_NUMERIC_TARGET",
+      "lab_required": false,
+      "conditional_requirements": [
+        "CLINICIAN_CONFIRMED_DEFICIENCY",
+        "REPORT_REFERENCE",
+        "VETERINARY_ROUTE_AND_DOSE"
+      ],
+      "contraindications": [],
+      "automatic_recommendation_allowed": false,
+      "physiologic_role": "在有记录的缺乏证据下纠正对应营养状态；不等于由食物估算缺口诊断缺乏。",
+      "intervention_scope": "SUPPLEMENT",
+      "therapeutic_nutrition_evidence": false
+    }
+  ],
+  "limitations": [
+    "NRC/AAFCO full licensed dose tables were not independently accessed; no numeric targets extracted from inaccessible text.",
+    "Null means unknown, not zero; evidence strength never supplies a missing individual dose.",
+    "Four-purpose model does not imply all purposes need an automatic recommendation."
+  ]
+}

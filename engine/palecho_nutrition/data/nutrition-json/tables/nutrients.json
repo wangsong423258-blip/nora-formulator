@@ -1,0 +1,650 @@
+[
+  {
+    "nutrient_id": "alpha_linolenic",
+    "name_zh": "α-亚麻酸",
+    "canonical_unit": "g",
+    "display_category": "脂肪和必需脂肪酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "alpha_tocopherol",
+    "name_zh": "α-生育酚",
+    "canonical_unit": "mg",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "arachidonic",
+    "name_zh": "花生四烯酸",
+    "canonical_unit": "mg",
+    "display_category": "脂肪和必需脂肪酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "arginine",
+    "name_zh": "精氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "ash",
+    "name_zh": "灰分",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "b1",
+    "name_zh": "维生素B1",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b12",
+    "name_zh": "维生素B12",
+    "canonical_unit": "ug",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b2",
+    "name_zh": "维生素B2",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b3",
+    "name_zh": "烟酸",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b5",
+    "name_zh": "泛酸",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b6",
+    "name_zh": "维生素B6",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "b9",
+    "name_zh": "叶酸（活性待核验）",
+    "canonical_unit": "ug",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "beta_carotene",
+    "name_zh": "β-胡萝卜素",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "biotin",
+    "name_zh": "生物素",
+    "canonical_unit": "ug",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "ca_p_ratio",
+    "name_zh": "钙磷比",
+    "canonical_unit": "ratio",
+    "display_category": "矿物质",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "calcium",
+    "name_zh": "钙",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "carbohydrate_by_difference",
+    "name_zh": "人用差减碳水化合物",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "chloride",
+    "name_zh": "氯",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "choline",
+    "name_zh": "胆碱",
+    "canonical_unit": "mg",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "copper",
+    "name_zh": "铜",
+    "canonical_unit": "mg",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "crude_fiber",
+    "name_zh": "粗纤维",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "cystine",
+    "name_zh": "胱氨酸",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "dha",
+    "name_zh": "DHA",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "dietary_fiber",
+    "name_zh": "总膳食纤维",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "energy_human",
+    "name_zh": "USDA人用能量（不是犬猫ME）",
+    "canonical_unit": "kcal",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "epa",
+    "name_zh": "EPA",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "epa_dha",
+    "name_zh": "EPA＋DHA",
+    "canonical_unit": "g",
+    "display_category": "脂肪和必需脂肪酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "fat",
+    "name_zh": "脂肪",
+    "canonical_unit": "g",
+    "display_category": "脂肪和必需脂肪酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "fatty_18_2_unspecified",
+    "name_zh": "18:2未区分异构体",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "fatty_18_3_unspecified",
+    "name_zh": "18:3未区分异构体",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "fatty_20_4_unspecified",
+    "name_zh": "20:4未区分异构体",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "folate_total",
+    "name_zh": "总叶酸（非DFE）",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "folic_acid",
+    "name_zh": "合成叶酸",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "histidine",
+    "name_zh": "组氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "iodine",
+    "name_zh": "碘",
+    "canonical_unit": "mg",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "iron",
+    "name_zh": "铁",
+    "canonical_unit": "mg",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "isoleucine",
+    "name_zh": "异亮氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "leucine",
+    "name_zh": "亮氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "linoleic",
+    "name_zh": "亚油酸",
+    "canonical_unit": "g",
+    "display_category": "脂肪和必需脂肪酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "lysine",
+    "name_zh": "赖氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "magnesium",
+    "name_zh": "镁",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "manganese",
+    "name_zh": "锰",
+    "canonical_unit": "mg",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "me_cat",
+    "name_zh": "猫代谢能",
+    "canonical_unit": "kcal",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "me_dog",
+    "name_zh": "犬代谢能",
+    "canonical_unit": "kcal",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "methionine",
+    "name_zh": "蛋氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "methionine_cystine",
+    "name_zh": "蛋氨酸＋胱氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "nfe",
+    "name_zh": "无氮浸出物",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "phenylalanine",
+    "name_zh": "苯丙氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "phenylalanine_tyrosine",
+    "name_zh": "苯丙氨酸＋酪氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "phosphorus",
+    "name_zh": "磷",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "potassium",
+    "name_zh": "钾",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "protein",
+    "name_zh": "蛋白质",
+    "canonical_unit": "g",
+    "display_category": "蛋白质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "retinol",
+    "name_zh": "视黄醇",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "selenium",
+    "name_zh": "硒",
+    "canonical_unit": "ug",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "sodium",
+    "name_zh": "钠",
+    "canonical_unit": "g",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "taurine",
+    "name_zh": "牛磺酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "threonine",
+    "name_zh": "苏氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "tryptophan",
+    "name_zh": "色氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "tyrosine",
+    "name_zh": "酪氨酸",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "valine",
+    "name_zh": "缬氨酸",
+    "canonical_unit": "g",
+    "display_category": "必需氨基酸",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "vitamin_a",
+    "name_zh": "维生素A活性",
+    "canonical_unit": "IU",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "vitamin_a_cat",
+    "name_zh": "猫维生素A活性（预成型视黄醇）",
+    "canonical_unit": "IU",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Table VII-14 p63. Species-specific vitamin A replaces ambiguous generic vector at runtime. D3 alone is not proof of total vitamin D."
+  },
+  {
+    "nutrient_id": "vitamin_a_dog",
+    "name_zh": "犬维生素A活性（物种换算）",
+    "canonical_unit": "IU",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Table VII-14 p63. Species-specific vitamin A replaces ambiguous generic vector at runtime. D3 alone is not proof of total vitamin D."
+  },
+  {
+    "nutrient_id": "vitamin_d",
+    "name_zh": "维生素D活性",
+    "canonical_unit": "IU",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "vitamin_d3",
+    "name_zh": "胆钙化醇D3",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Table VII-14 p63. Species-specific vitamin A replaces ambiguous generic vector at runtime. D3 alone is not proof of total vitamin D."
+  },
+  {
+    "nutrient_id": "vitamin_d3_activity",
+    "name_zh": "仅D3的活性贡献（非总D）",
+    "canonical_unit": "IU",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "FEDIAF2025",
+    "notes": "Table VII-14 p63. Species-specific vitamin A replaces ambiguous generic vector at runtime. D3 alone is not proof of total vitamin D."
+  },
+  {
+    "nutrient_id": "vitamin_d_total",
+    "name_zh": "D2＋D3（人用成分）",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "vitamin_e",
+    "name_zh": "维生素E活性",
+    "canonical_unit": "IU",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "vitamin_k",
+    "name_zh": "维生素K",
+    "canonical_unit": "ug",
+    "display_category": "维生素和胆碱",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  },
+  {
+    "nutrient_id": "vitamin_k1",
+    "name_zh": "叶绿醌",
+    "canonical_unit": "ug",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "water",
+    "name_zh": "水分",
+    "canonical_unit": "g",
+    "display_category": "能量与辅助校验",
+    "role": "SUPPORTING",
+    "source_id": "USDA_SR2018",
+    "notes": "Do not substitute total dietary fibre for crude fibre, human energy for pet ME, or human RAE/DFE for pet vitamin activity."
+  },
+  {
+    "nutrient_id": "zinc",
+    "name_zh": "锌",
+    "canonical_unit": "mg",
+    "display_category": "矿物质",
+    "role": "PROFILE_NUTRIENT",
+    "source_id": "FEDIAF2025",
+    "notes": "Minimum targets are profile-specific; absence of a numeric maximum is NOT evidence of unlimited safety."
+  }
+]

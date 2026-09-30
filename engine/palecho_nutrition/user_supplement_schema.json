@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UserSupplementSpec",
+  "type": "object",
+  "required": ["id", "supplement_type", "species", "label_source", "user_confirmed"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$"},
+    "supplement_type": {"enum": ["TAURINE", "CALCIUM", "OMEGA3_FISH_OIL", "DOG_VITAMIN_MINERAL", "CAT_VITAMIN_MINERAL"]},
+    "species": {"oneOf": [{"enum": ["DOG", "CAT", "BOTH"]}, {"type": "array", "minItems": 1, "items": {"enum": ["DOG", "CAT"]}}]},
+    "supplement_mode": {"enum": ["LABEL_GUIDED", "NUTRIENT_CALCULATED"]},
+    "serving_amount": {"type": "number", "exclusiveMinimum": 0},
+    "serving_unit": {"enum": ["g", "mg", "scoop", "mL", "capsule", "tablet"]},
+    "active_components": {"type": "array", "items": {"type": "object", "required": ["nutrient_id", "amount", "unit", "basis"], "properties": {"nutrient_id": {"type": "string"}, "amount": {"type": "number", "minimum": 0}, "unit": {"enum": ["g", "mg", "ug", "μg", "µg", "IU"]}, "basis": {"enum": ["PER_SERVING", "PER_G", "PER_UNIT"]}, "chemical_form": {"type": ["string", "null"]}}}},
+    "label_source": {"type": ["string", "object"]},
+    "user_confirmed": {"const": true},
+    "optional_quality_data": {"type": "object"},
+    "created_at": {"type": ["string", "null"], "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"},
+    "manufacturer": {"type": "string"},
+    "dosage_form": {"enum": ["CAPSULE", "TABLET", "POWDER", "LIQUID"]},
+    "measurement_increment": {"type": "number", "exclusiveMinimum": 0},
+    "grams_per_scoop": {"type": "number", "exclusiveMinimum": 0},
+    "complete_homemade_diet": {"type": "boolean"},
+    "usage_basis": {"enum": ["PER_BODY_WEIGHT", "PER_FOOD_WEIGHT", "PER_DAILY_DIET", "PER_SERVING"]}
+  },
+  "description": "Structural API contract. SupplementInputValidator additionally enforces physical mass, species, nutrient units and forms, serving conversion, chemical rules, label guidance, quality consistency and practical dispensing. Convenience nutrient fields are accepted as alternatives to active_components, never duplicates."
+}
